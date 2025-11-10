@@ -1,0 +1,75 @@
+.main_duration_container {
+  display: flex;
+  align-items: center;
+}
+
+.duration_block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.set_duration_container {
+  display: flex;
+  border: 1px solid var(--color-white);
+  height: 40px;
+  width: 55px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.set_duration_container input {
+  background-color: transparent;
+  color: var(--color-white);
+  font-size: 18px;
+  border: none;
+  text-align: center;
+  width: 22px;
+  cursor: pointer;
+}
+
+.set_duration_container input:focus-visible {
+  border: none;
+  outline: none;
+}
+
+.counter_action_container {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  justify-content: center;
+  align-items: center;
+}
+
+.project_setting_header_label {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.duration_divider {
+  color: var(--color-white);
+  font-size: 18px;
+  margin: 0 10px;
+  margin-top: 20px;
+}
+.duration_label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: var(--color-white);
+}
+
+.decrement_counter,
+.increment_counter {
+  padding: 0px 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 12px;
+}
+
+.main_duration_container_disabled {
+  opacity: 0.5;
+}

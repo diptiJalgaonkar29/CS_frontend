@@ -1,0 +1,206 @@
+.project_grid_item_V1 {
+  background: var(--color-secondary);
+  border-radius: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: var(--color-white);
+  position: relative;
+}
+
+/* .project_grid_Delete {
+  position: absolute;
+  right: 5px;
+  top: 10px;
+  cursor: pointer;
+  pointer-events: all;
+  font-size: 3em;
+} */
+
+.edit_delete_action_menu_icon {
+  position: absolute;
+  right: 5px;
+  top: 10px;
+  cursor: pointer;
+  pointer-events: all;
+  font-size: 3em;
+}
+
+.project_grid_Delete {
+  cursor: pointer;
+  pointer-events: all;
+  font-size: 3em;
+  margin-right: 1.1rem;
+  width: 18px;
+  height: 19px;
+}
+
+.edit_icon {
+  margin-right: 1rem;
+}
+
+.project-grid-image {
+  width: 75px;
+  height: 75px;
+}
+
+.grid_archive_btn_container {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+}
+
+.project_grid_item .loading_cover_image {
+  background-color: var(--color-secondary-shade2);
+  width: 100%;
+  height: 100%;
+}
+
+.project_grid_item .project_grid_asset {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  background: #393e44;
+  color: var(--color-white);
+  font-size: 16px;
+  font-family: var(--font-primary-light);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.project_grid_content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 42px;
+  margin-bottom: 50px;
+  justify-content: center;
+  align-items: center;
+}
+
+.project_grid_content .img_container {
+  width: 75px;
+  height: 75px;
+  border-radius: 17px;
+  overflow: hidden;
+  background-color: var(--color-secondary-shade2);
+}
+
+.project_grid_content img {
+  width: 75px;
+  height: 75px;
+  border-radius: 17px;
+  object-fit: cover;
+  transform: scale(1.05);
+}
+
+/* .project_grid_content img.imageLoading {
+  display: none;
+}
+
+.project_grid_content img.imageLoaded {
+  display: block !important;
+} */
+
+.project_grid_content .projectName_ellipsis_container {
+  width: 200px;
+  pointer-events: all;
+}
+
+.project_grid_content .projectName_ellipsis {
+  display: -webkit-box;
+  max-width: 100%;
+  height: auto;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 0 auto;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  padding: 0 15px;
+}
+
+.project_grid_content .projectName_ellipsis.Archive {
+  cursor: auto;
+}
+
+.project_grid_content .projectName_ellipsis.My_Projects:hover {
+  color: var(--color-primary);
+}
+
+#edit_delete_action_menu .MuiMenu-paper {
+  background-color: var(--color-secondary) !important;
+  font-size: 16px !important;
+  border-radius: 10px !important;
+  overflow: hidden !important;
+}
+
+#edit_delete_action_menu .MuiMenu-paper .MuiMenuItem-root {
+  font-size: 16px !important;
+  color: var(--color-icon);
+}
+
+#edit_delete_action_menu .MuiMenu-paper .MuiDivider-root {
+  background-color: #4d4d4d !important;
+  width: 90% !important;
+  margin: 0 auto;
+}
+
+/*  */
+
+.project_grid_v1 .card {
+  background-color: var(--color-card);
+  border-radius: 12px;
+  padding: 20px;
+  /* width: 320px; */
+  height: 180px;
+  position: relative;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.project_grid_v1 .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+
+.project_grid_v1 .icons-left {
+  display: flex;
+  gap: 8px;
+}
+
+.project_grid_v1 .trashBtn {
+  cursor: pointer;
+}
+
+.project_grid_v1 .content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.project_grid_v1 .title {
+  font-size: 14px;
+  line-height: 20px;
+  vertical-align: middle;
+  color: var(--color-white);
+}
+
+.project_grid_v1 .subtitle {
+  color: #9ca3af;
+  font-size: 14px;
+  font-weight: 400;
+}

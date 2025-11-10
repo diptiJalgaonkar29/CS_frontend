@@ -1,0 +1,23 @@
+.layout_container {
+  height: auto;
+  position: relative;
+}
+
+.layout_content {
+  height: calc(100% - 95px);
+  max-width: 1920px;
+  width: 94%;
+  margin: 0 auto;
+  position: relative;
+  margin-top: 15px;
+  padding-bottom: 25px;
+}
+
+.layout_content:has(.WS_header_action_btns_container) {
+  margin-top: 0;
+}
+
+.layout_content.full_width {
+  width: 100vw;
+  margin: 0;
+}

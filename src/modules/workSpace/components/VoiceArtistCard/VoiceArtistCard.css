@@ -1,0 +1,360 @@
+.voice_card_container {
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+  overflow: hidden;
+  border-radius: 20px;
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  border: 1px solid var(--color-white);
+  box-sizing: border-box;
+  cursor: pointer;
+  position: relative;
+}
+
+.voice_card_container:hover .artistName {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+.voice_card_disabled_overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  border-radius: 9px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.voice_card_disabled_overlay_text {
+  font-size: 16px;
+  padding: 5px 15px;
+  border-radius: 20px;
+  border: 1px solid var(--color-white);
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+}
+
+.voice_card_container.disabled_voice {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.voice_card_container.voice_card_default_container {
+  border-color: var(--color-white) !important;
+}
+.voice_card_container.voice_card_selected_container {
+  border-color: var(--color-primary) !important;
+}
+.voice_card_container.voice_card_replaced_container {
+  border-color: var(--color-primary-shade3) !important;
+}
+.voice_card_container.voice_card_already_used_container {
+  border-color: var(--color-primary-shade3) !important;
+}
+
+.voice_card_container .voice_card_left {
+  flex-basis: 80px;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  justify-content: center;
+  position: relative;
+}
+
+.voice_card_container .voice_card_right {
+  flex: 1;
+}
+
+.voice_card_container .voice_provider {
+  font-size: 14px;
+  position: absolute;
+  background-color: var(--color-primary);
+  padding: 2px 4px;
+  border-radius: 10px;
+  white-space: nowrap;
+  width: 80px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-transform: capitalize;
+  text-align: center;
+  margin-top: 60px;
+  display: none;
+}
+
+.voice_card_container .brandVoice {
+  width: 25px;
+  height: 25px;
+  object-fit: contain;
+  position: absolute;
+  bottom: 15px;
+  left: 7px;
+}
+
+.voice_card_container .voice_card_icon_small {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.voice_card_container .voice_card_icon_large {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.voice_card_container .voice_card_icon_large.bookmark {
+  fill: var(--color-primary);
+}
+
+.voice_card_container .MuiSvgIcon-root {
+  fill: #b8b8b8 !important;
+  font-size: 30px !important;
+  pointer-events: auto !important;
+}
+
+.voice_card_container .MuiIconButton-root {
+  padding: 0px !important;
+}
+
+.voice_card_container .MuiAccordionSummary-root {
+  /* pointer-events: none; */
+  padding: 0px 16px 0px 10px !important;
+  flex-direction: column !important;
+}
+
+.voice_card_container .MuiAccordionSummary-content {
+  margin: 10px 0px 10px 0px !important;
+}
+
+.voice_card_container .MuiIconButton-edgeEnd {
+  margin-top: -30px;
+  margin-right: 5px;
+  align-self: flex-end;
+}
+
+.voice_card_container .artistImg {
+  width: 70px;
+  height: 70px;
+  border-radius: 10px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.voice_card_container .artistName {
+  margin-top: 0rem !important;
+  font-size: 16px;
+  flex: 1;
+  width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: var(--color-white);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* .voice_card_container .artistName:hover {
+  color: var(--color-primary);
+} */
+
+.voice_card_container .selectVoiceBtn {
+  height: 30px;
+  width: 125px;
+  padding: 0px 10px;
+  cursor: pointer;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border: none;
+}
+
+.voice_card_container .voice_card_title_container,
+.voice_card_container .voice_card_audio_player_container {
+  display: flex;
+  gap: 5px;
+  /* justify-content: space-between; */
+  padding-right: 9px;
+  padding-top: 5px;
+}
+
+.voice_card_container .voice_card_audio_player_container {
+  align-items: center;
+}
+
+.voice_card_container .voice_card_audio_player_container {
+  padding-bottom: 6px;
+  padding-right: 8px;
+}
+
+.voice_card_container .voice_card_title_container {
+  padding-top: 6px;
+  padding-right: 8px;
+}
+
+.voice_card_container .favBtn {
+  font-size: 25px;
+  position: relative;
+  padding-left: 10px;
+  margin-left: auto;
+  pointer-events: auto;
+}
+
+.voice_card_container .voice_card_playIcon {
+  margin-top: 0px !important;
+  width: 25px !important;
+  pointer-events: auto;
+  height: 25px !important;
+  top: 0 !important;
+  right: 0 !important;
+}
+
+.voice_card_container .voice_sample_play_pause {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.voice_card_container .voice_sample_play_pause:disabled svg {
+  opacity: 0.5 !important;
+  cursor: progress;
+}
+
+.voice_card_container .voice_card_waveform_container {
+  width: 90%;
+  margin: 0 auto;
+  background-color: #808080;
+}
+
+.voice_card_container .voice_card_waveform {
+  width: 100%;
+  margin-bottom: -3px;
+  filter: invert(4%) sepia(68%) saturate(0%) hue-rotate(294deg) brightness(20%)
+    contrast(73%);
+  -webkit-filter: invert(4%) sepia(68%) saturate(0%) hue-rotate(294deg)
+    brightness(20%) contrast(73%);
+  -moz-filter: invert(4%) sepia(68%) saturate(0%) hue-rotate(294deg)
+    brightness(20%) contrast(73%);
+  -o-filter: invert(4%) sepia(68%) saturate(0%) hue-rotate(294deg)
+    brightness(20%) contrast(73%);
+}
+
+.voice_card_container .voice_card_select_voice_btn {
+  height: 30px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 0px 8px;
+  cursor: pointer;
+  border-radius: 30px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border: none;
+  pointer-events: auto;
+  margin-top: 10px;
+}
+
+.voice_card_select_voice_icon {
+  font-size: 25px;
+  margin-top: 10px;
+  pointer-events: auto;
+}
+
+.voice_card_container .MuiAccordionDetails-root {
+  padding: 8px 30px 16px 120px !important;
+  display: block !important;
+}
+
+.voice_card_container .voice_card_tags_header,
+.voice_card_container .voice_card_tags_header_summary {
+  color: var(--color-white) !important;
+  font-size: 16px !important;
+  font-weight: normal !important;
+  margin: 2px 0px;
+}
+
+.voice_card_container .voice_card_tags_header_summary {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.voice_card_container .voice_card_tags_header_summary span {
+  white-space: nowrap;
+  width: 90px;
+  overflow: hidden;
+  flex: 1;
+  text-overflow: ellipsis;
+  text-transform: capitalize;
+}
+
+.voice_card_container .voice_card_tags_header_summary svg {
+  font-size: 16px;
+  padding-right: 5px;
+}
+
+.voice_card_container .voice_card_tags_subheader {
+  font-size: 1.3rem !important;
+  margin: 15px 0px !important;
+}
+
+.voice_card_container .voice_meta_container {
+  /* display: flex;
+  flex-direction: column;
+  padding: 5px 10px 5px 0px; */
+  margin-top: 0rem !important;
+  width: 100%;
+  flex: 1;
+  font-size: 16px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: var(--color-white);
+  font-weight: bold;
+}
+
+.voice_card_container .MuiButtonBase-root {
+  min-width: 20px !important;
+  margin-right: -8px !important;
+  color: #b8b8b8 !important;
+  align-self: end !important;
+}
+
+.voice_card_container .voice_card_tag {
+  display: inline-block !important;
+  line-height: 1 !important;
+  padding: 0.7rem 1rem !important;
+  cursor: default;
+  border: 1px solid #ccc !important;
+  border-radius: 18px !important;
+  margin-bottom: 0.5rem !important;
+  margin-right: 0.5rem !important;
+  color: var(--color-white) !important;
+  font-size: 1.3rem !important;
+}
+
+.tooltip_container {
+  font-family: var(--font-primary);
+  font-size: 14px;
+  padding: 5px;
+}
+
+.tooltip.voice_card_icon_large {
+  align-self: flex-end;
+  margin-bottom: 2px;
+  width: 20px;
+  height: 20px;
+}

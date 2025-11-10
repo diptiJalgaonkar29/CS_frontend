@@ -1,0 +1,61 @@
+.WS_no_data_wrapper {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.WS_no_data_wrapper .header_container {
+  margin: 45px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.WS_no_data_wrapper .sub_header {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+
+.voice_fall_back_logo_container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.voice_music_placeholder {
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+  font-size: 16px;
+  padding: 25px 35px;
+  max-width: 360px;
+  border-radius: 10px;
+  line-height: 24px;
+  position: relative;
+  margin-top: 25px;
+}
+
+.voice_music_placeholder::before {
+  content: "";
+  background-color: transparent;
+  position: absolute;
+  top: -20px;
+  left: 75px;
+  border-bottom: 20px solid var(--color-secondary);
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+}
+
+.music_placeholder_block::before {
+  left: 265px;
+}
+
+.AIMusicTab_loader_container {
+  width: 100%;
+  text-align: center;
+  margin-top: 25px;
+}

@@ -1,0 +1,143 @@
+.project_list_item {
+  border-top: 1px solid var(--color-secondary);
+  border-bottom: 1px solid var(--color-secondary);
+  display: flex;
+  margin-bottom: 20px;
+  color: var(--color-white);
+  width: 100%;
+}
+
+.project_list_item .projectName_container {
+  display: flex;
+  justify-content: space-between;
+  width: calc(30% - 100px);
+  height: 64px;
+  background: var(--color-secondary);
+  align-items: center;
+  padding: 12px;
+  gap: 10px;
+}
+
+.page_project_field.Archive .project_list_item .projectName_container {
+  justify-content: flex-start;
+}
+
+.project_list_item .projectName_container .img_container {
+  width: 50px;
+  height: 50px;
+  border-radius: 13px;
+  overflow: hidden;
+  background-color: var(--color-secondary-shade2);
+}
+
+.project_list_item .loading_cover_image {
+  background-color: var(--color-secondary-shade2);
+  width: 100%;
+  height: 100%;
+}
+.project_list_item .projectName_container img {
+  width: 50px;
+  height: 50px;
+  border-radius: 13px;
+  object-fit: cover;
+  transform: scale(1.05);
+}
+
+.project_list_item .projectName {
+  font-size: 16px;
+  font-weight: 600;
+  white-space: nowrap;
+  width: calc(100% - 85px);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+}
+
+.project_list_item .projectName.Archive {
+  cursor: auto !important;
+  width: calc(100% - 60px);
+}
+
+.project_list_item .projectName.My_Projects:hover {
+  color: var(--color-primary);
+}
+
+.project_list_item .projectattr {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  width: 15%;
+  height: 64px;
+  justify-content: center;
+  height: 50px;
+  align-self: center;
+}
+
+.project_list_item .projectattr p {
+  white-space: nowrap;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0 20px;
+}
+
+.project_list_item #description {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  height: 64px;
+  height: 50px;
+  align-self: center;
+  width: 25%;
+  padding: 0px 0px 0px 10px;
+}
+
+.project_list_item #description p {
+  display: -webkit-box;
+  width: 100%;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  word-break: break-all;
+}
+
+.project_list_item .projectDelete {
+  display: flex;
+  width: 60px;
+  height: 64px;
+  background: var(--color-secondary);
+  align-items: center;
+  font-size: large;
+  justify-content: center;
+  cursor: pointer;
+  margin-left: 40px;
+}
+
+.project_list_item .list_archive_btn_container {
+  width: 80px;
+  width: auto;
+  align-self: center;
+  margin: 0px 5px;
+}
+
+.projectName_container .edit_icon_project_list {
+  /* margin-right: 1rem; */
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1024px) {
+  .project_list_item .projectName_container {
+    gap: 5px;
+    padding: 12px 5px;
+  }
+
+  .project_list_item .projectName {
+    width: calc(100% - 80px);
+  }
+  .projectName_container .edit_icon_project_list {
+    margin: 0;
+  }
+  .project_table_header_item_title {
+    padding: 0 10px;
+  }
+}

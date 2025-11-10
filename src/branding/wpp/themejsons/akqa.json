@@ -1,0 +1,364 @@
+{
+  "version": 1,
+  "settings": {
+    "fontUrl": "https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900"
+  },
+  "content": {
+    "light": {
+      "color": {
+        "primary": {
+          "100": "#F0F0F0",
+          "200": "#e3e3e3",
+          "300": "#c7c7c7",
+          "400": "#717171",
+          "500": "#414141",
+          "600": "#383838",
+          "700": "var(--color-secondary)",
+          "800": "#121212"
+        },
+        "success": {
+          "200": "#e0faea",
+          "400": "#15803d",
+          "500": "#11652f"
+        },
+        "warning": {
+          "200": "#FDEAE2",
+          "400": "#f15619",
+          "500": "#C2410C"
+        },
+        "danger": {
+          "200": "#fbe4e4",
+          "300": "#f7caca",
+          "400": "#df2f2f",
+          "500": "#b91c1c",
+          "600": "#921616"
+        },
+        "grey": {
+          "100": "#F6F6F6",
+          "200": "#f2f2f2",
+          "300": "#E8E8E8",
+          "400": "#C6C6C6",
+          "500": "#A8A8A8",
+          "600": "#929292",
+          "700": "#6F6F6F",
+          "800": "#525252",
+          "900": "#393939",
+          "1000": "#161616",
+          "000": "#FFFFFF"
+        },
+        "highlight": {
+          "200": "rgba(245, 219, 88, 0.4)",
+          "400": "#f5db58"
+        },
+        "brand": {
+          "default": "color.primary.500",
+          "disabled": "color.primary.300",
+          "hover": "color.primary.400",
+          "active": "color.primary.600"
+        },
+        "dataviz": {
+          "cat": {
+            "dark": {
+              "1": "#8508E8",
+              "2": "#934074",
+              "3": "#b91c1c",
+              "4": "#8b561a",
+              "5": "#8b561a",
+              "6": "#4D7C0F",
+              "7": "#15803D",
+              "8": "#0E7490",
+              "9": "#4f4fbd",
+              "10": "#5e5557"
+            },
+            "light": {
+              "1": "#eed9fe",
+              "2": "#edd6eb",
+              "3": "#fbe4e4",
+              "4": "#fdeae2",
+              "5": "#fef08a",
+              "6": "#d9f99d",
+              "7": "#c2f5d4",
+              "8": "#a5f3fc",
+              "9": "#ccdcf8",
+              "10": "#dedce0"
+            },
+            "neutral": {
+              "1": "#bc71fb",
+              "2": "#c880b2",
+              "3": "#f87171",
+              "4": "#f48052",
+              "5": "#CA8A04",
+              "6": "#68A512",
+              "7": "#1fbc59",
+              "8": "#0E7490",
+              "9": "#7b90df",
+              "10": "#919196"
+            }
+          },
+          "seq": {
+            "brand": {
+              "100": "#f3e6fe",
+              "200": "#e6c9fd",
+              "300": "#ce97fb",
+              "400": "#b561fa",
+              "500": "#9e30f8",
+              "600": "#8508E8",
+              "700": "#6A06BB",
+              "800": "#4E058A",
+              "900": "#35035E",
+              "1000": "#19022C"
+            },
+            "grey": {
+              "100": "#f9f9f8",
+              "200": "#f0f0f0",
+              "300": "#dedce0",
+              "400": "#bab9be",
+              "500": "#919196",
+              "600": "#747073",
+              "700": "#5e5557",
+              "800": "#484042",
+              "900": "#312c2e",
+              "1000": "#1f1b1e"
+            },
+            "negative": {
+              "100": "#fbe4e4",
+              "200": "#f7caca",
+              "300": "#f09999",
+              "400": "#e86464",
+              "500": "#df2f2f",
+              "600": "#b91c1c",
+              "700": "#921616",
+              "800": "#6f1111",
+              "900": "#4B0B0B",
+              "1000": "#230505"
+            },
+            "warning": {
+              "100": "#fdeae2",
+              "200": "#fbd5c5",
+              "300": "#f8aa8c",
+              "400": "#f48052",
+              "500": "#f15619",
+              "600": "#C2410C",
+              "700": "#9A320A",
+              "800": "#732607",
+              "900": "#4D1905",
+              "1000": "#260D02"
+            },
+            "positive": {
+              "100": "#e0faea",
+              "200": "#c9f2da",
+              "300": "#84ebaa",
+              "400": "#47e17f",
+              "500": "#1fbc59",
+              "600": "#15803d",
+              "700": "#11652f",
+              "800": "#0D4F25",
+              "900": "#093519",
+              "1000": "#041A0C"
+            }
+          }
+        },
+        "white": "color.grey.000"
+      },
+      "border": {
+        "radius": {
+          "xs": "0px",
+          "s": "0px",
+          "m": "0px",
+          "l": "0px",
+          "xl": "20px",
+          "round": "64px"
+        },
+        "width": {
+          "s": "1px",
+          "m": "2px",
+          "l": "3px"
+        }
+      },
+      "boxShadow": {
+        "xs": "0px 1px 4px 0px rgba(52, 58, 63, 0.12)",
+        "s": "0px 0px 1px 0px rgba(52, 58, 63, 0.1), 0px 1px 5px 0px rgba(52, 58, 63, 0.12)",
+        "m": "0px 1px 4px 0px rgba(52, 58, 63, 0.05), 0px 4px 12px 0px rgba(52, 58, 63, 0.12)",
+        "brand": "0px 4px 12px 0px rgba(0, 0, 0, 0.3)",
+        "l": "0px 8px 32px 0px rgba(52, 58, 63, 0.05)"
+      },
+      "font": {
+        "family": "Inter"
+      },
+      "icon": {
+        "color": {
+          "default": "color.grey.600",
+          "disabled": "color.grey.400",
+          "hover": "color.grey.800",
+          "active": "color.grey.900"
+        }
+      },
+      "text": {
+        "color": {
+          "default": "color.grey.1000",
+          "whiteInfo": "color.grey.200",
+          "disabled": "color.grey.500",
+          "danger": "color.danger.500",
+          "warning": "color.warning.500",
+          "success": "color.success.500",
+          "info": "color.grey.800"
+        }
+      },
+      "surface": {
+        "bgColor": "color.grey.100"
+      },
+      "overlay": {
+        "bgColor": "rgba(82, 82, 82, 0.6)"
+      },
+      "typography": {
+        "5xl": {
+          "display": {
+            "fontFamily": "Inter",
+            "fontSize": "48px",
+            "fontWeight": "600",
+            "letterSpacing": "0px",
+            "lineHeight": "62px"
+          }
+        },
+        "4xl": {
+          "display": {
+            "fontFamily": "Inter",
+            "fontSize": "36px",
+            "fontWeight": "600",
+            "letterSpacing": "0px",
+            "lineHeight": "48px"
+          }
+        },
+        "3xl": {
+          "heading": {
+            "fontFamily": "Inter",
+            "fontSize": "28px",
+            "fontWeight": "600",
+            "letterSpacing": "0px",
+            "lineHeight": "40px"
+          }
+        },
+        "2xl": {
+          "heading": {
+            "fontFamily": "Inter",
+            "fontSize": "24px",
+            "fontWeight": "600",
+            "letterSpacing": "0px",
+            "lineHeight": "32px"
+          }
+        },
+        "xl": {
+          "heading": {
+            "fontFamily": "Inter",
+            "fontSize": "20px",
+            "fontWeight": "600",
+            "letterSpacing": "0px",
+            "lineHeight": "32px"
+          }
+        },
+        "l": {
+          "strong": {
+            "fontFamily": "Inter",
+            "fontSize": "18px",
+            "fontWeight": "600",
+            "letterSpacing": "0px",
+            "lineHeight": "28px"
+          },
+          "midi": {
+            "fontFamily": "Inter",
+            "fontSize": "18px",
+            "fontWeight": "500",
+            "letterSpacing": "0px",
+            "lineHeight": "28px"
+          },
+          "body": {
+            "fontFamily": "Inter",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "letterSpacing": "0px",
+            "lineHeight": "28px"
+          }
+        },
+        "m": {
+          "strong": {
+            "fontFamily": "Inter",
+            "fontSize": "16px",
+            "fontWeight": "600",
+            "letterSpacing": "0px",
+            "lineHeight": "24px"
+          },
+          "midi": {
+            "fontFamily": "Inter",
+            "fontSize": "16px",
+            "fontWeight": "500",
+            "letterSpacing": "0px",
+            "lineHeight": "24px"
+          },
+          "body": {
+            "fontFamily": "Inter",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "letterSpacing": "0px",
+            "lineHeight": "24px"
+          }
+        },
+        "s": {
+          "strong": {
+            "fontFamily": "Inter",
+            "fontSize": "14px",
+            "fontWeight": "600",
+            "letterSpacing": "0px",
+            "lineHeight": "22px"
+          },
+          "midi": {
+            "fontFamily": "Inter",
+            "fontSize": "14px",
+            "fontWeight": "500",
+            "letterSpacing": "0px",
+            "lineHeight": "22px"
+          },
+          "body": {
+            "fontFamily": "Inter",
+            "fontSize": "14px",
+            "fontWeight": "400",
+            "letterSpacing": "0px",
+            "lineHeight": "22px"
+          }
+        },
+        "xs": {
+          "strong": {
+            "fontFamily": "Inter",
+            "fontSize": "12px",
+            "fontWeight": "600",
+            "letterSpacing": "0px",
+            "lineHeight": "20px"
+          },
+          "midi": {
+            "fontFamily": "Inter",
+            "fontSize": "12px",
+            "fontWeight": "500",
+            "letterSpacing": "0px",
+            "lineHeight": "20px"
+          },
+          "body": {
+            "fontFamily": "Inter",
+            "fontSize": "12px",
+            "fontWeight": "400",
+            "letterSpacing": "0px",
+            "lineHeight": "20px"
+          }
+        },
+        "2xs": {
+          "strong": {
+            "fontFamily": "Inter",
+            "fontSize": "10px",
+            "fontWeight": "700",
+            "letterSpacing": "5%",
+            "lineHeight": "20px",
+            "textTransform": "uppercase"
+          }
+        }
+      }
+    }
+  }
+}

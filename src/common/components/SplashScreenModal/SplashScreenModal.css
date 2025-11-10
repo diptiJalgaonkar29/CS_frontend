@@ -1,0 +1,21 @@
+.splash_screen {
+  text-align: center;
+}
+
+.splash_screen_text {
+  font-size: 16px !important;
+  color: var(--color-white);
+  width: 100%;
+  text-align: center;
+  margin: 5px 0px 35px 0px;
+}
+
+.splash_screen_btn_container {
+  width: 100%;
+  text-align: center;
+}
+
+.SonicModal_dialog.splash_screen .MuiPaper-root.MuiDialog-paper {
+  max-width: 800px !important;
+  width: 80% !important;
+}

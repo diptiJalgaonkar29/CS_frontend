@@ -1,0 +1,364 @@
+{
+  "version": 1,
+  "settings": {
+    "fontUrl": ["https://public-assets.os.wpp.com/fonts/outfit/index.css", "https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900"]
+  },
+  "content": {
+    "light": {
+      "color": {
+        "primary": {
+          "100": "#FFD7E5",
+          "200": "#FEB3CE",
+          "300": "#FE8BB3",
+          "400": "#FD6399",
+          "500": "#FD3E81",
+          "600": "#F70358",
+          "700": "#BB0243",
+          "800": "#7E012D"
+        },
+        "success": {
+          "200": "#D1FAE5",
+          "400": "#059669",
+          "500": "#065F46"
+        },
+        "warning": {
+          "200": "#FFEDD5",
+          "400": "#EA580C",
+          "500": "#C2410C"
+        },
+        "danger": {
+          "200": "#FEE2E2",
+          "300": "#FCA5A5",
+          "400": "#DC2626",
+          "500": "#B91C1C",
+          "600": "#991B1B"
+        },
+        "grey": {
+          "100": "#F6F6F6",
+          "200": "F2F2F2",
+          "300": "#E8E8E8",
+          "400": "#C6C6C6",
+          "500": "#A8A8A8",
+          "600": "#939393",
+          "700": "#6F6F6F",
+          "800": "#525252",
+          "900": "#393939",
+          "1000": "#161616",
+          "000": "#FFFFFF"
+        },
+        "highlight": {
+          "200": "rgba(250, 204, 21, 0.4)",
+          "400": "#FACC15"
+        },
+        "brand": {
+          "default": "color.primary.500",
+          "disabled": "color.primary.300",
+          "hover": "color.primary.400",
+          "active": "color.primary.600"
+        },
+        "dataviz": {
+          "cat": {
+            "dark": {
+              "1": "#F70358",
+              "2": "#EA580C",
+              "3": "#CA8A04",
+              "4": "#65A30D",
+              "5": "#059669",
+              "6": "#0891B2",
+              "7": "#3D58B9",
+              "8": "#6648C3",
+              "9": "#983D98",
+              "10": "#5E5557"
+            },
+            "light": {
+              "1": "#FFD7E5",
+              "2": "#FED7AA",
+              "3": "#FEF08A",
+              "4": "#D9F99D",
+              "5": "#A7F3D0",
+              "6": "#A5F3FC",
+              "7": "#BDDEF7",
+              "8": "#D6D7F8",
+              "9": "#EBD3F1",
+              "10": "#DEDCE0"
+            },
+            "neutral": {
+              "1": "#FD6399",
+              "2": "#FB923C",
+              "3": "#FACC15",
+              "4": "#A3E635",
+              "5": "#34D399",
+              "6": "#22D3EE",
+              "7": "#6097DC",
+              "8": "#9689E1",
+              "9": "#C97DC9",
+              "10": "#919196"
+            }
+          },
+          "seq": {
+            "brand": {
+              "100": "#FFEBF2",
+              "200": "#FFD7E5",
+              "300": "#FEB3CE",
+              "400": "#FE8BB3",
+              "500": "#FD6399",
+              "600": "#FD3E81",
+              "700": "#F70358",
+              "800": "#BB0243",
+              "900": "#7E012D",
+              "1000": "#3D0116"
+            },
+            "grey": {
+              "100": "#F9F9F8",
+              "200": "#F0F0F0",
+              "300": "#DEDCE0",
+              "400": "#BAB9BE",
+              "500": "#919196",
+              "600": "#747073",
+              "700": "#5E5557",
+              "800": "#484042",
+              "900": "#312C2E",
+              "1000": "#1F1B1E"
+            },
+            "negative": {
+              "100": "#FEF2F2",
+              "200": "#FEE2E2",
+              "300": "#FECACA",
+              "400": "#FCA5A5",
+              "500": "#F87171",
+              "600": "#EF4444",
+              "700": "#DC2626",
+              "800": "#B91C1C",
+              "900": "#991B1B",
+              "1000": "#7F1D1D"
+            },
+            "warning": {
+              "100": "#FFF7ED",
+              "200": "#FFEDD5",
+              "300": "#FED7AA",
+              "400": "#FDBA74",
+              "500": "#FB923C",
+              "600": "#F97316",
+              "700": "#EA580C",
+              "800": "#C2410C",
+              "900": "#9A3412",
+              "1000": "#7C2D12"
+            },
+            "positive": {
+              "100": "#ECFDF5",
+              "200": "#D1FAE5",
+              "300": "#A7F3D0",
+              "400": "#6EE7B7",
+              "500": "#34D399",
+              "600": "#10B981",
+              "700": "#059669",
+              "800": "#047857",
+              "900": "#065F46",
+              "1000": "#064E3B"
+            }
+          }
+        },
+        "white": "color.grey.000"
+      },
+      "border": {
+        "radius": {
+          "xs": "4px",
+          "s": "6px",
+          "m": "8px",
+          "l": "12px",
+          "xl": "20px",
+          "round": "64px"
+        },
+        "width": {
+          "s": "1px",
+          "m": "2px",
+          "l": "3px"
+        }
+      },
+      "boxShadow": {
+        "xs": "0px 1px 4px 0px rgba(57, 57, 57, 0.12)",
+        "s": "0px 0px 1px 0px rgba(57, 57, 57, 0.1), 0px 1px 5px 0px rgba(57, 57, 57, 0.1)",
+        "m": "0px 1px 4px 0px rgba(57, 57, 57, 0.05), 0px 4px 12px 0px rgba(57, 57, 57, 0.12)",
+        "brand": "0px 4px 12px 0px rgba(188, 21, 44, 0.3)",
+        "l": "0px 8px 32px 0px rgba(57, 57, 57, 0.05)"
+      },
+      "font": {
+        "family": ["Outfit", "Inter"]
+      },
+      "icon": {
+        "color": {
+          "default": "color.grey.600",
+          "disabled": "color.grey.400",
+          "hover": "color.grey.800",
+          "active": "color.grey.900"
+        }
+      },
+      "text": {
+        "color": {
+          "default": "color.grey.1000",
+          "whiteInfo": "color.grey.200",
+          "disabled": "color.grey.500",
+          "danger": "color.danger.500",
+          "warning": "color.warning.500",
+          "success": "color.success.500",
+          "info": "color.grey.800"
+        }
+      },
+      "surface": {
+        "bgColor": "color.grey.100"
+      },
+      "overlay": {
+        "bgColor": "rgba(82, 82, 82, 0.6)"
+      },
+      "typography": {
+        "5xl": {
+          "display": {
+            "fontFamily": ["Outfit", "Inter"],
+            "fontSize": "48px",
+            "fontWeight": "700",
+            "letterSpacing": "0px",
+            "lineHeight": "62px"
+          }
+        },
+        "4xl": {
+          "display": {
+            "fontFamily": ["Outfit", "Inter"],
+            "fontSize": "36px",
+            "fontWeight": "700",
+            "letterSpacing": "0px",
+            "lineHeight": "48px"
+          }
+        },
+        "3xl": {
+          "heading": {
+            "fontFamily": ["Outfit", "Inter"],
+            "fontSize": "28px",
+            "fontWeight": "700",
+            "letterSpacing": "0px",
+            "lineHeight": "40px"
+          }
+        },
+        "2xl": {
+          "heading": {
+            "fontFamily": ["Outfit", "Inter"],
+            "fontSize": "24px",
+            "fontWeight": "700",
+            "letterSpacing": "0px",
+            "lineHeight": "32px"
+          }
+        },
+        "xl": {
+          "heading": {
+            "fontFamily": ["Outfit", "Inter"],
+            "fontSize": "20px",
+            "fontWeight": "700",
+            "letterSpacing": "0px",
+            "lineHeight": "32px"
+          }
+        },
+        "l": {
+          "strong": {
+            "fontFamily": ["Outfit", "Inter"],
+            "fontSize": "18px",
+            "fontWeight": "700",
+            "letterSpacing": "0px",
+            "lineHeight": "28px"
+          },
+          "midi": {
+            "fontFamily": ["Outfit", "Inter"],
+            "fontSize": "18px",
+            "fontWeight": "500",
+            "letterSpacing": "0px",
+            "lineHeight": "28px"
+          },
+          "body": {
+            "fontFamily": ["Outfit", "Inter"],
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "letterSpacing": "0px",
+            "lineHeight": "28px"
+          }
+        },
+        "m": {
+          "strong": {
+            "fontFamily": ["Outfit", "Inter"],
+            "fontSize": "16px",
+            "fontWeight": "700",
+            "letterSpacing": "0px",
+            "lineHeight": "24px"
+          },
+          "midi": {
+            "fontFamily": ["Outfit", "Inter"],
+            "fontSize": "16px",
+            "fontWeight": "500",
+            "letterSpacing": "0px",
+            "lineHeight": "24px"
+          },
+          "body": {
+            "fontFamily": ["Outfit", "Inter"],
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "letterSpacing": "0px",
+            "lineHeight": "24px"
+          }
+        },
+        "s": {
+          "strong": {
+            "fontFamily": ["Outfit", "Inter"],
+            "fontSize": "14px",
+            "fontWeight": "700",
+            "letterSpacing": "0px",
+            "lineHeight": "22px"
+          },
+          "midi": {
+            "fontFamily": ["Outfit", "Inter"],
+            "fontSize": "14px",
+            "fontWeight": "500",
+            "letterSpacing": "0px",
+            "lineHeight": "22px"
+          },
+          "body": {
+            "fontFamily": ["Outfit", "Inter"],
+            "fontSize": "14px",
+            "fontWeight": "400",
+            "letterSpacing": "0px",
+            "lineHeight": "22px"
+          }
+        },
+        "xs": {
+          "strong": {
+            "fontFamily": ["Outfit", "Inter"],
+            "fontSize": "12px",
+            "fontWeight": "700",
+            "letterSpacing": "0px",
+            "lineHeight": "20px"
+          },
+          "midi": {
+            "fontFamily": ["Outfit", "Inter"],
+            "fontSize": "12px",
+            "fontWeight": "500",
+            "letterSpacing": "0px",
+            "lineHeight": "20px"
+          },
+          "body": {
+            "fontFamily": ["Outfit", "Inter"],
+            "fontSize": "12px",
+            "fontWeight": "400",
+            "letterSpacing": "0px",
+            "lineHeight": "20px"
+          }
+        },
+        "2xs": {
+          "strong": {
+            "fontFamily": ["Outfit", "Inter"],
+            "fontSize": "10px",
+            "fontWeight": "800",
+            "letterSpacing": "5%",
+            "lineHeight": "20px",
+            "textTransform": "uppercase"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,174 @@
+.SonicSliderInput {
+  align-items: center;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  min-height: 50px;
+  overflow: hidden;
+  width: 130px;
+}
+.SonicSliderInput:focus {
+  box-shadow: none;
+  outline: none;
+}
+.SonicSliderInput::-webkit-slider-runnable-track {
+  background: var(--color-primary) !important;
+  content: "";
+  height: 4px;
+  pointer-events: none;
+}
+.SonicSliderInput::-webkit-slider-thumb {
+  height: 14px;
+  width: 14px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: var(--color-primary);
+  border-radius: 14px;
+  box-shadow: 5px 0 0 -5px grey, 6px 0 0 -5px grey, 7px 0 0 -5px grey,
+    8px 0 0 -5px grey, 9px 0 0 -5px grey, 10px 0 0 -5px grey, 11px 0 0 -5px grey,
+    12px 0 0 -5px grey, 13px 0 0 -5px grey, 14px 0 0 -5px grey,
+    15px 0 0 -5px grey, 16px 0 0 -5px grey, 17px 0 0 -5px grey,
+    18px 0 0 -5px grey, 19px 0 0 -5px grey, 20px 0 0 -5px grey,
+    21px 0 0 -5px grey, 22px 0 0 -5px grey, 23px 0 0 -5px grey,
+    24px 0 0 -5px grey, 25px 0 0 -5px grey, 26px 0 0 -5px grey,
+    27px 0 0 -5px grey, 28px 0 0 -5px grey, 29px 0 0 -5px grey,
+    30px 0 0 -5px grey, 31px 0 0 -5px grey, 32px 0 0 -5px grey,
+    33px 0 0 -5px grey, 34px 0 0 -5px grey, 35px 0 0 -5px grey,
+    36px 0 0 -5px grey, 37px 0 0 -5px grey, 38px 0 0 -5px grey,
+    39px 0 0 -5px grey, 40px 0 0 -5px grey, 41px 0 0 -5px grey,
+    42px 0 0 -5px grey, 43px 0 0 -5px grey, 44px 0 0 -5px grey,
+    45px 0 0 -5px grey, 46px 0 0 -5px grey, 47px 0 0 -5px grey,
+    48px 0 0 -5px grey, 49px 0 0 -5px grey, 50px 0 0 -5px grey,
+    51px 0 0 -5px grey, 52px 0 0 -5px grey, 53px 0 0 -5px grey,
+    54px 0 0 -5px grey, 55px 0 0 -5px grey, 56px 0 0 -5px grey,
+    57px 0 0 -5px grey, 58px 0 0 -5px grey, 59px 0 0 -5px grey,
+    60px 0 0 -5px grey, 61px 0 0 -5px grey, 62px 0 0 -5px grey,
+    63px 0 0 -5px grey, 64px 0 0 -5px grey, 65px 0 0 -5px grey,
+    66px 0 0 -5px grey, 67px 0 0 -5px grey, 68px 0 0 -5px grey,
+    69px 0 0 -5px grey, 70px 0 0 -5px grey, 71px 0 0 -5px grey,
+    72px 0 0 -5px grey, 73px 0 0 -5px grey, 74px 0 0 -5px grey,
+    75px 0 0 -5px grey, 76px 0 0 -5px grey, 77px 0 0 -5px grey,
+    78px 0 0 -5px grey, 79px 0 0 -5px grey, 80px 0 0 -5px grey,
+    81px 0 0 -5px grey, 82px 0 0 -5px grey, 83px 0 0 -5px grey,
+    84px 0 0 -5px grey, 85px 0 0 -5px grey, 86px 0 0 -5px grey,
+    87px 0 0 -5px grey, 88px 0 0 -5px grey, 89px 0 0 -5px grey,
+    90px 0 0 -5px grey, 91px 0 0 -5px grey, 92px 0 0 -5px grey,
+    93px 0 0 -5px grey, 94px 0 0 -5px grey, 95px 0 0 -5px grey,
+    96px 0 0 -5px grey, 97px 0 0 -5px grey, 98px 0 0 -5px grey,
+    99px 0 0 -5px grey, 100px 0 0 -5px grey, 101px 0 0 -5px grey,
+    80px 0 0 -5px grey, 103px 0 0 -5px grey, 104px 0 0 -5px grey,
+    105px 0 0 -5px grey, 106px 0 0 -5px grey, 107px 0 0 -5px grey,
+    108px 0 0 -5px grey, 109px 0 0 -5px grey, 110px 0 0 -5px grey,
+    111px 0 0 -5px grey, 112px 0 0 -5px grey, 113px 0 0 -5px grey,
+    114px 0 0 -5px grey, 115px 0 0 -5px grey, 116px 0 0 -5px grey,
+    117px 0 0 -5px grey, 118px 0 0 -5px grey, 119px 0 0 -5px grey,
+    120px 0 0 -5px grey, 121px 0 0 -5px grey, 122px 0 0 -5px grey,
+    123px 0 0 -5px grey, 124px 0 0 -5px grey, 125px 0 0 -5px grey,
+    126px 0 0 -5px grey, 127px 0 0 -5px grey, 128px 0 0 -5px grey,
+    129px 0 0 -5px grey, 130px 0 0 -5px grey, 131px 0 0 -5px grey,
+    132px 0 0 -5px grey, 133px 0 0 -5px grey, 134px 0 0 -5px grey,
+    135px 0 0 -5px grey, 136px 0 0 -5px grey, 137px 0 0 -5px grey,
+    138px 0 0 -5px grey, 139px 0 0 -5px grey, 140px 0 0 -5px grey,
+    141px 0 0 -5px grey, 142px 0 0 -5px grey, 143px 0 0 -5px grey,
+    144px 0 0 -5px grey, 145px 0 0 -5px grey, 146px 0 0 -5px grey,
+    147px 0 0 -5px grey, 148px 0 0 -5px grey, 149px 0 0 -5px grey,
+    150px 0 0 -5px grey, 151px 0 0 -5px grey, 152px 0 0 -5px grey,
+    153px 0 0 -5px grey, 154px 0 0 -5px grey, 155px 0 0 -5px grey,
+    156px 0 0 -5px grey, 157px 0 0 -5px grey, 158px 0 0 -5px grey,
+    159px 0 0 -5px grey, 160px 0 0 -5px grey, 161px 0 0 -5px grey,
+    162px 0 0 -5px grey, 163px 0 0 -5px grey, 164px 0 0 -5px grey,
+    165px 0 0 -5px grey, 166px 0 0 -5px grey, 167px 0 0 -5px grey,
+    168px 0 0 -5px grey, 169px 0 0 -5px grey, 170px 0 0 -5px grey,
+    171px 0 0 -5px grey, 172px 0 0 -5px grey, 173px 0 0 -5px grey,
+    174px 0 0 -5px grey, 175px 0 0 -5px grey, 176px 0 0 -5px grey,
+    177px 0 0 -5px grey, 178px 0 0 -5px grey, 179px 0 0 -5px grey,
+    180px 0 0 -5px grey, 181px 0 0 -5px grey, 182px 0 0 -5px grey,
+    183px 0 0 -5px grey, 184px 0 0 -5px grey, 185px 0 0 -5px grey,
+    186px 0 0 -5px grey, 187px 0 0 -5px grey, 188px 0 0 -5px grey,
+    189px 0 0 -5px grey, 190px 0 0 -5px grey, 191px 0 0 -5px grey,
+    192px 0 0 -5px grey, 193px 0 0 -5px grey, 194px 0 0 -5px grey,
+    195px 0 0 -5px grey, 196px 0 0 -5px grey, 197px 0 0 -5px grey,
+    198px 0 0 -5px grey, 199px 0 0 -5px grey, 200px 0 0 -5px grey,
+    201px 0 0 -5px grey, 202px 0 0 -5px grey, 203px 0 0 -5px grey,
+    204px 0 0 -5px grey, 205px 0 0 -5px grey, 206px 0 0 -5px grey,
+    207px 0 0 -5px grey, 208px 0 0 -5px grey, 209px 0 0 -5px grey,
+    210px 0 0 -5px grey, 211px 0 0 -5px grey, 212px 0 0 -5px grey,
+    213px 0 0 -5px grey, 214px 0 0 -5px grey, 215px 0 0 -5px grey,
+    216px 0 0 -5px grey, 217px 0 0 -5px grey, 218px 0 0 -5px grey,
+    219px 0 0 -5px grey, 220px 0 0 -5px grey, 221px 0 0 -5px grey,
+    222px 0 0 -5px grey, 223px 0 0 -5px grey, 224px 0 0 -5px grey,
+    225px 0 0 -5px grey, 226px 0 0 -5px grey, 227px 0 0 -5px grey,
+    228px 0 0 -5px grey, 229px 0 0 -5px grey, 230px 0 0 -5px grey,
+    231px 0 0 -5px grey, 232px 0 0 -5px grey, 233px 0 0 -5px grey,
+    234px 0 0 -5px grey, 235px 0 0 -5px grey, 236px 0 0 -5px grey,
+    237px 0 0 -5px grey, 238px 0 0 -5px grey, 239px 0 0 -5px grey,
+    240px 0 0 -5px grey;
+  margin-top: -5px;
+}
+.SonicSliderInput::-moz-range-track {
+  width: 240px;
+  height: 4px;
+  background-color: grey;
+}
+
+.SonicSliderInput::-moz-range-progress {
+  background-color: var(--color-primary) !important;
+  height: 0.3em !important;
+}
+
+.SonicSliderInput::-moz-range-thumb {
+  height: 14px;
+  width: 14px;
+  border-radius: 14px;
+  background: var(--color-primary);
+  border: none;
+  position: relative;
+}
+
+.SonicSliderInput::-ms-track {
+  background: transparent;
+  border: 0;
+  border-color: transparent;
+  border-radius: 0;
+  border-width: 0;
+  color: transparent;
+  height: 2px;
+  margin-top: 10px;
+  width: 240px;
+}
+.SonicSliderInput::-ms-thumb {
+  height: 14px;
+  width: 14px;
+  background: var(--color-primary);
+  border: none;
+}
+.SonicSliderInput::-ms-fill-lower {
+  background: var(--color-primary) !important;
+  border-radius: 0;
+}
+.SonicSliderInput::-ms-fill-upper {
+  background: grey;
+  border-radius: 0;
+}
+.SonicSliderInput::-ms-tooltip {
+  display: none;
+}
+
+.SonicSliderInput + datalist {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  writing-mode: vertical-lr;
+  width: 130px;
+}
+
+.SonicSliderInput + datalist .option {
+  padding: 0;
+  font-family: var(--font-primary);
+  pointer-events: none;
+}

@@ -1,0 +1,174 @@
+.report-bug-dialog {
+  background-color: rgba(74, 74, 74, 0.3);
+  z-index: 11111111111 !important;
+}
+
+.report-bug-dialog-close {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  font-size: 14px;
+  color: var(--color-white);
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.report-bug-dialog-close svg {
+  stroke: var(--color-white);
+}
+
+.report-bug-dialog .MuiPaper-root.MuiDialog-paper {
+  max-width: 650px;
+  border-radius: 10px;
+  padding: 25px 50px;
+  width: 100%;
+}
+
+.report-bug-dialog .report-bug-dialog-title {
+  font-size: 18px !important;
+  color: var(--color-white);
+  width: 100%;
+  text-align: center;
+  margin: 30px 0px 20px 0px;
+}
+
+.reportBugContainer {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: var(--color-white);
+  padding: 0;
+}
+
+/* .reportBugContainer:hover {
+  color: var(--color-primary);
+} */
+
+.report-bug-dialog form {
+  border-radius: 5px;
+  width: 100%;
+  max-width: 1200px;
+  /* min-width: 650px; */
+}
+
+/* .report-bug-dialog .form-group {
+  margin-bottom: 25px;
+} */
+
+.report-bug-dialog .report_form_error {
+  color: red;
+  padding: 5px 0px;
+  font-size: 14px;
+  margin: 0;
+}
+
+/* .report-bug-dialog .form-group label {
+  margin-bottom: 0px;
+  color: var(--color-white);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.16px;
+} */
+
+/* .report-bug-dialog .form-group input[type="text"],
+.report-bug-dialog input[type="file"],
+.report-bug-dialog textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--color-white);
+  border-radius: 23px;
+  background-color: var(--color-bg);
+  color: var(--color-white);
+  margin-top: 15px;
+  font-size: 16px;
+  box-sizing: border-box;
+} */
+
+/* .report-bug-dialog .form-group textarea {
+  resize: vertical;
+} */
+
+/* .report-bug-dialog .form-group .formButton {
+  background-color: var(--color-primary);
+  border: none;
+  padding: 10px 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  width: 180px;
+  margin-top: 15px;
+  color: var(--color-white);
+  font-size: 16px;
+} */
+
+.report-bug-dialog .groupButton {
+  display: flex !important;
+  justify-content: center !important;
+  margin: 25px 0 !important;
+  width: 100%;
+}
+
+.report-bug-dialog .groupButton .lds-default {
+  margin: 0;
+  width: 50px;
+  height: 50px;
+  scale: 0.8;
+}
+
+.report-bug-dialog .form-group .logo {
+  text-align: center;
+  width: 20px;
+  height: 20px;
+}
+
+.report-bug-dialog .feedBack_container {
+  padding: 20px;
+  border-radius: 20px;
+  margin: 25px auto;
+  text-align: center;
+  height: 250px;
+  border: 1px solid var(--color-white);
+  width: 80%;
+  color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+}
+
+.report-bug-dialog .feedBack_container p {
+  font-size: 16px;
+  margin: 0;
+}
+
+.report-bug-dialog .feedBack_container .back-link {
+  text-decoration: none;
+  border-radius: 40px;
+  height: 52px;
+  border: 1px solid var(--color-white);
+  border-radius: 40px;
+  background: var(--color-bg);
+  margin: 0 auto;
+  color: var(--color-white) !important;
+  padding: 10px 17px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.report-bug-dialog .form-group .formButton:disabled {
+  background-color: var(--color-gray) !important;
+  cursor: not-allowed !important;
+}
+
+.report-bug-dialog .report_form_btn_container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}

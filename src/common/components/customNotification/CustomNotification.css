@@ -1,0 +1,35 @@
+.notification_container {
+  width: auto;
+  height: 45px;
+  right: 5vw;
+  z-index: 1000000;
+  top: 100px;
+  min-width: 180px;
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+}
+
+.notification_container p {
+  color: #000;
+  font-size: 16px;
+  padding: 10px 30px;
+  text-align: center;
+}
+
+.SUCCESS {
+  background-color: var(--color-success);
+}
+
+.ERROR {
+  background-color: var(--color-error);
+}
+
+.WARNING {
+  background-color: var(--color-warning);
+}
+
+.ERROR p {
+  color: var(--color-white);
+}

@@ -1,0 +1,22 @@
+.no_url_match_wrapper {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.no_url_match_wrapper .header_container {
+  margin: 45px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.no_url_match_wrapper .sub_header {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  margin-bottom: 5px;
+}

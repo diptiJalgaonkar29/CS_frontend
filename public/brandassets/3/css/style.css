@@ -1,0 +1,17 @@
+.mastercard .navbar_img {
+  max-width: 90px !important;
+}
+
+.mastercard .set_duration_container input {
+  padding-top: 4px !important;
+}
+
+.mastercard .sonicButton.filled {
+  color: var(--color-white) !important;
+}
+
+.mastercard .SonicCheckbox_container:has(input:checked):after,
+.mastercard .rmsc.multi_select_voice_filter label.select-item.selected::after {
+  border: solid var(--color-white) !important;
+  border-width: 0 2px 2px 0 !important;
+}

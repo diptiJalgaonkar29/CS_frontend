@@ -1,0 +1,33 @@
+.sonic_icon_button {
+  background-color: transparent;
+  color: var(--color-white);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 56px;
+  height: 30px;
+  border-radius: 48px;
+  padding: 5px 18px;
+}
+
+/* .sonic_icon_button svg {
+  width: 30px !important;
+  height: 20px !important;
+} */
+
+.sonic_icon_button:disabled {
+  background-color: var(--color-gray);
+  cursor: not-allowed;
+}
+
+.sonic_icon_button.auth_btn {
+  height: 48px;
+  font-weight: bold;
+}
+
+.sonic_icon_button {
+  fill: var(--color-white);
+  stroke: var(--color-white);
+}

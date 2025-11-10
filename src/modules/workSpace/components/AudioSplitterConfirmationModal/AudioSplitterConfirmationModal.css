@@ -1,0 +1,17 @@
+.AudioSplitterConfirmationModal_container {
+  max-width: 600px;
+}
+
+.AudioSplitterConfirmationModal_container .sub_title {
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.AudioSplitterConfirmationModal_container
+  .video_uploader_confirmation_btn_containerV2 {
+  margin: 30px 0px 0px;
+  text-align: center;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}

@@ -1,0 +1,17 @@
+.sonic_icon_button[icon="Help"] {
+  background-color: transparent;
+  padding: 0;
+  width: fit-content;
+}
+
+.sonic_icon_button[icon="Help"] svg {
+  stroke: var(--color-white);
+}
+
+.WebNavbar--anchor.activeNavlink .sonic_icon_button[icon="Help"] svg {
+  stroke: var(--color-primary);
+}
+
+.help_icon {
+  cursor: pointer;
+}

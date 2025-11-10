@@ -1,0 +1,364 @@
+{
+  "version": 1,
+  "settings": {
+    "fontUrl": ["https://use.typekit.net/gsk0gei.css", "https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900"]
+  },
+  "content": {
+    "light": {
+      "color": {
+        "primary": {
+          "100": "#F4EBFF",
+          "200": "#E9D6FF",
+          "300": "#D7B3FF",
+          "400": "#B066FF",
+          "500": "#9A3EFF",
+          "600": "#6500D1",
+          "700": "#4C009E",
+          "800": "#310066"
+        },
+        "success": {
+          "200": "#D1FAE5",
+          "400": "#00B982",
+          "500": "#018860"
+        },
+        "warning": {
+          "200": "#FFF7ED",
+          "400": "#EA580C",
+          "500": "#C2410C"
+        },
+        "danger": {
+          "200": "#FEF2F2",
+          "300": "#FECACA",
+          "400": "#EF4444",
+          "500": "#B91C1C",
+          "600": "#7F1D1D"
+        },
+        "grey": {
+          "100": "#F8F9FB",
+          "200": "#F4F5F7",
+          "300": "#E7EAEE",
+          "400": "#C1C7CD",
+          "500": "#A2A9B0",
+          "600": "#8B919A",
+          "700": "#697077",
+          "800": "#4D5358",
+          "900": "#343A3F",
+          "1000": "#121619",
+          "000": "#FFFFFF"
+        },
+        "highlight": {
+          "200": "rgba(250, 204, 21, 0.4)",
+          "400": "#FACC15"
+        },
+        "brand": {
+          "default": "color.primary.500",
+          "disabled": "color.primary.300",
+          "hover": "color.primary.400",
+          "active": "color.primary.600"
+        },
+        "dataviz": {
+          "cat": {
+            "dark": {
+              "1": "#7718DC",
+              "2": "#B5377C",
+              "3": "#DC2626",
+              "4": "#EA580C",
+              "5": "#CA8A04",
+              "6": "#65A30D",
+              "7": "#059669",
+              "8": "#0891B2",
+              "9": "#385AB9",
+              "10": "#535768"
+            },
+            "light": {
+              "1": "#E2CFF7",
+              "2": "#F3CFEB",
+              "3": "#FECACA",
+              "4": "#FED7AA",
+              "5": "#FEF08A",
+              "6": "#D9F99D",
+              "7": "#A7F3D0",
+              "8": "#A5F3FC",
+              "9": "#B9DEF7",
+              "10": "#D7DCE6"
+            },
+            "neutral": {
+              "1": "#BD86F9",
+              "2": "#DF76B6",
+              "3": "#F87171",
+              "4": "#FB923C",
+              "5": "#FACC15",
+              "6": "#A3E635",
+              "7": "#34D399",
+              "8": "#22D3EE",
+              "9": "#5998DC",
+              "10": "#8393A5"
+            }
+          },
+          "seq": {
+            "brand": {
+              "100": "#FAF7FD",
+              "200": "#F2EBFA",
+              "300": "#E2CFF7",
+              "400": "#D2B1F6",
+              "500": "#BD86F9",
+              "600": "#9A3EFF",
+              "700": "#8E2FF4",
+              "800": "#7718DC",
+              "900": "#5F1DA5",
+              "1000": "#341556"
+            },
+            "grey": {
+              "100": "#F8F9F8",
+              "200": "#EDF0F3",
+              "300": "#D7DCE6",
+              "400": "#B0BAC9",
+              "500": "#8393A5",
+              "600": "#677284",
+              "700": "#535768",
+              "800": "#40414F",
+              "900": "#2D2D37",
+              "1000": "#1B1C23"
+            },
+            "negative": {
+              "100": "#FEF2F2",
+              "200": "#FEE2E2",
+              "300": "#FECACA",
+              "400": "#FCA5A5",
+              "500": "#F87171",
+              "600": "#EF4444",
+              "700": "#DC2626",
+              "800": "#B91C1C",
+              "900": "#991B1B",
+              "1000": "#7F1D1D"
+            },
+            "warning": {
+              "100": "#FFF7ED",
+              "200": "#FFEDD5",
+              "300": "#FED7AA",
+              "400": "#FDBA74",
+              "500": "#FB923C",
+              "600": "#F97316",
+              "700": "#EA580C",
+              "800": "#C2410C",
+              "900": "#9A3412",
+              "1000": "#7C2D12"
+            },
+            "positive": {
+              "100": "#ECFDF5",
+              "200": "#D1FAE5",
+              "300": "#A7F3D0",
+              "400": "#6EE7B7",
+              "500": "#34D399",
+              "600": "#00B982",
+              "700": "#019D6E",
+              "800": "#018860",
+              "900": "#026E4E",
+              "1000": "#02553C"
+            }
+          }
+        },
+        "white": "color.grey.000"
+      },
+      "border": {
+        "radius": {
+          "xs": "2px",
+          "s": "4px",
+          "m": "4px",
+          "l": "8px",
+          "xl": "20px",
+          "round": "64px"
+        },
+        "width": {
+          "s": "1px",
+          "m": "2px",
+          "l": "3px"
+        }
+      },
+      "boxShadow": {
+        "xs": "0px 1px 4px 0px rgba(52, 58, 63, 0.12)",
+        "s": "0px 0px 1px 0px rgba(52, 58, 63, 0.1), 0px 1px 5px 0px rgba(52, 58, 63, 0.1)",
+        "m": "0px 1px 4px 0px rgba(52, 58, 63, 0.05), 0px 4px 12px 0px rgba(52, 58, 63, 0.12)",
+        "brand": "0px 4px 12px 0px rgba(154, 62, 255, 0.3)",
+        "l": "0px 8px 32px 0px rgba(52, 58, 63, 0.05)"
+      },
+      "font": {
+        "family": ["halyard-display", "Inter"]
+      },
+      "icon": {
+        "color": {
+          "default": "color.grey.600",
+          "disabled": "color.grey.400",
+          "hover": "color.grey.800",
+          "active": "color.grey.900"
+        }
+      },
+      "text": {
+        "color": {
+          "default": "color.grey.1000",
+          "whiteInfo": "color.grey.200",
+          "disabled": "color.grey.500",
+          "danger": "color.danger.500",
+          "warning": "color.warning.500",
+          "success": "color.success.500",
+          "info": "color.grey.800"
+        }
+      },
+      "surface": {
+        "bgColor": "color.grey.100"
+      },
+      "overlay": {
+        "bgColor": "rgba(77, 83, 88, 0.6)"
+      },
+      "typography": {
+        "5xl": {
+          "display": {
+            "fontFamily": ["halyard-display", "Inter"],
+            "fontSize": "48px",
+            "fontWeight": "500",
+            "letterSpacing": "0px",
+            "lineHeight": "62px"
+          }
+        },
+        "4xl": {
+          "display": {
+            "fontFamily": ["halyard-display", "Inter"],
+            "fontSize": "36px",
+            "fontWeight": "500",
+            "letterSpacing": "0px",
+            "lineHeight": "48px"
+          }
+        },
+        "3xl": {
+          "heading": {
+            "fontFamily": ["halyard-display", "Inter"],
+            "fontSize": "28px",
+            "fontWeight": "500",
+            "letterSpacing": "0px",
+            "lineHeight": "40px"
+          }
+        },
+        "2xl": {
+          "heading": {
+            "fontFamily": ["halyard-display", "Inter"],
+            "fontSize": "24px",
+            "fontWeight": "500",
+            "letterSpacing": "0px",
+            "lineHeight": "32px"
+          }
+        },
+        "xl": {
+          "heading": {
+            "fontFamily": ["halyard-display", "Inter"],
+            "fontSize": "20px",
+            "fontWeight": "500",
+            "letterSpacing": "0px",
+            "lineHeight": "32px"
+          }
+        },
+        "l": {
+          "strong": {
+            "fontFamily": ["halyard-display", "Inter"],
+            "fontSize": "18px",
+            "fontWeight": "500",
+            "letterSpacing": "0px",
+            "lineHeight": "28px"
+          },
+          "midi": {
+            "fontFamily": ["halyard-display", "Inter"],
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "letterSpacing": "0px",
+            "lineHeight": "28px"
+          },
+          "body": {
+            "fontFamily": ["halyard-display", "Inter"],
+            "fontSize": "18px",
+            "fontWeight": "300",
+            "letterSpacing": "0px",
+            "lineHeight": "28px"
+          }
+        },
+        "m": {
+          "strong": {
+            "fontFamily": ["halyard-display", "Inter"],
+            "fontSize": "16px",
+            "fontWeight": "500",
+            "letterSpacing": "0px",
+            "lineHeight": "24px"
+          },
+          "midi": {
+            "fontFamily": ["halyard-display", "Inter"],
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "letterSpacing": "0px",
+            "lineHeight": "24px"
+          },
+          "body": {
+            "fontFamily": ["halyard-display", "Inter"],
+            "fontSize": "16px",
+            "fontWeight": "300",
+            "letterSpacing": "0px",
+            "lineHeight": "24px"
+          }
+        },
+        "s": {
+          "strong": {
+            "fontFamily": ["halyard-display", "Inter"],
+            "fontSize": "14px",
+            "fontWeight": "500",
+            "letterSpacing": "0px",
+            "lineHeight": "22px"
+          },
+          "midi": {
+            "fontFamily": ["halyard-display", "Inter"],
+            "fontSize": "14px",
+            "fontWeight": "400",
+            "letterSpacing": "0px",
+            "lineHeight": "22px"
+          },
+          "body": {
+            "fontFamily": ["halyard-display", "Inter"],
+            "fontSize": "14px",
+            "fontWeight": "300",
+            "letterSpacing": "0px",
+            "lineHeight": "22px"
+          }
+        },
+        "xs": {
+          "strong": {
+            "fontFamily": ["halyard-display", "Inter"],
+            "fontSize": "12px",
+            "fontWeight": "500",
+            "letterSpacing": "0px",
+            "lineHeight": "20px"
+          },
+          "midi": {
+            "fontFamily": ["halyard-display", "Inter"],
+            "fontSize": "12px",
+            "fontWeight": "400",
+            "letterSpacing": "0px",
+            "lineHeight": "20px"
+          },
+          "body": {
+            "fontFamily": ["halyard-display", "Inter"],
+            "fontSize": "12px",
+            "fontWeight": "300",
+            "letterSpacing": "0px",
+            "lineHeight": "20px"
+          }
+        },
+        "2xs": {
+          "strong": {
+            "fontFamily": ["halyard-display", "Inter"],
+            "fontSize": "10px",
+            "fontWeight": "600",
+            "letterSpacing": "5%",
+            "lineHeight": "20px",
+            "textTransform": "uppercase"
+          }
+        }
+      }
+    }
+  }
+}

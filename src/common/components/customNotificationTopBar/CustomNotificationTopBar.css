@@ -1,0 +1,24 @@
+.CustomNotificationTopBar_container {
+  background-color: var(--color-primary);
+  width: 100%;
+  position: sticky;
+  height: fit-content;
+  inset: 0;
+  padding: 6px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+  z-index: 1000;
+  box-sizing: border-box;
+}
+.CustomNotificationTopBar_close_btn {
+  cursor: pointer;
+  filter: brightness(2);
+}
+.CustomNotificationTopBar_text {
+  font-size: 14px;
+  color: var(--color-white);
+  text-align: center;
+  flex: 1;
+}

@@ -1,0 +1,364 @@
+{
+  "version": 1,
+  "settings": {
+    "fontUrl": ["https://public-assets.os.wpp.com/fonts/dm-serif-display/index.css", "https://public-assets.os.wpp.com/fonts/open-sans/index.css", "https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900"]
+  },
+  "content": {
+    "light": {
+      "color": {
+        "primary": {
+          "100": "#f9e1ff",
+          "200": "#f4c2ff",
+          "300": "#eb94fe",
+          "400": "#d934fe",
+          "500": "#C301F1",
+          "600": "#8901A8",
+          "700": "#68017F",
+          "800": "#4B005B"
+        },
+        "success": {
+          "200": "#d8fef3",
+          "400": "#0CA177",
+          "500": "#05835F"
+        },
+        "warning": {
+          "200": "#FFF4EE",
+          "400": "#d7672f",
+          "500": "#bd4b12"
+        },
+        "danger": {
+          "200": "#fed6df",
+          "300": "#fdbecd",
+          "400": "#d72f56",
+          "500": "#bd123a",
+          "600": "#A10227"
+        },
+        "grey": {
+          "100": "#F6F6F6",
+          "200": "#f2f2f2",
+          "300": "#E8E8E8",
+          "400": "#C6C6C6",
+          "500": "#A8A8A8",
+          "600": "#929292",
+          "700": "#6F6F6F",
+          "800": "#525252",
+          "900": "#393939",
+          "1000": "#161616",
+          "000": "#FFFFFF"
+        },
+        "highlight": {
+          "200": "rgba(250, 204, 21, 0.4)",
+          "400": "#facc15"
+        },
+        "brand": {
+          "default": "color.primary.500",
+          "disabled": "color.primary.300",
+          "hover": "color.primary.400",
+          "active": "color.primary.600"
+        },
+        "dataviz": {
+          "cat": {
+            "dark": {
+              "1": "#ab2ac8",
+              "2": "#bd123a",
+              "3": "#bd4b12",
+              "4": "#CA8A04",
+              "5": "#16A34A",
+              "6": "#1DBD90",
+              "7": "#0D9EC3",
+              "8": "#185ab0",
+              "9": "#4d27bd",
+              "10": "#53574f"
+            },
+            "light": {
+              "1": "#f3c4fd",
+              "2": "#fdbecd",
+              "3": "#fdd3be",
+              "4": "#fef08a",
+              "5": "#bbf7d0",
+              "6": "#c1fdec",
+              "7": "#b2f2ff",
+              "8": "#c4ddfd",
+              "9": "#d2c4fd",
+              "10": "#dddfe1"
+            },
+            "neutral": {
+              "1": "#d56bed",
+              "2": "#ea587a",
+              "3": "#ea8958",
+              "4": "#facc15",
+              "5": "#4ade80",
+              "6": "#61eac3",
+              "7": "#42cff3",
+              "8": "#4587dd",
+              "9": "#8a6aea",
+              "10": "#879493"
+            }
+          },
+          "seq": {
+            "brand": {
+              "100": "#fceeff",
+              "200": "#f7d9fe",
+              "300": "#f3c4fd",
+              "400": "#e697f8",
+              "500": "#d56bed",
+              "600": "#c145dd",
+              "700": "#ab2ac8",
+              "800": "#9518b0",
+              "900": "#7F0F98",
+              "1000": "#6A0B80"
+            },
+            "grey": {
+              "100": "#f9faf9",
+              "200": "#f0f2f2",
+              "300": "#dddfe1",
+              "400": "#b7bdbe",
+              "500": "#879493",
+              "600": "#69726c",
+              "700": "#53574f",
+              "800": "#3f413c",
+              "900": "#2b2b2a",
+              "1000": "#1a1a1b"
+            },
+            "negative": {
+              "100": "#ffeef2",
+              "200": "#fed6df",
+              "300": "#fdbecd",
+              "400": "#f68aa3",
+              "500": "#ea587a",
+              "600": "#d72f56",
+              "700": "#bd123a",
+              "800": "#A10227",
+              "900": "#83001F",
+              "1000": "#660018"
+            },
+            "warning": {
+              "100": "#fff4ee",
+              "200": "#fee3d6",
+              "300": "#fdd3be",
+              "400": "#f6ae8a",
+              "500": "#ea8958",
+              "600": "#d7672f",
+              "700": "#bd4b12",
+              "800": "#A13702",
+              "900": "#832C00",
+              "1000": "#662200"
+            },
+            "positive": {
+              "100": "#eefffa",
+              "200": "#d8fef3",
+              "300": "#c1fdec",
+              "400": "#90f6d9",
+              "500": "#61eac3",
+              "600": "#39d7aa",
+              "700": "#1dbd90",
+              "800": "#0CA177",
+              "900": "#05835F",
+              "1000": "#03664A"
+            }
+          }
+        },
+        "white": "color.grey.000"
+      },
+      "border": {
+        "radius": {
+          "xs": "0px",
+          "s": "0px",
+          "m": "0px",
+          "l": "0px",
+          "xl": "20px",
+          "round": "64px"
+        },
+        "width": {
+          "s": "1px",
+          "m": "2px",
+          "l": "3px"
+        }
+      },
+      "boxShadow": {
+        "xs": "0px 1px 4px 0px rgba(57, 57, 57, 0.12)",
+        "s": "0px 0px 1px 0px rgba(57, 57, 57, 0.1), 0px 1px 5px 0px rgba(57, 57, 57, 0.12)",
+        "m": "0px 1px 4px 0px rgba(57, 57, 57, 0.05), 0px 4px 12px 0px rgba(57, 57, 57, 0.12)",
+        "brand": "0px 4px 12px 0px rgba(195, 1, 241, 0.3)",
+        "l": "0px 8px 32px 0px rgba(57, 57, 57, 0.05)"
+      },
+      "font": {
+        "family": ["DM Serif Display", "Open Sans", "Inter"]
+      },
+      "icon": {
+        "color": {
+          "default": "color.grey.600",
+          "disabled": "color.grey.400",
+          "hover": "color.grey.800",
+          "active": "color.grey.900"
+        }
+      },
+      "text": {
+        "color": {
+          "default": "color.grey.1000",
+          "whiteInfo": "color.grey.200",
+          "disabled": "color.grey.500",
+          "danger": "color.danger.500",
+          "warning": "color.warning.500",
+          "success": "color.success.500",
+          "info": "color.grey.800"
+        }
+      },
+      "surface": {
+        "bgColor": "color.grey.100"
+      },
+      "overlay": {
+        "bgColor": "rgba(82, 82, 82, 0.6)"
+      },
+      "typography": {
+        "5xl": {
+          "display": {
+            "fontFamily": ["DM Serif Display", "Inter"],
+            "fontSize": "48px",
+            "fontWeight": "400",
+            "letterSpacing": "0px",
+            "lineHeight": "62px"
+          }
+        },
+        "4xl": {
+          "display": {
+            "fontFamily": ["DM Serif Display", "Inter"],
+            "fontSize": "36px",
+            "fontWeight": "400",
+            "letterSpacing": "0px",
+            "lineHeight": "48px"
+          }
+        },
+        "3xl": {
+          "heading": {
+            "fontFamily": ["Open Sans", "Inter"],
+            "fontSize": "28px",
+            "fontWeight": "700",
+            "letterSpacing": "0px",
+            "lineHeight": "40px"
+          }
+        },
+        "2xl": {
+          "heading": {
+            "fontFamily": ["Open Sans", "Inter"],
+            "fontSize": "24px",
+            "fontWeight": "700",
+            "letterSpacing": "0px",
+            "lineHeight": "32px"
+          }
+        },
+        "xl": {
+          "heading": {
+            "fontFamily": ["Open Sans", "Inter"],
+            "fontSize": "20px",
+            "fontWeight": "700",
+            "letterSpacing": "0px",
+            "lineHeight": "32px"
+          }
+        },
+        "l": {
+          "strong": {
+            "fontFamily": ["Open Sans", "Inter"],
+            "fontSize": "18px",
+            "fontWeight": "700",
+            "letterSpacing": "0px",
+            "lineHeight": "28px"
+          },
+          "midi": {
+            "fontFamily": ["Open Sans", "Inter"],
+            "fontSize": "18px",
+            "fontWeight": "600",
+            "letterSpacing": "0px",
+            "lineHeight": "28px"
+          },
+          "body": {
+            "fontFamily": ["Open Sans", "Inter"],
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "letterSpacing": "0px",
+            "lineHeight": "28px"
+          }
+        },
+        "m": {
+          "strong": {
+            "fontFamily": ["Open Sans", "Inter"],
+            "fontSize": "16px",
+            "fontWeight": "700",
+            "letterSpacing": "0px",
+            "lineHeight": "24px"
+          },
+          "midi": {
+            "fontFamily": ["Open Sans", "Inter"],
+            "fontSize": "16px",
+            "fontWeight": "600",
+            "letterSpacing": "0px",
+            "lineHeight": "24px"
+          },
+          "body": {
+            "fontFamily": ["Open Sans", "Inter"],
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "letterSpacing": "0px",
+            "lineHeight": "24px"
+          }
+        },
+        "s": {
+          "strong": {
+            "fontFamily": ["Open Sans", "Inter"],
+            "fontSize": "14px",
+            "fontWeight": "700",
+            "letterSpacing": "0px",
+            "lineHeight": "22px"
+          },
+          "midi": {
+            "fontFamily": ["Open Sans", "Inter"],
+            "fontSize": "14px",
+            "fontWeight": "600",
+            "letterSpacing": "0px",
+            "lineHeight": "22px"
+          },
+          "body": {
+            "fontFamily": ["Open Sans", "Inter"],
+            "fontSize": "14px",
+            "fontWeight": "400",
+            "letterSpacing": "0px",
+            "lineHeight": "22px"
+          }
+        },
+        "xs": {
+          "strong": {
+            "fontFamily": ["Open Sans", "Inter"],
+            "fontSize": "12px",
+            "fontWeight": "700",
+            "letterSpacing": "0px",
+            "lineHeight": "20px"
+          },
+          "midi": {
+            "fontFamily": ["Open Sans", "Inter"],
+            "fontSize": "12px",
+            "fontWeight": "600",
+            "letterSpacing": "0px",
+            "lineHeight": "20px"
+          },
+          "body": {
+            "fontFamily": ["Open Sans", "Inter"],
+            "fontSize": "12px",
+            "fontWeight": "400",
+            "letterSpacing": "0px",
+            "lineHeight": "20px"
+          }
+        },
+        "2xs": {
+          "strong": {
+            "fontFamily": ["Open Sans", "Inter"],
+            "fontSize": "10px",
+            "fontWeight": "700",
+            "letterSpacing": "5%",
+            "lineHeight": "20px",
+            "textTransform": "uppercase"
+          }
+        }
+      }
+    }
+  }
+}

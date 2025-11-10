@@ -1,0 +1,147 @@
+.dict_report_header {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  background-color: var(--color-bg);
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.dict_report_header .title {
+  font-size: 2.8rem;
+  font-weight: 400;
+  margin: 1.5rem 0;
+}
+
+.dict_report_container {
+  background-color: var(--color-secondary);
+  border-radius: 10px;
+  padding: 25px 15px 20px;
+  margin-top: 15px;
+}
+
+.dict_report_header {
+  font-size: 22px;
+  font-weight: 600;
+  text-align: center;
+  margin: 30px 0px 40px;
+}
+
+.pronunciation_audio_container {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 111111111;
+  display: none;
+}
+
+.dict_report_modal_sub_header {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  text-align: center;
+  color: var(--color-white);
+  margin: 10px 0px 35px 0px;
+}
+
+.dict_report_data_row {
+  display: flex;
+  margin: 0px 15px;
+  align-items: center;
+  justify-content: center;
+  width: max-content;
+}
+
+.dict_report_delete_icon {
+  width: 22px;
+  height: 22px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.action_header {
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--color-white);
+  padding-left: 5px;
+}
+
+.dict_report_data_container {
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  /* min-height: 40vh; */
+}
+
+.dict_report_data_container_inner {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 260px);
+}
+
+.dict_report_divider {
+  width: 1250px;
+}
+
+.dict_report_data_header .ogWord_header {
+  width: 205px;
+}
+.dict_report_data_header .formatted_word_header {
+  width: 200px;
+}
+.dict_report_data_header .language_header {
+  width: 210px;
+}
+.dict_report_data_header .editor_header {
+  width: 180px;
+}
+.dict_report_data_header .action_header {
+  width: 90px;
+}
+.dict_report_action_btn_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dict_report_save_btn {
+  height: 28px;
+  width: 60px;
+  margin: 0px 6px;
+}
+
+.dict_report_btn_container {
+  width: 100%;
+  text-align: right;
+  margin-top: 15px;
+}
+
+.dict_report_header .BrandFilter {
+  margin-left: 20px;
+}
+
+.dict_report_header .BrandFilter select {
+  padding: 8px;
+  border: 1px solid white;
+  border-radius: 3px;
+  font-size: 14px;
+  background-color: #333;
+  /* color: #333; */
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.dict_report_header .BrandFilter select:hover {
+  border-color: #333;
+}
+
+.dict_report_header .BrandFilter select option {
+  padding: 10px;
+  font-size: 14px;
+}
+
+@media only screen and (max-width: 1100px) {
+  .dict_report_divider {
+    width: 1085px;
+  }
+}

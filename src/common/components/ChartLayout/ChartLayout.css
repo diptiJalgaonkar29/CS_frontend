@@ -1,0 +1,31 @@
+.chart_layout_container {
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.24), 0px 0px 16px rgba(0, 0, 0, 0.12);
+  border-radius: 5px;
+  color: black;
+  box-sizing: border-box;
+  /* height: 100%; */
+  height: calc(100% - 80px);
+  background-color: var(--color-secondary);
+}
+
+.chart_layout_container .date_range {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--color-white);
+  padding: 20px 30px 10px;
+  margin: 0;
+}
+
+.chart_layout_container .label {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  margin: 5px 30px 30px;
+  color: var(--color-white);
+}
+
+.chart_layout_container.top-10-moods .label,
+.chart_layout_container.top-10-genres .label {
+  margin: 5px 30px 0px;
+}

@@ -1,0 +1,30 @@
+.page_delete_menu {
+  /* background-color: var(--color-secondary); */
+  color: var(--color-white);
+  /* margin: 20px 40px 10px; */
+  max-height: 100%;
+  width: auto;
+  text-align: center;
+}
+
+.page_delete_menu .page_delete_content {
+  margin-top: 0px;
+  font-size: 16px;
+  width: 90%;
+  line-height: 22px;
+  margin: auto;
+}
+.delete_modal_project_name {
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 600;
+  margin: 0 6px 0 2px;
+  /* word-break: break-all; */
+}
+
+.page_delete_menu .page_delete_menu_btns {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin: 30px 0;
+}

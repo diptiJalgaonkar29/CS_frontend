@@ -1,0 +1,22 @@
+.sonic_tab_title {
+  font-size: 1.6rem !important;
+  font-family: var(--font-primary) !important;
+}
+
+.sonic_tab_title.MuiTab-textColorInherit.MuiTab-root {
+  background-color: transparent;
+  border-radius: 40px;
+  border: 1px solid var(--color-white);
+  min-height: 40px !important;
+  padding: 0 !important;
+  text-transform: none !important;
+  color: var(--color-white) !important;
+}
+
+.sonic_tab_title.MuiTab-textColorInherit.MuiTab-root.Mui-selected {
+  background-color: var(--color-primary);
+  border-radius: 40px;
+  border: 1px solid transparent !important;
+  flex: 1 !important;
+  max-width: none !important;
+}

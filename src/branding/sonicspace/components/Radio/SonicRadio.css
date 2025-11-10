@@ -1,0 +1,66 @@
+.SonicRadio_container [type="radio"]:checked,
+.SonicRadio_container [type="radio"]:not(:checked) {
+  position: absolute;
+  left: -9999px;
+}
+.SonicRadio_container [type="radio"]:checked + label,
+.SonicRadio_container [type="radio"]:not(:checked) + label {
+  position: relative;
+  padding-left: 25px;
+  cursor: pointer;
+  line-height: 18px;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  color: var(--color-white);
+}
+.SonicRadio_container [type="radio"]:checked + label:before,
+.SonicRadio_container [type="radio"]:not(:checked) + label:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 14px;
+  height: 14px;
+  border: 1px solid var(--color-white);
+  border-radius: 100%;
+  background: transparent;
+}
+
+.SonicRadio_container [type="radio"]:checked + label:before {
+  border: 1px solid var(--color-primary);
+}
+
+.SonicRadio_container [type="radio"]:checked + label:after,
+.SonicRadio_container [type="radio"]:not(:checked) + label:after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background: var(--color-primary);
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  border-radius: 100%;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.SonicRadio_container [type="radio"]:not(:checked) + label:after {
+  opacity: 0;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+}
+.SonicRadio_container [type="radio"]:checked + label:after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+.SonicRadio_container [type="radio"]:disabled + label {
+  cursor: not-allowed;
+  pointer-events: all !important;
+  color: var(--color-secondary-shade11);
+}
+
+.SonicRadio_container [type="radio"]:disabled + label:before {
+  border: 1px solid var(--color-secondary-shade11);
+}

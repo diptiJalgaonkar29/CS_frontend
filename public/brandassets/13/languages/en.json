@@ -1,0 +1,64 @@
+{
+  "app": {
+    "document": {
+      "title": "Vodafone Creation Station"
+    }
+  },
+  "home": {
+    "page": {
+      "titleSubtext": "Welcome to ",
+      "titleSubtextHighlight": "CREATION STATION",
+      "onlyVoiceTitleSubtextHighlight": "VOICES STATION",
+      "onlyMusicTitleSubtextHighlight": "MUSIC STATION",
+      "titleV2": "Creation Station",
+      "subtitleV2": "Turn ideas into original soundtracks and natural speech with AI",
+      "onlyVoiceSubtitleV2": "Turn ideas into natural speech with AI",
+      "onlyMusicSubtitleV2": "Turn ideas into original soundtracks with AI"
+    }
+  },
+  "navbar": {
+    "navItems": {
+      "Home": "Home",
+      "sonicSpaceHome": "Sonic Hub Home",
+      "workSpace": "Workspace",
+      "myProject": "My Projects",
+      "creationStation": "Creation Station (AI)",
+      "Predict": "Predict",
+      "Monitor": "Monitor",
+      "onlyVoiceCreationStation": "Voices Space Home",
+      "onlyMusicCreationStation": "Music Space Home",
+      "logout": "Log Out",
+      "profile": "Profile",
+      "reportEnquiry": "Report / Enquiry",
+      "documents": "Guidelines"
+    }
+  },
+  "workspace": {
+    "voiceTab": {
+      "note": "Please avoid entering confidential or sensitive information into this tool. Stick to non-sensitive content for privacy and security.",
+      "placeholder": "Click the “Add Voice” button and find the perfect voice to bring your text to life!",
+      "selectVoice": {
+        "allVoicesPlaceHolder": "All Voices",
+        "genderPlaceHolder": "Gender",
+        "agePlaceHolder": "Age",
+        "languagePlaceHolder": "Language",
+        "accentPlaceHolder": "Accent",
+        "speakingStylePlaceHolder": "Style",
+        "tagPlaceHolder": "Tag"
+      }
+    },
+    "AIMusicGenerator": {
+      "title": "AI Music Generator",
+      "subtitle": "Unleash the perfect soundtrack for your projects in seconds! Whether you’re creating content for social media, vlogs, or professional projects, you’ll always have the perfect tune to match the vibe.",
+      "optionSelectionTitle": "Select the option to start generating the perfect music for your project",
+      "GenerateMusicWithVideoTitle": "Generate Music That Fits Your Video",
+      "GenerateMusicWithVideoSubtitle": "This tool analyses your video’s style and mood, then uses advanced AI to create custom music that fits seamlessly with the visuals.",
+      "GenerateMusicWithBriefTitle": "Use a brief",
+      "GenerateMusicWithBriefSubtitle": "Provide a brief or a set of keywords, and our AI will generate custom music that perfectly matches the style and mood you're looking for.",
+      "GenerateMusicWithTagsTitle": "Compose with AI",
+      "GenerateMusicWithTagsSubtitle": "Craft the ideal music for your project by simply selecting the genre, mood, and tempo you want. ",
+      "BackBtn": "Back To Home",
+      "ProcessingText": "AI analysis will take some time to process. You can explore other projects meanwhile."
+    }
+  }
+}

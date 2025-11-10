@@ -1,0 +1,364 @@
+{
+  "version": 1,
+  "settings": {
+    "fontUrl": ["https://public-assets.os.wpp.com/fonts/ogilvy-sans/index.css", "https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900"]
+  },
+  "content": {
+    "light": {
+      "color": {
+        "primary": {
+          "100": "#FDE8E8",
+          "200": "#FACCCD",
+          "300": "#F7B0B2",
+          "400": "#F07072",
+          "500": "#EB3F43",
+          "600": "#AF1215",
+          "700": "#810D0F",
+          "800": "#4F0809"
+        },
+        "success": {
+          "200": "#EEF0DB",
+          "400": "#68A04B",
+          "500": "#3C6A1C"
+        },
+        "warning": {
+          "200": "#FCFBF7",
+          "400": "#B4642B",
+          "500": "#97491C"
+        },
+        "danger": {
+          "200": "#FAF0F0",
+          "300": "#F8D0D6",
+          "400": "#D25277",
+          "500": "#B83858",
+          "600": "#902A40"
+        },
+        "grey": {
+          "100": "#F6F6F6",
+          "200": "F2F2F2",
+          "300": "#E8E8E8",
+          "400": "#C6C6C6",
+          "500": "#A8A8A8",
+          "600": "#939393",
+          "700": "#6F6F6F",
+          "800": "#525252",
+          "900": "#393939",
+          "1000": "#161616",
+          "000": "#FFFFFF"
+        },
+        "highlight": {
+          "200": "rgba(250, 204, 21, 0.4)",
+          "400": "#FACC15"
+        },
+        "brand": {
+          "default": "color.primary.500",
+          "disabled": "color.primary.300",
+          "hover": "color.primary.400",
+          "active": "color.primary.600"
+        },
+        "dataviz": {
+          "cat": {
+            "dark": {
+              "1": "#B3252A",
+              "2": "#97491C",
+              "3": "#6C5816",
+              "4": "#3c6a1c",
+              "5": "#2c6963",
+              "6": "#3a5ba6",
+              "7": "#554ccc",
+              "8": "#7b43b3",
+              "9": "#b03877",
+              "10": "#53574f"
+            },
+            "light": {
+              "1": "#fdc4c6",
+              "2": "#f3d9ac",
+              "3": "#ebdea0",
+              "4": "#d7e3b0",
+              "5": "#bbe2e7",
+              "6": "#bfdff5",
+              "7": "#cbd9fa",
+              "8": "#e0d5f6",
+              "9": "#f2d1ea",
+              "10": "#dddfe1"
+            },
+            "neutral": {
+              "1": "#e6686c",
+              "2": "#ce854a",
+              "3": "#a8923e",
+              "4": "#68a04b",
+              "5": "#49a2a3",
+              "6": "#5e98d2",
+              "7": "#808de6",
+              "8": "#ae84d8",
+              "9": "#dc77b2",
+              "10": "#879493"
+            }
+          },
+          "seq": {
+            "brand": {
+              "100": "#ffeeef",
+              "200": "#fed9da",
+              "300": "#fdc4c6",
+              "400": "#f59699",
+              "500": "#e6686c",
+              "600": "#d04146",
+              "700": "#b3252a",
+              "800": "#911418",
+              "900": "#6ebe",
+              "1000": "#4d79"
+            },
+            "grey": {
+              "100": "#f9faf9",
+              "200": "#f0f2f2",
+              "300": "#dddfe1",
+              "400": "#b7bdbe",
+              "500": "#879493",
+              "600": "#69726c",
+              "700": "#53574f",
+              "800": "#3f413c",
+              "900": "#2b2b2a",
+              "1000": "#1a1a1b"
+            },
+            "negative": {
+              "100": "#fcfcfa",
+              "200": "#faf0f0",
+              "300": "#f5d1e0",
+              "400": "#e8a6bf",
+              "500": "#e27698",
+              "600": "#d25277",
+              "700": "#b83858",
+              "800": "#902a40",
+              "900": "#661d2a",
+              "1000": "#3d1217"
+            },
+            "warning": {
+              "100": "#fcfbf7",
+              "200": "#f9f0d7",
+              "300": "#f3d9ac",
+              "400": "#e1b278",
+              "500": "#ce854a",
+              "600": "#b4642b",
+              "700": "#97491c",
+              "800": "#733717",
+              "900": "#4f2612",
+              "1000": "#32170C"
+            },
+            "positive": {
+              "100": "#f7f8f4",
+              "200": "#eef0db",
+              "300": "#d7e3b0",
+              "400": "#a9c47b",
+              "500": "#68a04b",
+              "600": "#4b822a",
+              "700": "#3c6a1c",
+              "800": "#315018",
+              "900": "#223614",
+              "1000": "#17210F"
+            }
+          }
+        },
+        "white": "color.grey.000"
+      },
+      "border": {
+        "radius": {
+          "xs": "2px",
+          "s": "0px",
+          "m": "0px",
+          "l": "0px",
+          "xl": "20px",
+          "round": "64px"
+        },
+        "width": {
+          "s": "1px",
+          "m": "2px",
+          "l": "3px"
+        }
+      },
+      "boxShadow": {
+        "xs": "0px 1px 4px 0px rgba(57, 57, 57, 0.12)",
+        "s": "0px 0px 1px 0px rgba(57, 57, 57, 0.1), 0px 1px 5px 0px rgba(57, 57, 57, 0.1)",
+        "m": "0px 1px 4px 0px rgba(57, 57, 57, 0.05), 0px 4px 12px 0px rgba(57, 57, 57, 0.12)",
+        "brand": "0px 4px 12px 0px rgba(235, 63, 67, 0.3)",
+        "l": "0px 8px 32px 0px rgba(57, 57, 57, 0.05)"
+      },
+      "font": {
+        "family": ["Ogilvy Sans", "Inter"]
+      },
+      "icon": {
+        "color": {
+          "default": "color.grey.600",
+          "disabled": "color.grey.400",
+          "hover": "color.grey.800",
+          "active": "color.grey.900"
+        }
+      },
+      "text": {
+        "color": {
+          "default": "color.grey.1000",
+          "whiteInfo": "color.grey.200",
+          "disabled": "color.grey.500",
+          "danger": "color.danger.500",
+          "warning": "color.warning.500",
+          "success": "color.success.500",
+          "info": "color.grey.800"
+        }
+      },
+      "surface": {
+        "bgColor": "color.grey.100"
+      },
+      "overlay": {
+        "bgColor": "rgba(82, 82, 82, 0.6)"
+      },
+      "typography": {
+        "5xl": {
+          "display": {
+            "fontFamily": ["Ogilvy Sans", "Inter"],
+            "fontSize": "48px",
+            "fontWeight": "600",
+            "letterSpacing": "0px",
+            "lineHeight": "62px"
+          }
+        },
+        "4xl": {
+          "display": {
+            "fontFamily": ["Ogilvy Sans", "Inter"],
+            "fontSize": "36px",
+            "fontWeight": "600",
+            "letterSpacing": "0px",
+            "lineHeight": "48px"
+          }
+        },
+        "3xl": {
+          "heading": {
+            "fontFamily": ["Ogilvy Sans", "Inter"],
+            "fontSize": "28px",
+            "fontWeight": "600",
+            "letterSpacing": "0px",
+            "lineHeight": "40px"
+          }
+        },
+        "2xl": {
+          "heading": {
+            "fontFamily": ["Ogilvy Sans", "Inter"],
+            "fontSize": "24px",
+            "fontWeight": "600",
+            "letterSpacing": "0px",
+            "lineHeight": "32px"
+          }
+        },
+        "xl": {
+          "heading": {
+            "fontFamily": ["Ogilvy Sans", "Inter"],
+            "fontSize": "20px",
+            "fontWeight": "600",
+            "letterSpacing": "0px",
+            "lineHeight": "32px"
+          }
+        },
+        "l": {
+          "strong": {
+            "fontFamily": ["Ogilvy Sans", "Inter"],
+            "fontSize": "18px",
+            "fontWeight": "600",
+            "letterSpacing": "0px",
+            "lineHeight": "28px"
+          },
+          "midi": {
+            "fontFamily": ["Ogilvy Sans", "Inter"],
+            "fontSize": "18px",
+            "fontWeight": "500",
+            "letterSpacing": "0px",
+            "lineHeight": "28px"
+          },
+          "body": {
+            "fontFamily": ["Ogilvy Sans", "Inter"],
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "letterSpacing": "0px",
+            "lineHeight": "28px"
+          }
+        },
+        "m": {
+          "strong": {
+            "fontFamily": ["Ogilvy Sans", "Inter"],
+            "fontSize": "16px",
+            "fontWeight": "600",
+            "letterSpacing": "0px",
+            "lineHeight": "24px"
+          },
+          "midi": {
+            "fontFamily": ["Ogilvy Sans", "Inter"],
+            "fontSize": "16px",
+            "fontWeight": "500",
+            "letterSpacing": "0px",
+            "lineHeight": "24px"
+          },
+          "body": {
+            "fontFamily": ["Ogilvy Sans", "Inter"],
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "letterSpacing": "0px",
+            "lineHeight": "24px"
+          }
+        },
+        "s": {
+          "strong": {
+            "fontFamily": ["Ogilvy Sans", "Inter"],
+            "fontSize": "14px",
+            "fontWeight": "600",
+            "letterSpacing": "0px",
+            "lineHeight": "22px"
+          },
+          "midi": {
+            "fontFamily": ["Ogilvy Sans", "Inter"],
+            "fontSize": "14px",
+            "fontWeight": "500",
+            "letterSpacing": "0px",
+            "lineHeight": "22px"
+          },
+          "body": {
+            "fontFamily": ["Ogilvy Sans", "Inter"],
+            "fontSize": "14px",
+            "fontWeight": "400",
+            "letterSpacing": "0px",
+            "lineHeight": "22px"
+          }
+        },
+        "xs": {
+          "strong": {
+            "fontFamily": ["Ogilvy Sans", "Inter"],
+            "fontSize": "12px",
+            "fontWeight": "600",
+            "letterSpacing": "0px",
+            "lineHeight": "20px"
+          },
+          "midi": {
+            "fontFamily": ["Ogilvy Sans", "Inter"],
+            "fontSize": "12px",
+            "fontWeight": "500",
+            "letterSpacing": "0px",
+            "lineHeight": "20px"
+          },
+          "body": {
+            "fontFamily": ["Ogilvy Sans", "Inter"],
+            "fontSize": "12px",
+            "fontWeight": "400",
+            "letterSpacing": "0px",
+            "lineHeight": "20px"
+          }
+        },
+        "2xs": {
+          "strong": {
+            "fontFamily": ["Ogilvy Sans", "Inter"],
+            "fontSize": "10px",
+            "fontWeight": "700",
+            "letterSpacing": "5%",
+            "lineHeight": "20px",
+            "textTransform": "uppercase"
+          }
+        }
+      }
+    }
+  }
+}

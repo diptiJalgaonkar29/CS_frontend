@@ -1,0 +1,22 @@
+.custom_popover_content_container .MuiPopover-paper {
+  background-color: var(--color-secondary);
+  border: 1px solid var(--color-white);
+  padding: 15px 10px;
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--color-white);
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.custom_popover_content_container .MuiMenuItem-root {
+  font-size: 16px !important;
+  color: var(--color-icon);
+  padding: 0px 20px;
+}
+
+.custom_popover_content_container .MuiDivider-root {
+  background-color: #4d4d4d !important;
+  width: 90% !important;
+  margin: 0 auto;
+}

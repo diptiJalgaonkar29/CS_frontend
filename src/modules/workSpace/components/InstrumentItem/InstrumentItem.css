@@ -1,0 +1,106 @@
+.instrument_title {
+  font-size: 16px;
+  color: var(--color-white);
+  width: 90px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.instrument-ctrlbtn {
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+}
+
+.instrument-wave {
+  flex: 1;
+  position: relative;
+}
+
+.instrument_wave_spinner_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+}
+
+.close_icon {
+  width: 12px;
+  height: 12px;
+  cursor: pointer;
+}
+
+.instrument_volume_slider_wrapper {
+  position: relative;
+}
+
+.instrument_volume_slider_container {
+  width: 180px;
+  position: absolute;
+  right: -98px;
+  top: -120px;
+  transform: rotate(90deg);
+  background: rgba(0, 0, 0, 0.9);
+  height: 85px;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 10px 0px 10px 6px;
+  border-radius: 10px;
+  /* z-index: 10; */
+}
+
+.instrument_volume_slider_container .SonicSliderInput {
+  min-height: 30px;
+  height: 30px;
+  transform: rotate(180deg);
+}
+
+.instrument_volume_speaker_icon {
+  font-size: 22px;
+  cursor: pointer;
+  position: relative;
+}
+
+.MuiTooltip-tooltip:has(.instrument_volume_slider_container) {
+  background-color: transparent !important;
+  border: none !important;
+}
+
+.instrument_volume_slider_container .SonicSliderInput + datalist {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  writing-mode: sideways-lr;
+  width: 135px;
+  position: absolute;
+  top: 5px;
+  left: 8px;
+  pointer-events: none;
+}
+
+.instrument_volume_slider_container .SonicSliderInput + datalist option {
+  padding: 0;
+  font-size: 10px;
+}
+
+.instrument_volume_slider_container .instrument_volume_speaker_icon {
+  position: relative;
+  top: -4px;
+  left: 0px;
+  rotate: -90deg;
+}
+
+.instrument_volume_slider_container .slider_value_tooltip {
+  color:var(--color-white);
+  position: absolute;
+  font-size: 14px;
+  top: 15px;
+    right: 5px;
+  rotate: -90deg;
+  width: 25px;
+  height: 16px;
+}

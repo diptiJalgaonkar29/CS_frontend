@@ -1,0 +1,36 @@
+.MusicGenerationformContainer {
+  border-radius: 12px;
+  padding-bottom: 10px;
+}
+
+.MusicGenerationformContainer .musicForm {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.MusicGenerationformContainer .attachSection {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.MusicGenerationformContainer .fileUploads {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.MusicGenerationformContainer .SonicInputLabel {
+  font-size: 16px;
+}
+
+.MusicGenerationformContainer .field-error {
+  color: var(--color-error);
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.MusicGenerationformContainer .sonicButton.filled{
+  width: 100%;
+}

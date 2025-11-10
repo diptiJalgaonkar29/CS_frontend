@@ -1,0 +1,493 @@
+.wpp-typography::part(typography) {
+  color: var(--color-white);
+}
+
+.wpp-typography.brandTitle::part(typography) {
+  color: var(--color-primary);
+}
+
+.wpp-typography.title::part(typography) {
+  color: var(--color-white);
+}
+
+.wpp-typography.subtitle::part(typography) {
+  color: var(--color-white);
+  margin: 0 0 3rem 0;
+}
+
+.wpp-typography.tiplink::part(typography) {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+.wpp .CustomNotificationTopBar_text {
+  color: #fff !important;
+}
+
+.wpp .CustomNotificationTopBar_close_btn {
+  filter: invert(1) !important;
+}
+
+.wpp-pill::part(label) {
+  color: var(--color-white);
+}
+
+.wpp-pill::part(label):hover {
+  color: var(--color-white);
+}
+
+.wpp-pill.tag_amp_allmood_ids::part(pill-wrapper),
+.wpp-pill.tag_amp_mainmood_ids::part(pill-wrapper) {
+  background-color: var(--color-bubbletag-amp_allmood_ids-bg);
+  border-color: transparent;
+}
+
+.wpp-pill.tag_amp_allmood_ids::part(label),
+.wpp-pill.tag_amp_mainmood_ids::part(label) {
+  color: var(--color-bubbletag-amp_mainmood_ids-text);
+}
+
+.wpp-pill.st-tbl-sel-2::part(pill-wrapper) {
+  border-color: transparent;
+}
+
+.wpp-pill.st-tbl-sel-2::part(label) {
+  color: #fff;
+}
+
+.wpp-pill.tag_soniclogo_allmood_ids::part(pill-wrapper) {
+  background-color: var(--color-bubbletag-amp_allmood_ids-bg);
+  border-color: transparent;
+}
+
+.wpp-pill.tag_soniclogo_allmood_ids::part(label),
+.wpp-pill.tag_soniclogo_allmood_ids::part(label) {
+  color: var(--color-bubbletag-amp_mainmood_ids-text);
+}
+
+.wpp-pill.tag_genre::part(pill-wrapper) {
+  background-color: var(--color-bubbletag-genre-bg);
+  border-color: transparent;
+}
+
+.wpp-pill.tag_feelings::part(pill-wrapper) {
+  background-color: var(--color-bubbletag-feelings-bg);
+  border-color: transparent;
+}
+
+.wpp-pill.tag_tonality::part(pill-wrapper) {
+  background-color: var(--color-bubbletag-tonality-bg);
+  border-color: transparent;
+}
+
+.wpp-pill.tag_motion::part(pill-wrapper) {
+  background-color: var(--color-bubbletag-motion-bg);
+  border-color: transparent;
+}
+
+.wpp-pill.tag_impact::part(pill-wrapper) {
+  background-color: var(--color-bubbletag-impact-bg);
+  border-color: transparent;
+}
+
+.wpp-pill.tag_genre::part(label) {
+  color: var(--color-bubbletag-genre-text);
+}
+
+.wpp-pill.tag_tempo::part(pill-wrapper),
+.wpp-pill.tempo::part(pill-wrapper) {
+  background-color: var(--color-bubbletag-tempo-bg);
+  border-color: transparent;
+}
+
+.wpp-pill.tag_tempo::part(label),
+.wpp-pill.tempo::part(label) {
+  color: var(--color-bubbletag-tempo-text);
+}
+
+.wpp-pill.tag_key::part(pill-wrapper) {
+  background-color: var(--color-bubbletag-key-bg);
+  text-transform: lowercase;
+  border-color: transparent;
+}
+
+.wpp-pill.instrument_ids::part(pill-wrapper) {
+  background-color: var(--color-bubbletag-instrument-bg);
+  border-color: transparent;
+}
+
+.wpp-pill.assetTypeId::part(pill-wrapper) {
+  background-color: var(--color-bubbletag-asset_type_ids-bg);
+  border-color: transparent;
+}
+
+.wpp-modal::part(content) {
+  width: fit-content;
+  min-width: 600px;
+}
+
+.wpp-modal.voiceListModal::part(content) {
+  width: 80vw;
+  min-width: 600px;
+}
+
+.wpp-modal::part(body-wrapper) {
+  padding: 0;
+}
+
+.wpp-toggle::part(text) {
+  color: var(--color-white);
+}
+
+.wpp-toggle.checked::part(label)::before {
+  background-color: var(--color-primary);
+}
+
+.wpp-toggle.checked.--color-overtimechart-1::part(label)::before {
+  background-color: var(--color-overtimechart-1);
+}
+.wpp-toggle.checked.--color-overtimechart-2::part(label)::before {
+  background-color: var(--color-overtimechart-2);
+}
+.wpp-toggle.checked.--color-overtimechart-3::part(label)::before {
+  background-color: var(--color-overtimechart-3);
+}
+.wpp-toggle.checked.--color-overtimechart-4::part(label)::before {
+  background-color: var(--color-overtimechart-4);
+}
+.wpp-toggle.checked.--color-overtimechart-5::part(label)::before {
+  background-color: var(--color-overtimechart-5);
+}
+.wpp-toggle.checked.--color-overtimechart-6::part(label)::before {
+  background-color: var(--color-overtimechart-6);
+}
+.wpp-toggle.checked.--color-overtimechart-7::part(label)::before {
+  background-color: var(--color-overtimechart-7);
+}
+.wpp-toggle.checked.--color-overtimechart-8::part(label)::before {
+  background-color: var(--color-overtimechart-8);
+}
+.wpp-toggle.checked.--color-overtimechart-9::part(label)::before {
+  background-color: var(--color-overtimechart-9);
+}
+.wpp-toggle.checked.--color-overtimechart-10::part(label)::before {
+  background-color: var(--color-overtimechart-10);
+}
+.wpp-toggle.checked.--color-overtimechart-11::part(label)::before {
+  background-color: var(--color-overtimechart-11);
+}
+.wpp-toggle.checked.--color-overtimechart-12::part(label)::before {
+  background-color: var(--color-overtimechart-12);
+}
+.wpp-toggle.checked.--color-overtimechart-13::part(label)::before {
+  background-color: var(--color-overtimechart-13);
+}
+.wpp-toggle.checked.--color-overtimechart-14::part(label)::before {
+  background-color: var(--color-overtimechart-14);
+}
+.wpp-toggle.checked.--color-overtimechart-15::part(label)::before {
+  background-color: var(--color-overtimechart-15);
+}
+.wpp-toggle.checked.--color-overtimechart-16::part(label)::before {
+  background-color: var(--color-overtimechart-16);
+}
+.wpp-toggle.checked.--color-overtimechart-17::part(label)::before {
+  background-color: var(--color-overtimechart-17);
+}
+.wpp-toggle.checked.--color-overtimechart-18::part(label)::before {
+  background-color: var(--color-overtimechart-18);
+}
+.wpp-toggle.checked.--color-overtimechart-19::part(label)::before {
+  background-color: var(--color-overtimechart-19);
+}
+.wpp-toggle.checked.--color-overtimechart-20::part(label)::before {
+  background-color: var(--color-overtimechart-20);
+}
+
+.wpp-typography.modal_title::part(typography) {
+  color: var(--color-white);
+  width: 100%;
+  text-align: center;
+  display: block;
+}
+
+.wpp-list-item::part(label),
+.wpp-input::part(input),
+.wpp-single-select::part(placeholder),
+.wpp-datepicker::part(datepicker-input),
+.wpp-textarea-input::part(textarea) {
+  color: var(--color-white);
+}
+
+.wpp-slider {
+  width: 100% !important;
+}
+
+.wpp-icon-button::part(button) {
+  height: 28px;
+  border: #fff;
+}
+
+.wpp-datepicker::part(datepicker-container) {
+  width: 100%;
+}
+
+.wpp-input.sm::part(input) {
+  height: 28px;
+  padding-bottom: 10px;
+}
+
+.wpp-checkbox::part(text) {
+  color: var(--color-white);
+  font-size: 1.6rem;
+}
+
+.wpp-file-upload::part(text-info) {
+  display: none;
+}
+
+.wpp-icon.wpp-icon-like,
+.wpp-icon.wpp-icon-dislike {
+  cursor: pointer;
+  /* color: var(--color-secondary-shade3); */
+}
+
+.liked.wpp-icon.wpp-icon-like,
+.disliked.wpp-icon.wpp-icon-dislike {
+  cursor: pointer;
+  /* color: var(--color-primary); */
+}
+
+.wpp .navbar_img {
+  position: relative !important;
+  bottom: 3px !important;
+  max-width: 80px !important;
+}
+.wpp .navbar_left {
+  margin-right: 20px;
+}
+.app_version {
+  top: 70px !important;
+  font-size: 10px !important;
+}
+
+.project_grid_item .project_grid_asset {
+  color: #fff !important;
+}
+
+.nav-btn-right .wpp-button {
+  padding: 0 !important;
+}
+
+.brand_tag_modal_container .selection_container_block .tempo_btn.wpp-button {
+  height: auto !important;
+  width: auto !important;
+}
+
+.project_setting_wrapper .btn_container .wpp-button {
+  width: auto !important;
+}
+
+.cs_image_icon img {
+  filter: invert(1) !important;
+}
+
+#voice_add_menu .MuiMenu-paper .MuiMenuItem-root {
+  color: #000 !important;
+}
+
+.addTextBoxIcon,
+.page_delete_menu .page_delete_menu_btns .wpp-button,
+.video_uploader_btn_containerV2 .wpp-button {
+  width: auto !important;
+}
+
+.MG_container .selection_container_block .tempo_btn.wpp-button {
+  width: auto !important;
+  height: auto !important;
+}
+
+.video_uploader_confirmation_btn_containerV2 > * {
+  flex: none !important;
+}
+
+.MG_container .selection_container_block .tempo_btn.selected_tempo.wpp-button,
+.brand_tag_modal_container
+  .selection_container_block
+  .tempo_btn.selected_tempo.wpp-button,
+.ending_option_container .selected.wpp-button {
+  border: none !important;
+  outline: 1px solid var(--color-primary) !important;
+  outline-offset: 2px !important;
+  border-radius: var(--wpp-border-radius-s) !important;
+}
+
+.edit_instruments_btn *,
+.undo_redo_btn *,
+.MuiTooltip-tooltip * {
+  /* color: #fff !important; */
+  color: var(--color-white) !important;
+}
+
+.edit_instruments_btn svg {
+  stroke: #fff !important;
+}
+
+.voice_card_container .voice_card_tags_header_summary {
+  margin: 0 !important;
+}
+
+.CStoSSTransferBtn.wpp-button {
+  padding: 0 !important;
+  height: auto !important;
+  min-height: auto !important;
+}
+
+/* .loader_container.overlayBg {
+  background-color: var(--modal-overlay-bg-color) !important;
+} */
+
+.custom_progress_bar_container .parent_div {
+  background-color: #fff !important;
+}
+
+#scroll_to_top_btn {
+  stroke: #fff !important;
+}
+
+.WS_header_action_btns_container .inactiveWSBtn {
+  color: #000 !important;
+}
+.WS_header_action_btns_container .inactiveWSBtn:disabled {
+  color: var(--color-secondary-shade11) !important;
+}
+
+.home_container .create_block,
+.creationStation_homePage_wrapper .creationStation_homePage_container,
+.creationStation_homePage_wrapper .creationStation_homePage_option,
+.project_setting_container,
+.voice_placeholder,
+.upload_video_container,
+.upload_video_container .video_upload_v2 .uploaderBlock,
+.playerContainer .test,
+.inputWrapper .inputTextBox,
+.project_grid_content .img_container,
+.project_list_item .projectName_container .img_container,
+.export_container .CardContent2 .format_style,
+.export_container .CardContent1 .format_style,
+.export_container .edit_project_info_container .edit_projectName_wrapper,
+.export_container .edit_project_info_container .edit_projectDesc_wrapper,
+#project_video,
+.voice_card_container,
+.voicePage__container .search_voice_input,
+.editor_container,
+.dict_input_container,
+.project_grid_item,
+.timeline_box_container .right .slider_container {
+  border-radius: var(--wpp-border-radius-m) !important;
+}
+
+.grid_archive_btn_container {
+  top: 5px !important;
+  right: 5px !important;
+}
+
+.dict_input_container,
+.dict_input {
+  background-color: transparent !important;
+}
+
+.project_grid_item .project_grid_asset {
+  border-bottom-right-radius: var(--wpp-border-radius-m) !important;
+  border-bottom-left-radius: var(--wpp-border-radius-m) !important;
+}
+
+.inputWrapper .inputbox {
+  background-color: transparent !important;
+}
+
+.loader_container .overlay {
+  border-radius: var(--wpp-border-radius-m) !important;
+  border: 1px solid var(--color-white) !important;
+  background-color: #fff !important;
+}
+
+.MuiSlider-valueLabelLabel {
+  color: #fff !important;
+}
+
+.export_container .CardContent1 .format_style svg.video_icon {
+  filter: invert(1) !important;
+  stroke: #fff !important;
+  fill: #fff;
+}
+
+.export_container
+  .CardContent1
+  .format_style.format_style_active
+  svg.video_icon {
+  filter: none !important;
+  stroke: #fff !important;
+  fill: var(--color-primary) !important;
+}
+
+.audioRetentionPage_container .retention_radio_desc {
+  margin: 4px auto 10px 28px !important;
+}
+
+.projectSettings_radio_false_container {
+  display: flex !important;
+  gap: 10px !important;
+}
+
+.voice_card_container .voice_card_icon_small {
+  height: 20px !important;
+}
+
+.right_VoicesFilterOption_container .search_icon {
+  top: 10px !important;
+}
+
+.tooltip.voice_card_icon_large,
+.track_info_tooltip.voice_card_icon_large {
+  filter: brightness(0%) !important;
+}
+
+.voice_card_icon_large.pause_tts_icon.TTS_play_restart_Icon.wpp-icon.wpp-icon-pause,
+.voice_card_icon_large.play_tts_icon.TTS_play_restart_Icon.wpp-icon.wpp-icon-play {
+  margin-top: 3px !important;
+  scale: 1.1 !important;
+}
+
+.TTS_play_restart_Icon.loading.wpp-icon.wpp-icon-reset {
+  font-size: 20px !important;
+  width: 20px !important;
+  height: 20px !important;
+}
+
+.timeline_music_volume_slider_container .WppSliderInput,
+.timeline_voice_music_volume_slider_container .WppSliderInput,
+.timeline_voice_volume_slider_container .WppSliderInput {
+  transform: rotate(180deg);
+  pointer-events: all;
+}
+
+.wpp .BackButton_container .wpp-icon.wpp-icon-chevron {
+  color: #fff !important;
+  scale: 1.2 !important;
+}
+
+.wpp .cue_track_player_close_btn {
+  filter: brightness(0) !important;
+}
+
+.timeline_voice_volume_slider_wrapper:hover
+  .timeline_voice_volume_speaker_icon {
+  filter: invert(1) !important;
+}
+
+svg {
+  /* fill: var(--button-secondary-icon-color) !important; */
+  stroke: var(--button-secondary-icon-color) !important;
+  filter: none !important; /* Resets conflicting filters */
+}

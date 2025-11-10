@@ -1,0 +1,45 @@
+.ss_input_container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ss_input {
+  height: 45px;
+  border-radius: 25px;
+  border: 1px solid var(--color-white);
+  padding: 0px 20px;
+  font-size: 16px;
+  background-color: transparent;
+  color: var(--color-white);
+}
+
+.ss_input.sm {
+  height: 28px;
+}
+
+.ss_input.filled {
+  background-color: var(--color-white);
+  color: #000;
+  border: 1px solid transparent;
+}
+
+.shell .ss_input.invalid,
+.shell .ss_input:required:invalid,
+.ss_input.invalid,
+.ss_input:required:invalid {
+  border: 1px solid red !important;
+}
+
+/* 
+.shell .ss_input:-webkit-autofill,
+.shell .ss_input:-webkit-autofill:hover,
+.shell .ss_input:-webkit-autofill:focus,
+.shell .ss_input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px var(--color-gray-2) inset !important;
+}
+
+.shell .ss_input {
+  border: 1px solid var(--color-gray-2) !important;
+  background-color: var(--color-gray-2) !important;
+} */

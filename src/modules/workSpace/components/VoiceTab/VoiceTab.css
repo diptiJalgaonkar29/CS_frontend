@@ -1,0 +1,100 @@
+.TTS_player_audio_container {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 111111111;
+  display: none;
+}
+
+.voice_tab_container {
+  min-height: calc(100vh - 560px);
+  position: relative;
+}
+
+.voice_tab_container .voice_header {
+  background-color: var(--color-secondary);
+  width: 100%;
+  padding: 8px;
+  display: flex;
+  gap: 8px;
+}
+
+.selected_voice_container {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  padding-right: 10px;
+  cursor: pointer;
+}
+
+.selected_voice_container.no_content {
+  cursor: not-allowed !important;
+}
+
+.selected_voice_img {
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  object-fit: cover;
+  margin: 5px 10px 5px 0px;
+}
+
+.selected_voice_artistname {
+  font-size: 16px;
+  color: var(--color-white);
+}
+
+.voice_fall_back_logo_container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.voice_placeholder {
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+  font-size: 16px;
+  padding: 25px 35px;
+  max-width: 360px;
+  border-radius: 10px;
+  line-height: 24px;
+  position: relative;
+  /* margin-top: 25px; */
+}
+
+/* .voice_placeholder::before {
+  content: "";
+  background-color: transparent;
+  position: absolute;
+  top: -20px;
+  left: 20px;
+  border-bottom: 20px solid var(--color-secondary);
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+} */
+
+.voice_note {
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+  font-size: 16px;
+  padding: 25px 35px;
+  max-width: 530px;
+  border-radius: 10px;
+  line-height: 24px;
+  position: absolute;
+  bottom: 40px;
+  margin-top: 25px;
+}
+
+.SonicModal_dialog.voiceListModal .MuiPaper-root.MuiDialog-paper {
+  width: 80vw !important;
+  /* max-width: fit-content !important; */
+}
+
+.voices_action_btn_bottom_container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

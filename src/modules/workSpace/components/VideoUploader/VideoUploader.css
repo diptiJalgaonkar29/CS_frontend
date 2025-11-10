@@ -1,0 +1,45 @@
+.uploaderBlock {
+  border: solid 1px var(--color-primary);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--color-white);
+  align-items: center;
+  padding: 30px;
+  margin: 50px 0px 35px;
+  width: 350px;
+  height: 225px;
+}
+
+.uploaderBlock .uploadBtn {
+  font-size: 16px;
+  border: 1px solid white;
+  padding: 5px 10px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.uploaderBlock .title {
+  font-size: 18px;
+  margin: 5px;
+  margin-top: -5px;
+}
+
+.uploaderBlock .sub_title {
+  font-size: 16px;
+  margin: 0px;
+  text-align: center;
+}
+
+.video_uploader_btn_container {
+  margin: 20px 40px 30px;
+  text-align: center;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.upload_video_container video {
+  background-color: black;
+}

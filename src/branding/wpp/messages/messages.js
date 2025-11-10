@@ -1,0 +1,47 @@
+//addition by Trupti-Wits (textual and extra fields)
+export default {
+  app: {
+    document: {
+      title: "WPP Creation Station",
+    },
+  },
+  home: {
+    page: {
+      titleSubtext: "Welcome to ",
+      titleSubtextHighlight: "CREATION STATION",
+      onlyVoiceTitleSubtextHighlight: "VOICES STATION",
+      onlyMusicTitleSubtextHighlight: "MUSIC STATION",
+    },
+  },
+  navbar: {
+    navItems: {
+      Home: "Home",
+      sonicSpaceHome: "Sonic Hub Home",
+      workSpace: "WorkSpace",
+      myProject: "My Projects",
+      creationStation: "Creation Station (AI)",
+      onlyVoiceCreationStation: "Voices Space Home",
+      onlyMusicCreationStation: "Music Space Home",
+      logout: "Logout",
+      profile: "Profile",
+      reportEnquiry: "Report / Enquiry",
+      documents: "Guidelines",
+    },
+  },
+  workspace: {
+    voiceTab: {
+      note: "Please avoid entering confidential or sensitive information into this tool. Stick to non-sensitive content for privacy and security.",
+      placeholder:
+        "Click the “Add Voice” button and find the perfect voice to bring your text to life!",
+      selectVoice: {
+        allVoicesPlaceHolder: "All Voices",
+        genderPlaceHolder: "Gender",
+        agePlaceHolder: "Age",
+        languagePlaceHolder: "Language",
+        accentPlaceHolder: "Accent",
+        speakingStylePlaceHolder: "Style",
+        tagPlaceHolder: "Tag",
+      },
+    },
+  },
+};

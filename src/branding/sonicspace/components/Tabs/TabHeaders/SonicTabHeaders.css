@@ -1,0 +1,11 @@
+.sonic_tab_headers.MuiTabs-root {
+  min-height: 40px !important;
+}
+
+.sonic_tab_headers .MuiTabs-flexContainer {
+  gap: 10px !important;
+}
+
+.sonic_tab_headers.MuiTabs-root .MuiTabs-indicator {
+  background-color: transparent !important;
+}

@@ -1,0 +1,20 @@
+#scroll_to_top_btn {
+  stroke: var(--color-white);
+  background-color: var(--color-primary);
+  border-radius: 50px;
+  bottom: 2px;
+  cursor: pointer;
+  height: 30px;
+  padding: 8px 6px 6px;
+  position: fixed;
+  right: 2px;
+  rotate: 180deg;
+  transition: all 0.5s;
+  width: 30px;
+  z-index: 111111111;
+}
+
+#scroll_to_top_btn.hide {
+  visibility: hidden;
+  opacity: 0;
+}

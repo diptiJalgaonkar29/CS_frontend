@@ -1,0 +1,329 @@
+.TTSInputWrapper {
+  display: flex;
+}
+
+.inputTextBox {
+  flex: 1;
+  background-color: transparent;
+  font-size: 16px;
+  color: #000;
+  border: none;
+  line-height: 22px;
+  height: 80px;
+  resize: vertical;
+  box-sizing: border-box;
+  caret-color: #000;
+}
+
+.projectNameInput {
+  height: 0px !important;
+}
+
+.projectNameInputbox {
+  position: relative;
+  top: 1px;
+}
+
+.inputTextBox:focus {
+  outline: none;
+}
+
+.inputWrapper {
+  padding: 1px 0px;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  margin: 5px 0 10px;
+  position: relative;
+}
+
+.TTSInputWrapper:first-child {
+  top: 0px;
+  position: relative;
+}
+
+.sumbitTTSButton {
+  height: 30px;
+  width: 56px;
+  cursor: pointer;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: right;
+  right: 0;
+  display: flex;
+  position: absolute;
+  border: 0;
+  color: var(--color-white);
+  font-size: 16px;
+  padding: 0 36px;
+  background-color: var(--color-primary);
+  top: -45px;
+}
+
+#voice_add_menu .MuiMenu-paper {
+  background-color: var(--color-secondary) !important;
+  font-size: 16px !important;
+  border-radius: 10px !important;
+  overflow: hidden !important;
+}
+
+#voice_add_menu .MuiMenu-paper .MuiMenuItem-root {
+  font-size: 16px !important;
+  color: var(--color-icon);
+}
+
+#voice_add_menu .MuiMenu-paper .MuiDivider-root {
+  background-color: #4d4d4d !important;
+  width: 90% !important;
+  margin: 0 auto;
+}
+
+.leftTextBox {
+  width: 90%;
+}
+
+.textarea_wrapper {
+  position: relative;
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  padding: 10px 15px;
+}
+
+.inputWrapper .btn-box {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+}
+
+.removeIcon {
+  width: 20%;
+  background-color: transparent;
+  border: none;
+  height: 0;
+}
+
+.audioPlayer_btn {
+  background-color: transparent;
+  border: none;
+}
+
+.closeTextBoxIcon {
+  font-size: 25px !important;
+  cursor: pointer;
+}
+
+.btn-box .profanity_loader {
+  width: 20px;
+  height: 20px;
+  border-radius: 50px;
+  animation: blink 2s infinite;
+  background-color: #b9b9b9;
+  cursor: wait;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.btn-box .profanity_icon,
+.btn-box .tts_failed_icon {
+  font-size: 25px !important;
+  cursor: pointer;
+  border-radius: 50px;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  fill: #000;
+  z-index: 1;
+  pointer-events: all;
+  position: relative;
+}
+
+.btn-box .profanity_icon.green {
+  background-color: #4bb543;
+  cursor: default;
+}
+
+.btn-box .profanity_icon.red,
+.btn-box .tts_failed_icon.red {
+  background-color: #e63c23;
+  pointer-events: all;
+}
+
+.btn-box .profanity_icon.NA,
+.btn-box .tts_failed_icon.NA {
+  background-color: gray;
+}
+
+.TTS_play_Icon,
+.TTS_pause_Icon {
+  font-size: 25px !important;
+  cursor: pointer;
+  scale: 1.15;
+  pointer-events: all;
+}
+
+.TTS_restart_Icon {
+  font-size: 20px !important;
+  fill: #434343;
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+  scale: 0.8;
+  pointer-events: all;
+}
+
+.tts_processing .inputbox_hoverable_container,
+.voice_disabled .inputbox_hoverable_container {
+  pointer-events: none;
+}
+
+.tts_processing_loader {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  border-radius: 9px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tts_processing_loader_text {
+  font-size: 16px;
+  padding: 5px 15px;
+  border-radius: 20px;
+  border: 1px solid var(--color-white);
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+}
+
+.inputbox {
+  position: relative;
+  margin: 0px 10px 10px 0px;
+  border: 1px solid var(--color-white);
+  border-radius: 10px;
+  width: 100%;
+  background-color: #e2e2e2;
+}
+
+/* .inputbox:last-child {
+  margin: 0px 10px 60px 0px;
+} */
+
+.inputbox .loading {
+  animation: rotation 1s linear 0s infinite;
+  width: 25px;
+
+  height: 25px;
+  scale: 0.8;
+}
+
+@keyframes rotation {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.pause_tts_icon {
+  top: 9px;
+  right: 50px;
+  color: var(--color-primary);
+  fill: var(--color-primary) !important;
+  z-index: 2;
+  pointer-events: all;
+}
+
+.play_tts_icon {
+  top: 9px;
+  right: 50px;
+  color: var(--color-primary);
+  fill: var(--color-primary) !important;
+  z-index: 2;
+  pointer-events: all;
+}
+
+.selected_voice_menu_img_container {
+  padding: 6px 16px;
+  max-width: 148px;
+  margin-top: 5px;
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.selected_voice_menu_img.disabled_voice {
+  filter: grayscale(1);
+  cursor: not-allowed;
+}
+
+.selected_voice_menu_img {
+  border-radius: 20px;
+  height: 25px;
+  width: 25px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.inputbox_header {
+  width: 100%;
+  background-color: var(--color-secondary);
+  display: flex;
+  align-items: center;
+  position: relative;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 0 10px;
+  transition: all 0.2s;
+}
+
+.tts_processing .inputbox_hoverable_container .closeTextBoxIcon,
+.voice_disabled .inputbox_hoverable_container .closeTextBoxIcon {
+  z-index: 2;
+  pointer-events: all;
+  fill: #fff;
+  cursor: pointer;
+}
+
+.inputWrapper .textarea_wrapper_error_message {
+  padding: 0px 15px 10px;
+  font-size: 1.4rem;
+  color: red;
+}
+
+.inputWrapper .TTS_process_Icon {
+  opacity: 1;
+  pointer-events: all;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background-color: transparent;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  opacity: 1;
+}
+
+.inputWrapper .TTS_process_Icon:disabled {
+  opacity: 0.5;
+  cursor: not-allowed !important;
+}
+
+.inputWrapper .TTS_process_Icon:disabled .TTS_restart_Icon {
+  cursor: not-allowed !important;
+}

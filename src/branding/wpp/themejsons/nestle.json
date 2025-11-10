@@ -1,0 +1,364 @@
+{
+  "version": 1,
+  "settings": {
+    "fontUrl": ["https://public-assets.os.wpp.com/fonts/wpp/index.css", "https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900"]
+  },
+  "content": {
+    "light": {
+      "color": {
+        "primary": {
+          "100": "#E5F1FF",
+          "200": "#C2DDFF",
+          "300": "#9ECAFF",
+          "400": "#147EFF",
+          "500": "#0055BD",
+          "600": "#003C85",
+          "700": "#002552",
+          "800": "#001938"
+        },
+        "success": {
+          "200": "#E8FDF6",
+          "400": "#0B7A55",
+          "500": "#07553B"
+        },
+        "warning": {
+          "200": "#FEEEE1",
+          "400": "#DC6504",
+          "500": "#B95504"
+        },
+        "danger": {
+          "200": "#FFF5F5",
+          "300": "#FDD3D3",
+          "400": "#CC0A0A",
+          "500": "#970707",
+          "600": "#660505"
+        },
+        "grey": {
+          "100": "#F8F9FB",
+          "200": "#F4F5F7",
+          "300": "#E7EAEE",
+          "400": "#C1C7CD",
+          "500": "#A2A9B0",
+          "600": "#8B919A",
+          "700": "#697077",
+          "800": "#4D5358",
+          "900": "#343A3F",
+          "1000": "#121619",
+          "000": "#FFFFFF"
+        },
+        "highlight": {
+          "200": "rgba(234, 179, 8, 0.4)",
+          "400": "#EAB308"
+        },
+        "brand": {
+          "default": "color.primary.500",
+          "disabled": "color.primary.300",
+          "hover": "color.primary.400",
+          "active": "color.primary.600"
+        },
+        "dataviz": {
+          "cat": {
+            "dark": {
+              "1": "#3E55C8",
+              "2": "#7643C0",
+              "3": "#C53367",
+              "4": "#DC2626",
+              "5": "#EA580C",
+              "6": "#A16207",
+              "7": "#4D7C0F",
+              "8": "#047857",
+              "9": "#0891B2",
+              "10": "#697077"
+            },
+            "light": {
+              "1": "#E0F1FC",
+              "2": "#EFF0FB",
+              "3": "#FBF0F2",
+              "4": "#FEE2E2",
+              "5": "#FFEDD5",
+              "6": "#FEF9C3",
+              "7": "#ECFCCB",
+              "8": "#D1FAE5",
+              "9": "#CFFAFE",
+              "10": "#E7EAEE"
+            },
+            "neutral": {
+              "1": "#6295E4",
+              "2": "#A884DF",
+              "3": "#E971A5",
+              "4": "#F87171",
+              "5": "#FB923C",
+              "6": "#EAB308",
+              "7": "#84CC16",
+              "8": "#10B981",
+              "9": "#22D3EE",
+              "10": "#A2A9B0"
+            }
+          },
+          "seq": {
+            "brand": {
+              "100": "#F2F6FD",
+              "200": "#E9F0FB",
+              "300": "#CFDFF7",
+              "400": "#B1CBF2",
+              "500": "#8EB3EC",
+              "600": "#6295E4",
+              "700": "#2E73DB",
+              "800": "#205EBB",
+              "900": "#174487",
+              "1000": "#103060"
+            },
+            "grey": {
+              "100": "#F7F7F8",
+              "200": "#F1F2F3",
+              "300": "#E1E3E5",
+              "400": "#CDD1D5",
+              "500": "#B7BDC2",
+              "600": "#A2A9B0",
+              "700": "#7D8791",
+              "800": "#677079",
+              "900": "#4B5258",
+              "1000": "#34383D"
+            },
+            "negative": {
+              "100": "#FFF5F5",
+              "200": "#FEECEC",
+              "300": "#FDD3D3",
+              "400": "#FCBBBB",
+              "500": "#FA9999",
+              "600": "#F87171",
+              "700": "#F41B1B",
+              "800": "#CC0A0A",
+              "900": "#970707",
+              "1000": "#660505"
+            },
+            "warning": {
+              "100": "#FFF7F0",
+              "200": "#FEEEE1",
+              "300": "#FEDDC3",
+              "400": "#FDCAA0",
+              "500": "#FCB173",
+              "600": "#FB923C",
+              "700": "#DC6504",
+              "800": "#B95504",
+              "900": "#823C03",
+              "1000": "#5A2902"
+            },
+            "positive": {
+              "100": "#E8FDF6",
+              "200": "#C7FAE9",
+              "300": "#8AF5D1",
+              "400": "#14EBA3",
+              "500": "#12D393",
+              "600": "#10B981",
+              "700": "#0D9265",
+              "800": "#0B7A55",
+              "900": "#07553B",
+              "1000": "#06422E"
+            }
+          }
+        },
+        "white": "color.grey.000"
+      },
+      "border": {
+        "radius": {
+          "xs": "4px",
+          "s": "6px",
+          "m": "8px",
+          "l": "12px",
+          "xl": "20px",
+          "round": "64px"
+        },
+        "width": {
+          "s": "1px",
+          "m": "2px",
+          "l": "3px"
+        }
+      },
+      "boxShadow": {
+        "xs": "0px 1px 4px 0px rgba(52, 58, 63, 0.12)",
+        "s": "0px 0px 1px 0px rgba(52, 58, 63, 0.1), 0px 1px 5px 0px rgba(52, 58, 63, 0.1)",
+        "m": "0px 1px 4px 0px rgba(52, 58, 63, 0.05), 0px 4px 12px 0px rgba(52, 58, 63, 0.12)",
+        "brand": "0px 4px 12px 0px rgba(0, 85, 189, 0.3)",
+        "l": "0px 8px 32px 0px rgba(52, 58, 63, 0.05)"
+      },
+      "font": {
+        "family": ["WPP", "Inter"]
+      },
+      "icon": {
+        "color": {
+          "default": "color.grey.600",
+          "disabled": "color.grey.400",
+          "hover": "color.grey.800",
+          "active": "color.grey.900"
+        }
+      },
+      "text": {
+        "color": {
+          "default": "color.grey.1000",
+          "whiteInfo": "color.grey.200",
+          "disabled": "color.grey.500",
+          "danger": "color.danger.500",
+          "warning": "color.warning.500",
+          "success": "color.success.500",
+          "info": "color.grey.800"
+        }
+      },
+      "surface": {
+        "bgColor": "color.grey.100"
+      },
+      "overlay": {
+        "bgColor": "rgba(77, 83, 88, 0.6)"
+      },
+      "typography": {
+        "5xl": {
+          "display": {
+            "fontFamily": ["WPP", "Inter"],
+            "fontSize": "48px",
+            "fontWeight": "600",
+            "letterSpacing": "0px",
+            "lineHeight": "62px"
+          }
+        },
+        "4xl": {
+          "display": {
+            "fontFamily": ["WPP", "Inter"],
+            "fontSize": "36px",
+            "fontWeight": "600",
+            "letterSpacing": "0px",
+            "lineHeight": "48px"
+          }
+        },
+        "3xl": {
+          "heading": {
+            "fontFamily": ["WPP", "Inter"],
+            "fontSize": "28px",
+            "fontWeight": "600",
+            "letterSpacing": "0px",
+            "lineHeight": "40px"
+          }
+        },
+        "2xl": {
+          "heading": {
+            "fontFamily": ["WPP", "Inter"],
+            "fontSize": "24px",
+            "fontWeight": "600",
+            "letterSpacing": "0px",
+            "lineHeight": "32px"
+          }
+        },
+        "xl": {
+          "heading": {
+            "fontFamily": ["WPP", "Inter"],
+            "fontSize": "20px",
+            "fontWeight": "600",
+            "letterSpacing": "0px",
+            "lineHeight": "32px"
+          }
+        },
+        "l": {
+          "strong": {
+            "fontFamily": ["WPP", "Inter"],
+            "fontSize": "18px",
+            "fontWeight": "600",
+            "letterSpacing": "0px",
+            "lineHeight": "28px"
+          },
+          "midi": {
+            "fontFamily": ["WPP", "Inter"],
+            "fontSize": "18px",
+            "fontWeight": "500",
+            "letterSpacing": "0px",
+            "lineHeight": "28px"
+          },
+          "body": {
+            "fontFamily": ["WPP", "Inter"],
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "letterSpacing": "0px",
+            "lineHeight": "28px"
+          }
+        },
+        "m": {
+          "strong": {
+            "fontFamily": ["WPP", "Inter"],
+            "fontSize": "16px",
+            "fontWeight": "600",
+            "letterSpacing": "0px",
+            "lineHeight": "24px"
+          },
+          "midi": {
+            "fontFamily": ["WPP", "Inter"],
+            "fontSize": "16px",
+            "fontWeight": "500",
+            "letterSpacing": "0px",
+            "lineHeight": "24px"
+          },
+          "body": {
+            "fontFamily": ["WPP", "Inter"],
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "letterSpacing": "0px",
+            "lineHeight": "24px"
+          }
+        },
+        "s": {
+          "strong": {
+            "fontFamily": ["WPP", "Inter"],
+            "fontSize": "14px",
+            "fontWeight": "600",
+            "letterSpacing": "0px",
+            "lineHeight": "22px"
+          },
+          "midi": {
+            "fontFamily": ["WPP", "Inter"],
+            "fontSize": "14px",
+            "fontWeight": "500",
+            "letterSpacing": "0px",
+            "lineHeight": "22px"
+          },
+          "body": {
+            "fontFamily": ["WPP", "Inter"],
+            "fontSize": "14px",
+            "fontWeight": "400",
+            "letterSpacing": "0px",
+            "lineHeight": "22px"
+          }
+        },
+        "xs": {
+          "strong": {
+            "fontFamily": ["WPP", "Inter"],
+            "fontSize": "12px",
+            "fontWeight": "600",
+            "letterSpacing": "0px",
+            "lineHeight": "20px"
+          },
+          "midi": {
+            "fontFamily": ["WPP", "Inter"],
+            "fontSize": "12px",
+            "fontWeight": "500",
+            "letterSpacing": "0px",
+            "lineHeight": "20px"
+          },
+          "body": {
+            "fontFamily": ["WPP", "Inter"],
+            "fontSize": "12px",
+            "fontWeight": "400",
+            "letterSpacing": "0px",
+            "lineHeight": "20px"
+          }
+        },
+        "2xs": {
+          "strong": {
+            "fontFamily": ["WPP", "Inter"],
+            "fontSize": "10px",
+            "fontWeight": "700",
+            "letterSpacing": "5%",
+            "lineHeight": "20px",
+            "textTransform": "uppercase"
+          }
+        }
+      }
+    }
+  }
+}

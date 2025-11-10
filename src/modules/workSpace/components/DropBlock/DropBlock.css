@@ -1,0 +1,62 @@
+.drop_container {
+  width: 100%;
+  background-color: var(--color-secondary);
+  border-radius: 10px;
+  padding: 10px 25px;
+  margin-bottom: 15px;
+}
+
+.drop_container .drop_selection_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* padding-top: 20px; */
+}
+
+.drop_selection_left_container {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.drop_container .drop_radio_container {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  flex-wrap: nowrap !important;
+  scale: 0.9;
+}
+
+.drop_hint {
+  font-size: 14px;
+  color: var(--color-white);
+  padding: 0px 8px;
+  text-align: center;
+}
+
+.ending_option_container {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.ending_option_container p {
+  font-size: 16px;
+  color: var(--color-white);
+}
+
+.ending_option_container .selected.sonicButton.outlined,
+.drop_selection_left_container .drop_selection_active.sonicButton.outlined {
+  color: var(--color-primary) !important;
+  border: 1px solid var(--color-primary) !important;
+}
+
+.drop_selection_container .MuiFormControlLabel-root {
+  margin-right: 0px !important;
+}
+
+@media only screen and (max-width: 1024px) {
+  .ending_option_container {
+    gap: 5px;
+  }
+}

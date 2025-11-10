@@ -1,0 +1,167 @@
+.audioRetentionPage_container {
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin: 15px 0; */
+  height: calc(100vh - 80px);
+}
+
+.audioRetentionPage_container .audio_on_off_container {
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+  height: auto;
+  margin: 45px auto 20px;
+  border-radius: 25px;
+  width: 600px;
+  padding: 30px 40px;
+  position: relative;
+}
+
+.audioRetentionPage_container .audio_on_off_container .audio_on_off_header {
+  text-align: center;
+  font-size: 22px;
+  margin: 10px 0 0px 0;
+}
+
+.audioRetentionPage_container .audio_on_off_container {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.audioRetentionPage_container .audioRetentionPage_radio_field_container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 15px;
+}
+.audioRetentionPage_container .audio_retention_acceptTerms_container {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.audio_retention_acceptTerms_container .SonicRadio_container {
+  margin-bottom: 22px;
+}
+
+.audioRetentionPage_container
+  .audio_on_off_container
+  .audio_on_off_header
+  .title {
+  font-size: 24px;
+}
+
+.audioRetentionPage_container
+  .audio_on_off_container
+  .audio_on_off_header
+  .sub_title {
+  font-size: 16px;
+  margin: 20px auto 0px;
+  max-width: 350px;
+  width: 100%;
+}
+
+.audio_on_off_container .audio_on_off_video_wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 65px;
+}
+
+.audio_on_off_container
+  .audio_on_off_video_wrapper
+  .audio_on_off_video_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 16px auto 15px;
+}
+
+.audio_on_off_container .audio_on_off_video_container .toggle_audio {
+  width: 254px;
+  height: 110px;
+}
+
+.audio_on_off_container
+  .audio_on_off_video_container
+  .toggle_audio
+  .audio_on_off {
+  color: var(--color-primary);
+}
+
+.audio_on_off_container
+  .audio_on_off_video_container
+  .toggle_audio
+  .Mui-disabled {
+  cursor: not-allowed !important;
+  pointer-events: all !important ;
+  color: var(--color-secondary-shade11) !important;
+}
+
+.audio_on_off_container .audio_on_off_video_wrapper .radio_voice_music {
+  color: var(--color-primary);
+}
+
+.audio_on_off_container .audio_on_off_video_wrapper .radioHeader {
+  font-size: 18px;
+}
+
+.audio_on_off_container .audio_on_off_video_wrapper .MuiFormControlLabel-label {
+  font-size: 16px;
+}
+
+.audioRetentionPage_container .btn_container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.audioRetentionPage_container .retention_radio_desc {
+  margin: 8px auto 8px 25px;
+  color: #858585;
+  font-size: 14px;
+}
+
+.video_uploader_btn_containerV2 {
+  margin: 35px 0px 30px;
+  text-align: center;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.upload_video_container video {
+  background-color: black;
+}
+
+.playerContainer {
+  position: absolute;
+  top: 165px;
+  right: 30px;
+  border: 1px solid var(--color-primary);
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.VideoTime {
+  position: absolute;
+  font-size: 16px;
+  top: 10px;
+  right: 10px;
+  color: #fff;
+}
+
+.AudioRetentionTandC_radio {
+  margin-top: 35px;
+}
+
+@media only screen and (max-height: 825px) {
+  .audioRetentionPage_container {
+    height: auto;
+    padding-bottom: 20px;
+  }
+}

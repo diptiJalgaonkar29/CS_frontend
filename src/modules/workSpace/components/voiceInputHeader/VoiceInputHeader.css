@@ -1,0 +1,43 @@
+.add_Pause_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.voice_tab_header_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+}
+
+.voice_tab_header_btn {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: var(--color-white);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.voice_tab_header_btn:hover {
+  color: var(--color-primary);
+}
+
+.add_Pause_container {
+  display: flex;
+  align-items: center;
+}
+
+.add_Pause_container input {
+  width: 60px;
+  border: 1px solid var(--color-white);
+  background-color: transparent;
+  color: var(--color-white);
+  font-size: 16px;
+  border-radius: 5px;
+  margin-right: 5px;
+  padding: 5px;
+}

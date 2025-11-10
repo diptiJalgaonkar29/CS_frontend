@@ -1,0 +1,93 @@
+.AIReportPage_header {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  background-color: var(--color-bg);
+  /* position: sticky;
+  top: 80px;
+  z-index: 10; */
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.AIReportPage_header .title {
+  font-size: 2.8rem;
+  font-weight: 400;
+  margin: 1.5rem 0;
+}
+
+.DownloadAITrackReportExcelBtn_container {
+  flex: 1;
+  text-align: right;
+}
+
+.like_dislike_report_filter {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+
+.custom_table_container .table th.cue_id,
+.custom_table_container .table td.cue_id {
+  border: 1px solid var(--color-secondary);
+  word-break: break-word;
+  min-width: 200px;
+}
+
+.AICueIdReportPage_container {
+  margin-bottom: 80px;
+}
+
+.dates_selection_container {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin: 20px 0px;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.AIReportPage_header .label {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--color-white);
+}
+.chart-container .Grid-container {
+  flex-basis: 50%;
+  flex-grow: 0;
+  max-width: 50%;
+}
+
+.AIReportPage_header .BrandFilter {
+  margin-left: 20px;
+}
+
+.AIReportPage_header .BrandFilter select {
+  padding: 8px;
+  border: 1px solid white;
+  border-radius: 3px;
+  font-size: 14px;
+  background-color: #333;
+  /* color: #333; */
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.AIReportPage_header .BrandFilter select:hover {
+  border-color: #333;
+}
+
+.dates_selection_container .BrandFilter select option {
+  padding: 10px;
+  font-size: 14px;
+}
+
+@media only screen and (max-width: 850px) {
+  .chart-container .Grid-container {
+    flex-grow: 0;
+    max-width: 100% !important;
+    flex-basis: 100% !important;
+  }
+}

@@ -1,0 +1,9 @@
+.SonicInputLabel {
+  /* margin-bottom: 10px; */
+  font-size: 18px;
+  /* color: var(--color-white); */
+  color: var(--color-white);
+  /* padding: 10px 0; */
+  /* height: 15px; */
+  display: block;
+}

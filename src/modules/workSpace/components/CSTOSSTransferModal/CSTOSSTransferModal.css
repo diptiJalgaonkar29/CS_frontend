@@ -1,0 +1,18 @@
+.CSTOSS_transfer_modal_container {
+  /* padding: 40px 50px; */
+  max-width: 650px;
+}
+
+.CSTOSS_transfer_modal_container .transfer_confirmation_message {
+  color: var(--color-white);
+  font-size: 16px;
+  line-height: 22.5px;
+}
+
+.CSTOSS_transfer_btn_container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 15px;
+  margin-top: 45px;
+}

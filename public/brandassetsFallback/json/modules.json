@@ -1,0 +1,9 @@
+{
+  "SHOW_LOGIN_PAGE": false,
+  "CS_TO_SS_AI_TRACK_TRANSFER": true,
+  "TRACK_NAME_DESCRIPTION_BY_OPEN_AI": false,
+  "SHOW_EXPORT_BTN": true,
+  "KEYCLOACK_AUTH": false,
+  "SHOW_SSO_LOGOUT": true,
+  "FROM_FALLBACK": true
+}

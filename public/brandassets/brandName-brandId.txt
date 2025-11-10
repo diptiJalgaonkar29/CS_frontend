@@ -1,0 +1,12 @@
+"ADAC": 1,
+"AMP": 2,
+"SONICSPACE": 2,
+"MASTERCARD": 3,
+"MERCEDES": 4,
+"SHELL": 5,
+"WPP": 8,
+"BCG": 9,
+"INTEL": 10,
+"COCACOLA": 12,
+"VODAFONE": 13,
+"GOOGLE": 14

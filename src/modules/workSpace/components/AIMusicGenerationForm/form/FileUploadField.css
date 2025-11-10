@@ -1,0 +1,54 @@
+.MusicGenerationformContainer .file-field-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.MusicGenerationformContainer .file-upload-button {
+  background-color: var(--color-bg);
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  transition: all 0.2s ease;
+  border: 1px solid #363b41;
+  gap: 8px;
+}
+
+.MusicGenerationformContainer .file-upload-button-icon {
+  background-color: var(--color-card);
+  width: 36px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+
+.MusicGenerationformContainer .file-upload-button:hover {
+  border: 1px solid var(--color-primary);
+}
+
+.MusicGenerationformContainer .file-label {
+  color: var(--color-white);
+  flex: 1;
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+  width: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.MusicGenerationformContainer .file-upload-button svg {
+  color: #a0aec0;
+}
+
+.MusicGenerationformContainer .hidden-file-input {
+  display: none;
+}

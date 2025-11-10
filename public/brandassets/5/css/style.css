@@ -1,0 +1,430 @@
+.shell .navbar_container {
+  height: 75px !important;
+  border-bottom: 1px solid var(--color-gray-2) !important;
+  padding-left: 15px !important;
+}
+
+.shell .navbar_left {
+  width: auto !important;
+  gap: 20px;
+}
+
+.shell .navbar_right {
+  flex: 1 !important;
+}
+
+.shell .navbar_img {
+  max-width: 45px !important;
+}
+
+.shell .primary_border {
+  color: var(--color-white) !important;
+  border-color: var(--color-white) !important;
+}
+
+.shell .cue_variant_block .track_tag {
+  color: var(--color-white) !important;
+}
+
+.shell .ERROR p {
+  color: #fff !important;
+}
+
+.shell button.filled {
+  color: var(--color-white) !important;
+}
+
+.shell .video_upload_v2 .uploaderBlock .uploadBtn {
+  color: var(--color-white) !important;
+}
+
+/* .shell .video_upload_v2 .uploaderBlock .uploadBtn .uploadImg {
+  filter: invert(1) !important;
+} */
+
+.shell .sonicButton:disabled {
+  color: var(--color-secondary-shade6) !important;
+  background-color: var(--color-primary-shade5) !important;
+  border: 1px solid transparent !important;
+}
+
+.shell .voice_card_container.voice_card_selected_container {
+  border-color: var(--color-primary-shade1) !important;
+}
+
+.shell .app_version {
+  top: 60px !important;
+  left: 15px !important;
+}
+
+.shell .voice_card_container.voice_card_default_container {
+  border-color: transparent !important;
+}
+
+.shell #voice-form-container {
+  gap: 10px !important;
+}
+
+.shell .BackButton_container svg {
+  fill: var(--color-white) !important;
+}
+
+.shell .active_nav_link,
+.shell .MuiSlider-valueLabel *,
+.shell .sonicButton,
+.shell .nav_link:hover {
+  color: var(--color-white) !important;
+}
+.shell .nav_link {
+  border-radius: 5px;
+  padding: 10px !important;
+}
+
+.shell .nav_link:hover {
+  background-color: #4a4a4a1a !important;
+}
+
+.shell .active_nav_link::before {
+  content: "";
+  width: 100% !important;
+  height: 4px !important;
+  background-color: var(--color-primary) !important;
+  position: absolute !important;
+  bottom: -17px !important;
+  left: 0 !important;
+}
+
+.shell .project_grid_item .project_grid_asset {
+  background-color: #e7eaee !important;
+  border-top: solid 1px #393e44 !important;
+}
+
+.shell .custom_tooltip .MuiTooltip-tooltip {
+  background-color: #e7eaee !important;
+}
+
+.shell .nav_link svg,
+.shell .cs_image_icon img .shell .CustomNotificationTopBar_close_btn,
+.shell .video_upload_v2 .uploaderBlock .uploadBtn .uploadImg {
+  filter: contrast(0%) brightness(60%) !important;
+}
+.shell .SonicModal_dialog .MuiPaper-root.MuiDialog-paper,
+.shell .SonicModal_dialog .MuiDialog-container .MuiPaper-root.MuiDialog-paper {
+  background-color: #fff !important;
+}
+
+.shell .sonicButton.outlined,
+.shell .loader_spinner_percentage,
+.shell .tick_inner,
+.shell #voice_add_menu .MuiMenu-paper .MuiMenuItem-root {
+  color: var(--color-white) !important;
+}
+
+.shell .ending_option_container .selected.sonicButton.outlined {
+  color: var(--color-primary) !important;
+  /* color: var(--color-primary-shade1) !important;
+  border: 1px solid var(--color-primary-shade1) !important; */
+}
+
+.shell .ending_option_container .selected.sonicButton.outlined:disabled {
+  color: var(--color-secondary-shade11) !important;
+}
+
+.shell .lds-default div {
+  background-color: var(--color-white) !important;
+}
+
+.shell .dict_input_wrapper .disabled_dict_input,
+.shell .disabled_name {
+  color: #999 !important;
+}
+
+.shell
+  .export_container
+  .CardContent1
+  .format_style.format_style_active
+  svg.video_icon
+  path {
+  fill: var(--color-primary-shade1) !important;
+}
+.shell .export_container .CardContent1 .format_style svg.video_icon path {
+  fill: var(--color-white) !important;
+}
+
+.shell .export_container .format_style_active p {
+  color: var(--color-primary-shade1);
+}
+
+.shell .export_container .format_style.format_style_active svg,
+.shell .export_container .format_style.format_style_active svg path {
+  fill: var(--color-primary-shade1) !important;
+}
+
+.shell .sonicButton.frashlyMadeButton,
+.shell .activeWSBtn.sonicButton.outlined {
+  color: var(--color-primary) !important;
+}
+
+.shell .custom_progress_bar_container .parent_div {
+  background-color: var(--color-secondary-shade6) !important;
+}
+
+.shell
+  .timeline_voice_volume_slider_wrapper:hover
+  .timeline_voice_volume_speaker_icon,
+.shell
+  .timeline_voice_music_volume_slider_wrapper:hover
+  .timeline_voice_volume_speaker_icon,
+.shell
+  .timeline_music_volume_slider_wrapper:hover
+  .timeline_voice_volume_speaker_icon,
+.shell .voice_card_tags_header_summary svg {
+  filter: invert(1) !important;
+}
+
+.cue_variant_block .curr-time,
+.shell .MuiSlider-valueLabel * {
+  color: var(--color-white) !important;
+}
+
+.shell .track_like_dislike svg path,
+.shell .track_like_dislike svg path {
+  fill: var(--color-white) !important;
+}
+
+.track_like_dislike svg.liked path,
+.track_like_dislike svg.disliked path {
+  fill: var(--color-primary) !important;
+}
+
+.shell .cue_track_player_close_btn {
+  filter: brightness(0) !important;
+}
+
+.shell .WS_header_action_btns_container .activeWSBtn.sonicButton.outlined {
+  background-color: var(--color-secondary) !important;
+  color: var(--color-white) !important;
+}
+
+.shell .project_table_header .disableSort {
+  fill: #4a4a4a70;
+}
+
+.shell .highlight_text {
+  color: var(--color-white) !important;
+}
+
+.shell .inputbox {
+  border-color: var(--color-secondary) !important;
+}
+
+.shell .inputbox_header {
+  background-color: #fff !important;
+}
+
+.shell
+  .creationStation_homePage_wrapper
+  .creationStation_homePage_option.selected
+  svg {
+  fill: var(--color-primary-shade1) !important;
+}
+
+.shell .custom_carousel_container .arrow {
+  fill: var(--color-white) !important;
+}
+
+.shell
+  .creationStation_homePage_wrapper
+  .creationStation_homePage_option.selected
+  .creationStation_homePage_option_title,
+.shell .readMoreBtn {
+  color: var(--color-primary-shade1) !important;
+}
+
+.shell .AudioRetentionTandC_text span,
+.shell .project_grid_content .projectName_ellipsis.My_Projects:hover,
+.shell .project_list_item .projectName.My_Projects:hover,
+.shell .highlight_text,
+.shell .home_container .create_block:hover p,
+.shell .voice_card_container .artistName:hover,
+.shell .voice_tab_header_btn:hover,
+.track_info_tooltip_container b {
+  color: var(--color-white) !important;
+}
+
+.shell
+  .creationStation_homePage_wrapper
+  .creationStation_homePage_option.selected {
+  border: 1px solid var(--color-primary-shade1) !important;
+}
+
+.shell .MuiTooltip-tooltip {
+  background-color: var(--color-gray-3) !important;
+}
+
+.shell .MuiTooltip-arrow {
+  color: var(--color-gray-3) !important;
+}
+
+.shell .closeTextBoxIcon,
+.shell .TTS_restart_Icon,
+.shell .dict_action_btn_container .dict_delete_icon,
+.shell .dict_report_delete_icon,
+.shell .play_tts_icon,
+.shell .pause_tts_icon,
+.shell .voice_card_container .voice_card_icon_large.bookmark {
+  fill: var(--color-white) !important;
+  /* stroke: var(--color-white) !important; */
+}
+
+.shell .tts_processing .inputbox_hoverable_container .closeTextBoxIcon {
+  fill: #fff !important;
+  /* stroke: #fff !important; */
+}
+
+.shell .nav_link#home_nav_link {
+  order: -1 !important;
+}
+
+.shell .SonicCheckbox_container input {
+  accent-color: var(--color-white) !important;
+}
+
+.shell .SonicRadio_container [type="radio"]:checked + label:before {
+  border: 1px solid var(--color-white) !important;
+}
+
+.shell .SonicRadio_container [type="radio"]:checked + label:after,
+.shell .SonicRadio_container [type="radio"]:not(:checked) + label:after {
+  background: var(--color-white) !important;
+}
+
+.shell .voice_card_container .voice_card_tags_header_summary span,
+.voice_card_container .artistName {
+  font-size: 15px !important;
+}
+
+.shell .audioRetentionPage_container .btn_container .sonicButton,
+.shell .project_setting_container .btn_container .sonicButton {
+  flex: 1 !important;
+}
+
+.shell .timeline_container .timeline-box-collapsed .left .header {
+  word-spacing: -5px !important;
+}
+
+.shell .timeline_container #marker rect,
+.shell .timeline_container #marker path {
+  fill: var(--color-primary-shade1) !important;
+}
+
+.shell .MuiTooltip-tooltip {
+  background-color: var(--color-bg) !important;
+  border: 1px solid var(--color-white) !important;
+  border-radius: 8px !important;
+}
+
+.shell .export_container .format_style_active {
+  background-color: var(--color-bg) !important;
+  border: 1px solid var(--color-primary-shade1) !important;
+  color: var(--color-primary-shade1) !important;
+}
+
+.shell .rmsc.multi_select_voice_filter .search::after {
+  filter: invert(1) contrast(0%) brightness(50%) !important;
+}
+
+.shell .rmsc.multi_select_voice_filter .item-renderer input {
+  accent-color: var(--color-white) !important;
+}
+.shell
+  .rmsc.multi_select_voice_filter.selectAll
+  ul
+  > label.select-item
+  input[type="checkbox"] {
+  accent-color: var(--color-primary) !important;
+}
+.shell .rmsc.multi_select_voice_filter .select-item:hover span,
+.shell .rmsc.multi_select_voice_filter .select-item.selected span,
+.shell .footer_link:hover {
+  color: var(--color-white) !important;
+}
+
+.shell ::-webkit-scrollbar-thumb {
+  background-color: var(--color-white) !important;
+}
+
+.shell ::-webkit-scrollbar-thumb:hover {
+  background: var(--color-white) !important;
+}
+
+.shell
+  .rmsc.multi_select_voice_filter
+  .select-item.selected
+  .item-renderer
+  span,
+.shell .voice-form-label,
+.shell .voice-form-Heading,
+.shell .voicePage__container .profileColumn p,
+.shell .VoiceCard--artistname,
+.shell .voice_card_container .artistName,
+.shell .profanity_modal .profanity_title,
+.shell .export_container .CardHeader1,
+.shell .export_container .CardHeader2,
+.shell .export_container .CardHeader3,
+.shell .export_container .edit_project_info_container .project_info_title,
+.shell .CSTOSS_transfer_success_modal_container .transfer_success_message_bold,
+.shell .custom_table_container .table th,
+.shell .sonic_icon_button.auth_btn,
+.shell .WS_header_action_btns_container .tab_btns.sonicButton.outlined,
+.shell .boldFamily {
+  font-family: var(--font-primary-bold) !important;
+  font-weight: normal !important;
+}
+
+.shell .voice_card_container .brandVoice {
+  width: 55px !important;
+  height: 55px !important;
+  bottom: 0px !important;
+  left: -6px !important;
+}
+
+.shell
+  .brand_tag_modal_container
+  .selection_container_block
+  .tempo_btn.selected_tempo {
+  border: 1px solid var(--color-primary-shade1) !important;
+  color: var(--color-primary-shade1) !important;
+}
+
+.shell .brand_tag_modal_container .activeSelection {
+  background-color: var(--color-primary-shade1) !important;
+}
+
+.shell .sonicButton.frashlyMadeButton,
+.shell .activeWSBtn.sonicButton.outlined {
+  color: var(--color-white) !important;
+  border: 1px solid var(--color-white) !important;
+}
+
+.shell .rmsc.multi_select_voice_filter label.select-item.selected::before {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-white);
+}
+
+.shell .rmsc.multi_select_voice_filter label.select-item.selected::after {
+  border: solid var(--color-bg);
+  border-width: 0 2px 2px 0;
+}
+
+.shell .SonicCheckbox_container:has(input:checked)::before {
+  background-color: var(--color-white) !important;
+  border: 1px solid var(--color-white) !important;
+}
+
+.shell
+  .rmsc.multi_select_voice_filter.selectAll
+  .options
+  > label.select-item.selected:first-child::before {
+  border: 0.3px solid var(--color-white) !important;
+}

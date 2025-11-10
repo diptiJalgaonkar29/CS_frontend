@@ -1,0 +1,23 @@
+.custom_modal_container {
+  width: 90%;
+  margin: 0 auto;
+  height: 85vh;
+  margin-top: 8vh;
+  border-radius: 10px;
+}
+
+.custom_modal_container .MuiDialog-paperWidthSm {
+  max-width: 1920px !important;
+  width: auto !important;
+}
+
+.custom_modal_container .MuiDialog-paper {
+  background-color: var(--color-secondary) !important;
+  box-shadow: none;
+  margin: 0px;
+}
+
+.custom_modal_container .MuiDialog-paperScrollPaper {
+  max-height: 100% !important;
+  border-radius: 10px !important;
+}

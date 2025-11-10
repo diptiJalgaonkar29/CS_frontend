@@ -1,0 +1,15 @@
+.style_selection_container .style_selection_title {
+  font-size: 18px;
+  margin: 0px 0 20px;
+}
+
+.style_selection_container .MusicStyleSelector_btn_container {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  margin-top: 35px;
+}
+
+.style_selection_container .MusicStyleSelector_btn_container .sonicButton {
+  flex: 1;
+}

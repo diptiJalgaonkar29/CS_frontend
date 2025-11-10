@@ -1,0 +1,38 @@
+.ss_select_container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ss_select_label {
+  margin-bottom: 0px;
+  color: var(--color-white);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.16px;
+  text-align: left;
+}
+
+.ss_select {
+  height: 45px;
+  border-radius: 25px;
+  border: 1px solid var(--color-white);
+  padding: 0px 20px;
+  font-size: 16px;
+  background-color: transparent;
+  color: var(--color-white);
+}
+
+.ss_select.filled {
+  background-color: var(--color-white);
+  color: #000;
+  border: 1px solid transparent;
+}
+
+.ss_error_msg {
+  margin: 8px 0;
+  font-size: 1.4rem;
+  color: red;
+}

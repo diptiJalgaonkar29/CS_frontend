@@ -1,0 +1,58 @@
+.OnBrandVoiceContainer {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+.OnBrandVoice_header {
+  font-size: 20px;
+  color: var(--color-white);
+  padding: 0px 0px 25px;
+  margin: 0;
+}
+
+.OnBrandVoice_Box {
+  margin-top: -10px;
+  display: flex;
+  gap: 20px;
+  align-items: flex-end;
+}
+
+.OnBrandVoice_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.OnBrandVoice_item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+}
+
+.OnBrandVoice_img {
+  width: 67px;
+  height: 67px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.OnBrandVoice_name {
+  color: var(--color-white);
+  margin-top: 10px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.InspectVoiceButton {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: none;
+  cursor: pointer;
+  background-color: white;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.spinnerWrapper {
+  text-align: center;
+}

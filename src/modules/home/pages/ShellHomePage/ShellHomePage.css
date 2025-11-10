@@ -1,0 +1,146 @@
+.shell_home_container {
+  /* display: flex;
+  justify-content: center;
+  height: calc(100vh - 160px);
+  flex-direction: column; */
+  margin-top: 20px;
+  padding-bottom: 120px;
+}
+
+.shell_home_container .header {
+  margin-top: 25px;
+  font-size: 48px;
+  color: var(--color-white);
+  line-height: 65px;
+}
+
+.shell_home_container .section_header {
+  font-size: 20px;
+  line-height: 28px;
+  margin: 35px 0 15px;
+}
+
+.shell_home_container .create_project_button {
+  width: 207px;
+  height: 210px;
+  border-radius: 20px;
+  display: grid;
+  place-content: center;
+  background-color: var(--color-secondary);
+  cursor: pointer;
+}
+
+.shell_home_container .create_project_button svg {
+  width: 25px;
+  height: 25px;
+}
+
+.shell_home_container .sub_header {
+  font-size: 18px;
+  margin-top: 15px;
+}
+
+.shell_home_container .main_header {
+  font-weight: 400;
+  font-size: 45px;
+  margin: 10px 0px 30px 0px;
+}
+
+.shell_home_container .create_block {
+  width: 420px;
+  height: 201px;
+  background-color: var(--color-secondary);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin: 15px 0px 50px 0px;
+}
+
+.shell_home_container .create_block p {
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.shell_home_container .create_block:hover p {
+  color: var(--color-primary);
+}
+
+.shell_home_container .NewProjectButton {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  width: 492px;
+  height: 99px;
+  padding: 12px;
+  border-radius: 37px;
+  border: none;
+  position: fixed;
+  bottom: 20px;
+  /* Adjusted for better visibility */
+  right: 10%;
+  font-size: 16px;
+  font-weight: 500;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.shell_home_container .home_projectList_Container {
+  width: 100%;
+  display: flex;
+  gap: 30px !important;
+  align-items: flex-end;
+}
+
+.shell_home_container .AllProjectButton {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: none;
+  cursor: pointer;
+  background-color: white;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.shell_home_container .AllProjectButton p {
+  font-weight: 500;
+}
+
+.footer-dialog.is-first-login_modal {}
+
+.footer-dialog.is-first-login_modal .is-first-login_modal_header {
+  display: flex;
+}
+
+.footer-dialog.is-first-login_modal .is-first-login_modal_header span {
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  font-family: var(--font-primary-bold), Helvetica, sans-serif;
+  color: #000000;
+  flex: 1;
+}
+
+.footer-dialog.is-first-login_modal .footer_modal_iframe.is-first-login_iframe {
+  background-color: transparent;
+  border: none;
+  border-radius: 0px;
+  cursor: pointer;
+}
+
+.footer-dialog.is-first-login_modal .footer_modal_container.is-first-login_modal_container {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+@media screen and (max-height: 800px) {
+  .home_container {
+    height: auto;
+  }
+}

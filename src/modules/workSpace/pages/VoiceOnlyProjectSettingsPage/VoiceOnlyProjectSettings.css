@@ -1,0 +1,108 @@
+.project_setting_wrapper {
+  width: 100%;
+  height: calc(100vh - 80px);
+  overflow-x: hidden;
+  overflow-y: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project_setting_container form {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 40px;
+}
+.project_setting_container {
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+  width: max-content;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 25px;
+  max-width: 550px;
+  width: 100%;
+  padding: 40px;
+}
+
+.project_setting_header {
+  margin: 40px 40px 30px;
+}
+
+.video_length_checkbox {
+  display: flex;
+  align-items: center;
+  position: relative;
+  left: 8px;
+  top: -5px;
+}
+
+.project_setting_wrapper .project_name_input {
+  background-color: transparent;
+  border: 1px solid var(--color-white);
+  border-radius: 30px;
+  height: 41px;
+  padding-left: 15px;
+  padding-right: 10px;
+  font-size: 16px;
+  color: var(--color-white);
+}
+
+.duration_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.radio_container {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project_description_input {
+  resize: none;
+  background-color: transparent;
+  border: 1px solid var(--color-white);
+  border-radius: 30px;
+  color: var(--color-white);
+  font-size: 16px;
+  padding: 15px;
+  height: 100px;
+}
+
+.main_duration_radio_container {
+  gap: 10px;
+}
+
+.Form_radio_container {
+  gap: 125px;
+  margin-top: 20px;
+}
+
+.Form_radio_container,
+.main_duration_radio_container {
+  display: flex;
+  /* align-items: center; */
+}
+
+.project_setting_container .btn_container {
+  /* margin: 0px 40px 30px; */
+  text-align: center;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.project_setting_container .btn_container .sonicButton {
+  flex: 1;
+}
+
+@media only screen and (max-height: 675px) {
+  .project_setting_wrapper {
+    height: auto;
+    padding-bottom: 20px;
+  }
+}

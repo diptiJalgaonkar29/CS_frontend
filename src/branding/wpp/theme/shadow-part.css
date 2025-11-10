@@ -1,0 +1,16 @@
+:root {
+    --wpp-button-secondary-icon-color-disabled: var(--color-alternative);
+    --wpp-button-secondary-bg-color-active: var(--color-primary-600);
+}
+
+.wpp-button::part(button) {
+    background-color: var(--color-primary);
+}
+
+.wpp-icon::part(icon) {
+    color: var(--color-primary);
+}
+
+.wpp-icon-button::part(wpp-icon) {
+    color: var(--color-primary);
+}

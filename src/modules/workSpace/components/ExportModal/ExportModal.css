@@ -1,0 +1,477 @@
+.export_container .CardContent1 {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin: 10px 0px 30px;
+  cursor: pointer;
+}
+
+.export_container .options1 {
+  border: 1px solid var(--color-white);
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.export_container .CardContent2 {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin: 10px 0px 30px;
+  cursor: pointer;
+}
+
+.export_container .CardContent3 {
+  margin: 10px 0px 30px;
+}
+
+.CStoSSTransferBtn {
+  width: auto !important;
+  padding: 15px 55px !important;
+  height: auto !important;
+  min-height: 60px !important;
+}
+
+.export_container .CardHeader1,
+.export_container .CardHeader2,
+.export_container .CardHeader3 {
+  padding: 0px 0px 10px 0px;
+  font-size: 18px;
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  gap: 15px;
+}
+
+.transfer_title {
+  padding: 10px 5px !important;
+}
+
+.export_container .project_name_value {
+  font-weight: normal;
+  white-space: nowrap;
+  width: 250px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.export_container .CardNavigation {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: flex-end;
+  margin-top: 45px;
+}
+
+.export_container .format_style {
+  font-size: 16px;
+  border: 1px solid var(--color-white);
+  color: var(--color-white);
+  padding: 10px 10px;
+  border-radius: 10px;
+  text-align: center;
+  gap: 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 130px;
+}
+
+.export_container .CardContent1 .format_style {
+  padding: 15px 10px;
+  border-radius: 20px;
+}
+
+.export_container .CardContent2 .format_style {
+  border-radius: 30px;
+  width: auto;
+  padding: 10px 30px;
+}
+
+.export_container .edit_project_info_container {
+  display: flex;
+  align-items: flex-start;
+  gap: 7px;
+  margin-bottom: 30px;
+  flex-direction: column;
+}
+
+.export_container .edit_project_info_container .project_info_title {
+  color: var(--color-white);
+  font-size: 18px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.export_container .edit_project_info_container svg {
+  fill: var(--color-white);
+}
+
+.export_container .edit_project_info_container .edit_projectName_wrapper {
+  border: 1px solid var(--color-white);
+  border-radius: 30px;
+  padding: 0.5rem;
+  display: flex;
+  width: 100%;
+}
+
+.edit_projectName_btn_container button {
+  height: 26px !important;
+}
+
+.export_container .edit_project_info_container .edit_projectDesc_wrapper {
+  border: 1px solid var(--color-white);
+  border-radius: 18px;
+  padding: 0.5rem;
+  width: 100%;
+  height: 85px;
+  display: flex;
+}
+
+.export_container .edit_project_info_container .edit_projectName_input,
+.export_container .edit_project_info_container .edit_projectdesc_input {
+  font-size: 16px;
+  color: var(--color-white);
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-style: normal;
+  padding: 0.5rem;
+  width: 100%;
+}
+
+.export_container .edit_project_info_container .edit_projectName_input {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.export_container .edit_project_info_container .edit_projectdesc_input {
+  resize: none;
+}
+
+.export_container .edit_projectName_btn_container {
+  display: flex;
+  align-items: center;
+}
+
+.export_container .edit_projectDesc_wrapper .edit_projectName_btn_container {
+  align-items: flex-start;
+}
+
+.export_container .edit_projectName_btn_container svg {
+  width: 25px;
+  height: 25px;
+}
+
+.export_container .CardContent3 .CStoSSTransferSelected,
+.export_container .format_style_active {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.export_container .format_style_active svg,
+.export_container .format_style_active svg path {
+  fill: var(--color-primary);
+}
+
+.export_container .format_style_active p {
+  color: var(--color-primary);
+}
+
+.export_container .edit_projectName_btn_container .save_btn svg,
+.export_container .edit_projectName_btn_container .close_btn svg {
+  fill: var(--color-white);
+}
+
+.export_container .edit_projectName_btn_container .save_btn.disabled svg,
+.export_container .edit_projectName_btn_container .close_btn.disabled svg {
+  fill: var(--color-secondary-shade11);
+}
+
+.export-dialog {
+  /* max-width: 600px; */
+  margin: 0 auto;
+  /* background-color: #000; */
+}
+
+.export-dialog .export_wrpper-sect {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 54px;
+  align-items: center;
+}
+
+.export-dialog .header {
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.export-dialog .title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.export-dialog .description {
+  color: #888;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.export-dialog .exportTimestamp {
+  /* color: #888; */
+  font-size: 14px;
+}
+
+.export-dialog .section {
+  margin-bottom: 30px;
+}
+
+.export-dialog .section-title {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.export-dialog .asset-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.export-dialog .asset-option {
+  text-align: center;
+  cursor: pointer;
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.export-dialog .asset-option:hover {
+  border-color: #555;
+}
+
+.export-dialog .asset-icon {
+  width: 32px;
+  height: 32px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.export-dialog .asset-label {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.export-dialog .format-options {
+  display: flex;
+  gap: 12px;
+}
+
+/* .export-dialog .format-option {
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 12px 20px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+} */
+
+/* Base format option styling */
+.export-dialog .format-option {
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 12px 15px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  background-color: transparent;
+  color: #fff;
+  text-align: center;
+}
+
+/* Highlight on hover */
+.export-dialog .format-option:hover {
+  border-color: #8b5cf6;
+  background-color: var(--color-white);
+  color: var(--color-white);
+}
+
+/* Highlight when selected */
+.export-dialog .format-option.selected {
+  border-color: #8b5cf6;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.export-dialog .format-option:not(.selected):hover {
+  border-color: #555;
+}
+
+.export-dialog .transfer-option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  /* margin-bottom: 30px; */
+  cursor: pointer;
+}
+
+.export-dialog .checkbox {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #555;
+  border-radius: 3px;
+  position: relative;
+  cursor: pointer;
+}
+
+.export-dialog .checkbox-label {
+  font-size: 14px;
+  color: #ccc;
+  cursor: pointer;
+  /* flex: 1; */
+}
+
+.export-dialog .info-icon {
+  width: 16px;
+  height: 16px;
+  border: 1px solid #555;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: #888;
+  cursor: pointer;
+}
+
+.export-dialog .info-icon::before {
+  content: "i";
+  font-style: italic;
+  font-weight: bold;
+}
+
+.export-dialog .button-group {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+.export-dialog .button {
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+  min-width: 80px;
+}
+
+.export-dialog .button-cancel {
+  background-color: transparent;
+  border: 1px solid #555;
+  color: #ccc;
+}
+
+.export-dialog .button-export {
+  /* background-color: #8b5cf6; */
+  color: white;
+}
+
+.export_modal_dialog .MuiPaper-root.MuiDialog-paper {
+  max-width: 100vw !important;
+}
+
+.export-dialog .dialog-overlay {
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.export-dialog .dialog {
+  background-color: #1a1a1a;
+  border-radius: 12px;
+  padding: 24px;
+  max-width: 735px;
+  width: 100%;
+  color: white;
+}
+
+.export-dialog .dialog-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #ffffff;
+}
+
+.export-dialog .dialog-content {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #e0e0e0;
+  margin-bottom: 24px;
+}
+
+.export-dialog .dialog-content .track-name {
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.export-dialog .dialog-buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+.export-dialog .export_wrpper-sect .button {
+  padding: 12px 24px;
+  border-radius: 24px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s ease;
+  min-width: 120px;
+}
+
+.export-dialog .export_wrpper-sect .button-cancel {
+  background-color: transparent;
+  color: var(--color-white);
+  /* border: 1px solid var(--color-white); */
+}
+
+@media (max-width: 640px) {
+  .export-dialog .asset-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .export-dialog .button-group {
+    justify-content: stretch;
+  }
+
+  .export-dialog .button {
+    flex: 1;
+  }
+}
+
+.export-dialog.export_container .export_btn {
+  background-color: var(--color-white);
+  color: var(--color-bg);
+}

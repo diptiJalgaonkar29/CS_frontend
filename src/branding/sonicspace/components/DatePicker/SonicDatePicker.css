@@ -1,0 +1,31 @@
+.sonic_datepicker {
+  outline: none;
+  box-shadow: none;
+  width: 100%;
+}
+
+.sonic_datepicker .MuiInputBase-input {
+  height: 45px;
+  border-radius: 25px;
+  border: 1px solid var(--color-white);
+  padding: 0px 20px;
+  font-size: 16px;
+  background-color: transparent;
+  color: var(--color-white);
+  width: 100%;
+}
+
+.sonic_datepicker .MuiOutlinedInput-notchedOutline {
+  border: none !important;
+}
+
+#date-picker-dialog-helper-text {
+  display: none !important;
+}
+
+.MuiDialog-paper.MuiPickersModal-dialogRoot {
+  background-color: var(--color-bg) !important;
+  color: var(--color-white) !important;
+  border: none !important;
+  font-size: 16px;
+}

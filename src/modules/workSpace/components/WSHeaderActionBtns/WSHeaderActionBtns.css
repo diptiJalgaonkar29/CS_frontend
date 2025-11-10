@@ -1,0 +1,76 @@
+.WS_header_action_btns_container {
+  display: flex;
+  gap: 15px;
+  justify-content: space-between;
+  align-items: center;
+  width: calc(100vw - 7px);
+  position: relative;
+  left: -3vw;
+  padding: 0 3vw;
+  margin-bottom: 5px;
+}
+
+.WS_header_action_btns_container .nav-btn-left {
+  display: flex;
+  gap: 15px;
+  background-color: var(--color-secondary);
+  padding: 7px 12px;
+  border-radius: 50px;
+}
+
+.WS_header_action_btns_container .nav-btn-right {
+  display: flex;
+  gap: 15px;
+}
+
+.export_option_icon_container {
+  width: 60px;
+  height: 60px;
+  padding: 5px;
+}
+
+.WS_header_action_btns_container .tab_btns.sonicButton.outlined {
+  border: none !important;
+  font-weight: 700 !important;
+  font-size: 16px !important;
+  height: 55px !important;
+  border-radius: 0px;
+  height: 42px !important;
+}
+
+.WS_header_action_btns_container .activeWSBtn.sonicButton.outlined {
+  background-color: var(--color-white);
+  color: var(--color-bg);
+  border-radius: 50px;
+}
+
+.WS_header_action_btns_container .sonicButton.outlined:disabled {
+  background-color: transparent !important;
+  cursor: not-allowed !important;
+  pointer-events: all !important;
+  color: var(--color-secondary-shade11) !important;
+}
+
+.WS_sub_header_action_btns_container .voice_header {
+  background-color: var(--color-secondary);
+  width: 100%;
+  padding: 8px;
+  display: flex;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+@media only screen and (max-width: 850px) {
+  .WS_header_action_btns_container {
+    flex-direction: column-reverse;
+    gap: 15px;
+  }
+  .WS_header_action_btns_container .nav-btn-left {
+    justify-content: flex-start;
+    width: 100%;
+  }
+  .WS_header_action_btns_container .nav-btn-right {
+    justify-content: flex-end;
+    width: 100%;
+  }
+}

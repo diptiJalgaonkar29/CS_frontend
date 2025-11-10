@@ -1,0 +1,20 @@
+.tick_outer {
+  position: absolute;
+  margin-top: -23px;
+  width: 1px;
+  height: 16px;
+  background-color: rgb(200, 200, 200);
+  pointer-events: none;
+}
+.tick_inner {
+  position: absolute;
+  margin-top: -19px;
+  font-size: 10px;
+  text-align: center;
+  margin-left: 4px;
+  width: max-content;
+  color: #c8c8c8;
+  font-family: var(--font-primary);
+  font-weight: 700;
+  pointer-events: none;
+}

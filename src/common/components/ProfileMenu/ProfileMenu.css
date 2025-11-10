@@ -1,0 +1,16 @@
+.sonic_icon_button[icon="Profile"] {
+  background-color: transparent;
+  padding: 0;
+  width: fit-content;
+}
+
+.sonic_icon_button[icon="Profile"] svg {
+  stroke: var(--color-white);
+}
+
+.WebNavbar--anchor.activeNavlink .sonic_icon_button[icon="Profile"] svg {
+  stroke: var(--color-primary);
+}
+.profile_icon {
+  cursor: pointer;
+}

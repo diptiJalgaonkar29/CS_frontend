@@ -1,0 +1,148 @@
+.custom_table_container {
+  width: 100%;
+  overflow: auto;
+}
+
+.custom_table_container .table {
+  width: 100%;
+  font-size: 1.6rem;
+  border-spacing: 0;
+  border: none;
+  padding-bottom: 20px;
+}
+
+.custom_table_container caption {
+  font-style: italic;
+  font-size: 90%;
+  margin-bottom: 10px;
+  font-size: 2.2rem;
+}
+
+.custom_table_container .table th.up {
+  background-image: url("./images/up_arrow.png");
+}
+.custom_table_container .table th.down {
+  background-image: url("./images/down_arrow.png");
+}
+.custom_table_container .table th.default {
+  background-image: url("./images/default.png");
+}
+.custom_table_container th.up,
+.custom_table_container th.default,
+.custom_table_container th.down {
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: center right;
+}
+
+.custom_table_container .table th {
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--color-secondary);
+  font-weight: bold;
+  text-align: left;
+}
+
+.custom_table_container .table td {
+  padding: 5px 15px;
+  position: relative;
+}
+
+.custom_table_container .table th,
+.custom_table_container .table td {
+  border: 1px solid var(--color-secondary);
+}
+
+.custom_table_container .table th,
+.custom_table_container .table tbody tr:hover {
+  background-color: var(--color-secondary) !important;
+}
+
+.custom_table_container .table .status {
+  background-color: var(--color-secondary) !important;
+  color: #fff;
+}
+
+/* .custom_table_container .table .NOTSTARTED,
+.custom_table_container .table .NA {
+  background-color: #6f6f6f !important;
+}
+
+.custom_table_container .table .PENDING {
+  background-color: #ff832b !important;
+}
+
+.custom_table_container .table .SUCCESS,
+.custom_table_container .table .COMPLETED {
+  background-color: #24a148 !important;
+}
+
+.custom_table_container .table .PARTIAL_COMPLETED {
+  background-color: #ff5722 !important;
+}
+
+.custom_table_container .table .FAILURE {
+  background-color: #da1e28 !important;
+} */
+/* 
+taskInfo Status
+NA
+STARTED
+PENDING
+COMPLETED
+
+task_combination
+NOTSTARTED
+STARTED
+PENDING
+FAILURE
+SUCCESS */
+
+.custom_table_container .copy_icon {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  fill: var(--color-white);
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+}
+
+.custom_table_container th.stickyAtStart,
+.custom_table_container td.stickyAtStart {
+  position: sticky !important;
+  left: 0 !important;
+  background-color: var(--color-bg);
+  z-index: 1;
+}
+
+.custom_table_container th.stickyAtEnd,
+.custom_table_container td.stickyAtEnd {
+  position: sticky !important;
+  right: 0 !important;
+  background-color: var(--color-bg);
+  z-index: 1;
+}
+
+.custom_table_container tr:hover th.stickyAtStart,
+.custom_table_container tr:hover td.stickyAtStart {
+  background-color: var(--color-secondary) !important;
+}
+
+.custom_table_container tr:hover th.stickyAtEnd,
+.custom_table_container tr:hover td.stickyAtEnd {
+  background-color: var(--color-secondary) !important;
+}
+
+.custom_table_container .cue_track_play_pause_icon {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.custom_table_container .lds-default {
+  width: 30px;
+  height: 30px;
+  scale: 0.4;
+  margin-top: -30px;
+  margin-left: -10px;
+}

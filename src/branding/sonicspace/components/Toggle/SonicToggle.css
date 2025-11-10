@@ -1,0 +1,73 @@
+.sonicToggle_container .switch .legendLabel {
+  display: inline-block;
+  margin-left: 5px;
+  cursor: pointer;
+  font-size: 1.4rem;
+  color: var(--color-white);
+}
+
+.sonicToggle_container .switch {
+  position: relative;
+  display: flex;
+  /* align-items: center; */
+  width: auto;
+}
+
+.sonicToggle_container .switch input {
+  display: none;
+}
+
+.sonicToggle_container .switch .slider {
+  position: relative;
+  cursor: pointer;
+  width: 29px;
+  height: 14px;
+  background-color: #757575;
+  transition: background-color 0.4s;
+}
+
+.sonicToggle_container .switch .slider:before {
+  content: "";
+  position: absolute;
+  height: 8.4px;
+  width: 8.4px;
+  left: 5px;
+  bottom: 2px;
+  background-color: var(--color-white);
+  transition: transform 0.4s;
+  border: 1px solid #6f6f6f;
+}
+
+.sonicToggle_container .switch input:checked + .slider:before {
+  transform: translateX(12px);
+}
+
+/* .sonicToggle_container .switch input + .sonicToggle_container .switch .slider {
+  background-color: gray;
+}
+
+.sonicToggle_container
+  .switch
+  input:checked
+  + .sonicToggle_container
+  .switch
+  .slider {
+  background-color: var(--color-primary);
+} */
+
+.sonicToggle_container .switch .slider.round {
+  border-radius: 34px;
+}
+
+.sonicToggle_container .switch .slider.round:before {
+  border-radius: 50%;
+}
+
+.sonicToggle_container
+  .switch
+  .color-index-1:checked
+  + .sonicToggle_container
+  .switch
+  .slider {
+  background-color: var(--color-overtimechart-1);
+}

@@ -1,0 +1,62 @@
+.SonicCheckbox_container {
+  font-size: 16px;
+  margin: 2px 0;
+  color: var(--color-white);
+  cursor: pointer;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  width: fit-content;
+  min-width: 18px;
+  height: 18px;
+}
+
+.SonicCheckbox_container:has(input:disabled) {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.SonicCheckbox_container input {
+  display: none;
+}
+
+.SonicCheckbox_container:has(input):before {
+  content: "";
+  display: block;
+  width: 14px;
+  min-width: 14px;
+  height: 14px;
+  border-radius: 4px;
+  border: 1px solid var(--color-white);
+}
+
+.SonicCheckbox_container:has(input:checked):before {
+  content: "";
+  display: block;
+  width: 14px;
+  min-width: 14px;
+  height: 14px;
+  border-radius: 4px;
+  /* background-color: var(--color-secondary); */
+  background-color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+}
+
+.SonicCheckbox_container:has(input:checked):after {
+  content: "";
+  font-weight: 900;
+  display: block;
+  position: absolute;
+  left: 5px;
+  top: 2px;
+  width: 4px;
+  height: 10px;
+  /* border: solid var(--color-white); */
+  border: solid var(--color-bg);
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}

@@ -1,0 +1,25 @@
+.custom_progress_bar_container {
+  width: 100%;
+}
+
+.custom_progress_bar_container .parent_div {
+  height: 8px;
+  width: 100%;
+  background-color: var(--color-white);
+  border-radius: 40px;
+  margin: 12px 0px 12px;
+}
+.custom_progress_bar_container .child_div {
+  height: 100%;
+  background-color: var(--color-primary);
+  border-radius: 40px;
+  text-align: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.custom_progress_bar_container .progress_text {
+  padding: 10px;
+  color: black;
+  font-weight: 900;
+}

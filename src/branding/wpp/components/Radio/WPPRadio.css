@@ -1,0 +1,4 @@
+:root {  
+    --wpp-radio-bg-color-checked: var(--color-primary);
+    --wpp-radio-border-color-checked: var(--color-primary);
+  }

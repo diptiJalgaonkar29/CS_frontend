@@ -1,0 +1,15 @@
+.fall_back_container {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--color-bg);
+  color: var(--color-white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fall_back_container .fall_back_logo {
+  width: 250px;
+  height: 250px;
+  object-fit: contain;
+}

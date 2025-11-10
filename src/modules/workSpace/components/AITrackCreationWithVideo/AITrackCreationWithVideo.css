@@ -1,0 +1,88 @@
+.AITrackCreationWithVideo_container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.AITrackCreationWithVideo_container .VideoPreview_wrapper {
+  margin-top: 20px;
+}
+
+.AITrackCreationWithVideo_container .card_icon svg {
+  width: 35px;
+  height: 35px;
+}
+
+.AITrackCreationWithVideo_container .note {
+  font-size: 16px;
+  color: var(--color-white);
+}
+
+.AITrackCreationWithVideo_container .thumbnail_container {
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid var(--color-primary);
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.AITrackCreationWithVideo_container .thumbnail_container .video_duration {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  font-size: 30px;
+  color: #fff;
+}
+
+.AITrackCreationWithVideo_container .thumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 15px;
+}
+
+.AITrackCreationWithVideo_btn_container {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+}
+
+.AITrackCreationWithVideo_btn_container .sonicButton {
+  flex: 1;
+}
+
+.pollingModal-dialog {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pollingModal-dialog .pollingModal_header {
+  margin-bottom: 20px;
+  font-size: 16px;
+  text-align: center;
+  color: var(--color-white) !important;
+}
+
+.pollingModal-dialog .pollingModal_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.pollingModal-dialog .pollingModal_loader {
+  width: 100%;
+}
+
+.pollingModal_loader .lds-default {
+  scale: 0.5;
+  width: 80px;
+  height: 40px;
+}
+
+.AITrackCreationWithVideo_container .SonicCheckbox_container:has(input):before {
+  border-radius: 50%;
+}

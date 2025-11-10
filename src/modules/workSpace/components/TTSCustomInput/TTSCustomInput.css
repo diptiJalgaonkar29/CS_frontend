@@ -1,0 +1,125 @@
+.dict_input_wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.dict_input_wrapper .ogWord_header {
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--color-white);
+  padding-left: 5px;
+}
+
+.dict_input_container {
+  background-color: transparent;
+  border: 1px solid var(--color-white);
+  /* width: 200px; */
+  width: 170px;
+  height: 35px;
+  display: flex;
+  /* justify-content: space-around; */
+  align-items: center;
+  border-radius: 10px;
+  padding-right: 5px;
+  gap: 5px;
+  margin: 5px;
+}
+
+.dict_input_container .short_input {
+  width: 90px;
+}
+
+.dict_input_container .long_input {
+  width: 90px;
+}
+
+.dict_input {
+  flex: 1;
+  height: 28px;
+  background-color: transparent;
+  border: none;
+  margin-left: 10px;
+  color: var(--color-white);
+  font-size: 16px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.disabled_dict_input {
+  color: rgba(255, 255, 255, 0.4) !important;
+}
+
+.dict_input:focus-visible {
+  border: none;
+  outline: none;
+}
+
+.dict_play {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.dict_cross {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.pause_dict_icon,
+.play_dict_icon {
+  width: 22px !important;
+  height: 22px !important;
+  margin: 0 !important;
+  color: var(--color-primary);
+  cursor: pointer;
+}
+
+.dict_play_restart_Icon {
+  width: 20px !important;
+  height: 20px !important;
+  margin: 0 !important;
+  cursor: pointer;
+}
+
+.play_pause_dict_icon {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  /* scale: 1.6; */
+  margin-top: 2px;
+  cursor: pointer;
+  margin-left: -5px;
+}
+
+/* .disabled_dict_input ~ .play_pause_dict_icon {
+  cursor: default;
+} */
+
+.play_pause_dict_icon svg {
+  fill: #858585;
+  width: 25px;
+  height: 25px;
+  font-size: 25px;
+}
+
+.dict_play_restart_Icon.loading {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  /* .dict_input_container {
+    width: 130px;
+  } */
+
+  /* .dict_input_container .short_input {
+    width: 70px;
+  } */
+}

@@ -1,0 +1,58 @@
+.AITrackCreationWithBrief_container .VideoPreview_wrapper {
+  margin: 20px 0 30px;
+}
+
+.AITrackCreationWithBrief_container .card_icon svg {
+  width: 35px;
+  height: 35px;
+}
+
+.brief_form_divider {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-white);
+  margin: 25px 0 20px;
+}
+
+.brief_form_btn_container {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  margin-top: 35px;
+}
+
+.brief_form_btn_container .sonicButton {
+  flex: 1;
+}
+
+.pollingModal-dialog {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pollingModal-dialog .pollingModal_header {
+  margin-bottom: 20px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.pollingModal-dialog .pollingModal_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.pollingModal_loader .lds-default {
+  scale: 0.5;
+  width: 80px;
+  height: 40px;
+}
+
+.pollingModal_loader {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

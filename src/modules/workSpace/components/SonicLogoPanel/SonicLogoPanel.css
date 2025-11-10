@@ -1,0 +1,72 @@
+.sonic_logo_panel {
+  width: 100%;
+  border-radius: 10px;
+  padding: 0px 25px;
+  justify-content: space-between;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: var(--color-secondary);
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.sonic_logo_panel .sonic_logo_panel_title {
+  color: var(--color-white);
+  font-size: 16px;
+  font-weight: 700;
+  margin: 20px 0 20px;
+}
+
+.sonic_logo_panel_item_container {
+  margin-bottom: 15px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 15px 60px;
+  max-height: 208px;
+  overflow-y: auto;
+}
+
+.SonicLogoItem_container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  width: fit-content;
+}
+
+.SonicLogoItem_container .SonicLogoItem_title {
+  width: 160px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.SonicLogoItem_container .sonic_logo_ctrlbtn,
+.sonic_logo_audio_controls_container,
+.sonic_logo_play_pause_btn,
+.sonic_logo_item_audio_loader,
+.sonic_logo_item_audio_loader .lds-default {
+  width: 20px;
+  height: 20px;
+}
+
+.sonic_logo_play_pause_btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.sonic_logo_play_pause_btn:disabled {
+  opacity: 0.5;
+}
+
+#sonic_logo_audio {
+  display: none;
+}
+
+.sonic_logo_item_audio_loader .lds-default {
+  scale: 0.3;
+  position: relative;
+  top: -9px;
+  left: -9px;
+}

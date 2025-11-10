@@ -1,0 +1,40 @@
+.AudioRetentionTandC_modal .MuiDialog-paperScrollPaper {
+  padding: 20px 30px !important;
+}
+
+.AudioRetentionTandC_text {
+  color: var(--color-white);
+  font-size: 14px;
+}
+
+.AudioRetentionTandC_text span {
+  color: var(--color-primary);
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.AudioRetentionTandC_header {
+  color: var(--color-white);
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 28px;
+  margin-bottom: 8px;
+}
+
+.AudioRetentionTandC_content {
+  color: var(--color-white);
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 28px;
+  margin: 0 0 16px;
+}
+
+.AudioRetentionTandC_modal ul {
+  padding-left: 75px;
+}
+
+.AudioRetentionTandC_btns {
+  margin: 10px auto;
+  display: flex;
+  justify-content: center;
+}

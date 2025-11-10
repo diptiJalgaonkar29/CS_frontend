@@ -1,0 +1,227 @@
+.cue_variant_block {
+  position: relative;
+}
+
+.cue_variant_block .play_pause_cue_icon {
+  background-color: transparent;
+  border: none;
+  pointer-events: all;
+  cursor: pointer;
+  opacity: 1;
+}
+.cue_variant_block .play_pause_cue_icon:disabled svg {
+  cursor: progress;
+  opacity: 0.5;
+}
+
+.cue_variant_block .wavesurfer {
+  background: var(--color-secondary);
+  border-radius: 10px;
+  margin-bottom: 15px;
+  height: 135px;
+}
+
+.cue_variant_block_skeleton {
+  background: var(--color-secondary);
+  border-radius: 10px;
+  margin-bottom: 15px;
+  height: 133px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cue_variant_block .main_container {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  padding: 10px 25px;
+}
+
+.cue_variant_block .wave {
+  width: calc(100% - 220px);
+}
+
+.cue_variant_block .header_container {
+  display: flex;
+  gap: 15px;
+  justify-content: space-between;
+  align-items: center;
+  width: calc(100% - 200px);
+  padding: 15px 0px 5px 0px;
+}
+
+.cue_variant_block .track_name {
+  color: var(--color-white);
+  font-size: 16px;
+  font-weight: 700;
+  padding-left: 25px;
+  white-space: nowrap;
+  width: 100px;
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cue_variant_block .track_name .track_action {
+  font-size: 12px;
+}
+
+.cue_variant_block .track_tags {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  padding-right: 0px;
+}
+
+.cue_variant_block .track_tag {
+  color: var(--color-primary);
+  font-size: 16px;
+}
+
+.cue_variant_block .timestamp {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.cue_variant_block .selection {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cue_variant_block .use-track,
+.cue_variant_block .get-variants {
+  width: 150px;
+  height: 42px;
+  color: var(--color-white);
+  border-radius: 30px;
+  position: relative;
+  font-size: 16px;
+  justify-content: center;
+  align-items: center;
+}
+
+.cue_variant_block .use-track {
+  background-color: var(--color-primary);
+  border: none;
+}
+.cue_variant_block .get-variants {
+  border: 0.1rem solid var(--color-white);
+  background-color: transparent;
+}
+.cue_variant_block .curr-time {
+  color: var(--color-white);
+  font-size: 14px;
+}
+.cue_variant_block .duration {
+  position: relative;
+  color: var(--color-white);
+  font-size: 14px;
+}
+
+.cue_variant_block .play_pause_btn {
+  width: 65px;
+}
+
+.cue_variant_block .ctrlbtn {
+  position: relative;
+  width: 70px;
+  height: 50px;
+  border-radius: 40px;
+  cursor: pointer;
+}
+
+.cue_variant_block .video-block {
+  position: relative;
+  left: 100%;
+  width: 500px;
+}
+
+.cue_variant_block .like_icon {
+  cursor: not-allowed;
+}
+
+.cue_variant_spinner_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+}
+
+.track_info {
+  cursor: pointer;
+}
+
+.track_info_tooltip_container {
+  padding: 15px 10px;
+}
+
+.track_info_tooltip_container b {
+  color: var(--color-primary);
+  font-size: 16px;
+}
+
+.track_info_tooltip_container p {
+  font-size: 14px;
+  line-height: 16px;
+  padding-top: 10px;
+}
+
+/* .track_info_tooltip {
+  position: absolute;
+  right: 25px; 
+  top: 16px;
+} */
+
+.cue_modal {
+  /* background-color: var(--color-secondary); */
+  color: var(--color-white);
+  margin: 20px 40px 10px;
+  max-height: 100%;
+  width: 500px;
+}
+
+.cue_modal .cue_modal_content {
+  margin-top: 0px;
+  font-size: 16px;
+  width: 100%;
+  line-height: 22px;
+  font-family: var(--font-primary-light);
+}
+
+.cue_modal .cue_modal_header {
+  margin: 25px 0px;
+  font-size: 16px;
+  font-weight: 700;
+}
+.cue_modal .cue_modal_btns {
+  display: flex;
+  gap: 15px;
+  margin: 30px 0;
+}
+
+.track_like_dislike {
+  display: flex;
+  gap: 25px;
+  position: absolute;
+  right: 25px;
+  top: 18px;
+}
+
+.track_like_dislike.dashbord_AICard {
+  position: relative;
+  right: 0px;
+  top: 0px;
+}
+
+.track_like_dislike svg.liked path,
+.track_like_dislike svg.disliked path {
+  fill: var(--color-primary);
+}
+
+.track_like_dislike svg {
+  cursor: pointer;
+}

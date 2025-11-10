@@ -1,0 +1,90 @@
+.video_layout_containerForShell {
+  display: flex;
+  gap: 25px;
+  position: relative;
+  width: 100%;
+}
+
+.video_layout_containerForShell .content_container {
+  padding-bottom: 225px;
+}
+
+.video_layout_containerForShell .video_container {
+  height: 350px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 50px;
+  width: 30%;
+}
+
+.video_layout_containerForShell .delete_icon_btn {
+  background-color: initial;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  z-index: 10;
+}
+
+.video_layout_containerForShell .delete_icon_container {
+  background-color: var(--color-bg-opacity);
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  opacity: 0.8;
+}
+
+.video_layout_containerForShell .delete_icon_btn:disabled {
+  cursor: not-allowed;
+}
+
+.video_layout_containerForShell .video_container_loader {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-color: var(--color-secondary);
+  z-index: 1;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 350px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.video_layout_containerForShell .video_container_processing {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-color: var(--color-secondary);
+  z-index: 1;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 350px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  color: var(--color-primary);
+  font-size: 16px;
+}
+
+.video_layout_containerForShell .video_loader_percentage {
+  color: var(--color-primary);
+  font-size: 18px;
+}
+
+.video_layout_containerForShell_filler {
+  width: 100%;
+  height: 15px;
+}

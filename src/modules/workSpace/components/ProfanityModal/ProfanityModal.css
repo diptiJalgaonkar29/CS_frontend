@@ -1,0 +1,52 @@
+.profanity_modal.SonicModal_dialog .MuiPaper-root.MuiDialog-paper {
+  min-width: min(500px, 80%) !important;
+}
+
+.profanity_modal .profanity_title {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--color-white);
+  margin: 8px 0;
+}
+
+.profanity_modal .profanity_value {
+  font-size: 16px;
+  font-weight: normal;
+  color: var(--color-white);
+}
+
+.profanity_modal .profanity_btns {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+.profanity_modal .profanity_expletive_words {
+  display: flex;
+  align-items: center;
+  margin: 6px 0;
+  gap: 5px;
+}
+
+.profanity_modal .profanity_icon {
+  font-size: 25px !important;
+  cursor: pointer;
+  border-radius: 50px;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  fill: #000;
+  z-index: 1;
+  pointer-events: all;
+  position: relative;
+}
+
+.profanity_modal .profanity_icon.green {
+  background-color: #4bb543;
+}
+
+.profanity_icon.red {
+  background-color: #e63c23;
+}

@@ -1,0 +1,123 @@
+/* for V2 */
+
+.upload_video_container .video_upload_v2 {
+  /* background-color: red; */
+  margin: 20px auto;
+}
+
+.upload_video_container .video_upload_v2 .uploaderBlock {
+  border: 1px solid var(--color-primary);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--color-white);
+  align-items: center;
+  padding: 30px;
+  margin: 5px 35px 5px;
+  width: 400px;
+  height: 200px;
+  gap: 20px;
+}
+
+.video_upload_v2_loading_block {
+  color: var(--color-white);
+  align-items: center;
+  padding: 30px;
+  margin: 0px 50px;
+  width: 350px;
+  height: 270px;
+  background-color: var(--color-secondary);
+  position: relative;
+  z-index: 11;
+  display: flex;
+  justify-content: center;
+}
+
+.video_upload_v2 .uploaderBlock .uploadBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 41px;
+  width: 320px;
+  background-color: var(--color-primary);
+  font-size: 16px;
+  padding: 0 10px;
+  border-radius: 49px;
+  cursor: pointer;
+  border-color: transparent;
+}
+
+.video_upload_v2 .uploaderBlock .uploadBtn .uploadImg {
+  height: 21px;
+  width: 22px;
+}
+
+.video_upload_v2 .uploaderBlock .title {
+  font-size: 18px;
+  /* margin: 5px; */
+  /* margin-top: -5px; */
+}
+
+.video_upload_v2 .uploaderBlock .sub_title {
+  font-size: 16px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.video_upload_v2 .upload_video_container .audio_on_off_video_wrapper {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+}
+
+.video_upload_v2 .upload_video_container .audio_on_off_video_wrapper .audio_on_off_video_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 16px;
+  margin-bottom: 15px;
+}
+
+.video_upload_v2 .audio_on_off_video_container .toggle_audio {
+  width: 254px;
+  height: 110px;
+}
+
+.video_upload_v2 .audio_on_off_video_container .toggle_audio .audio_on_off {
+  color: var(--color-primary);
+}
+
+.video_upload_v2 .audio_on_off_video_wrapper .radio_voice_music {
+  color: var(--color-primary);
+}
+
+.video_upload_v2 .audio_on_off_video_wrapper .radioHeader {
+  font-size: 20px;
+}
+
+.video_upload_v2 .audio_on_off_video_wrapper .MuiFormControlLabel-label {
+  font-size: 16px;
+}
+
+.video_upload_v2 .audio_on_off_video_wrapper .radio_desc {
+  margin-left: 22px;
+  color: #858585;
+  font-size: 14px;
+}
+
+.video_upload_v2 .video_uploader_btn_container {
+  margin: 20px 40px 30px;
+  text-align: center;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.video_uploader_btn_container .sonicButton.outlined {
+  width: 100%;
+}
+
+.video_upload_v2 .upload_video_container video {
+  background-color: black;
+}

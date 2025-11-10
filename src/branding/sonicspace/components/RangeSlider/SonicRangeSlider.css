@@ -1,0 +1,121 @@
+.sonic-rangeslider-wrapper .rheostat {
+  overflow: visible;
+}
+
+.sonic-rangeslider-wrapper .rheostat-background {
+  background-color: #fcfcfc;
+  border: 1px solid #d8d8d8;
+  position: relative;
+}
+
+.sonic-rangeslider-wrapper .rheostat-background {
+  height: 3px;
+  top: 2px;
+  width: 100%;
+  background-color: var(--color-primary);
+  border: none;
+}
+.sonic-rangeslider-wrapper .rheostat-handle {
+  width: 16px;
+  height: 16px;
+  background: var(--color-primary);
+  top: -6px;
+  margin-left: -10px;
+  border-radius: 50%;
+  border: solid 2px var(--color-primary);
+}
+
+.sonic-rangeslider-wrapper {
+  position: relative;
+  background: transparent;
+  border-bottom: 1px dotted gray;
+  box-sizing: border-box;
+  padding: 4rem 0.8rem 0rem;
+  border: 1px solid var(--color-white);
+  border-radius: 3rem;
+  margin: 10px 0px 10px 0px;
+}
+
+.sonic-rangeslider-wrapper {
+  margin: 50px 20px 20px 20px;
+}
+
+.sonic-rangeslider-wrapper .rheostat-progress {
+  height: 5px;
+  position: absolute;
+  top: 0;
+  background: var(--color-primary);
+}
+
+.sonic-rangeslider-wrapper .slideCtrLbl {
+  opacity: 1;
+  position: absolute;
+  left: -11px;
+  height: 30px;
+  width: 36px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 20px;
+  background-color: var(--color-primary) !important;
+  color: var(--color-white);
+  font-weight: 500;
+  top: -45px;
+  transform: translateX(-1px);
+  transition: 0.2s;
+  font-size: 15px;
+}
+
+.sonic-rangeslider-wrapper .slideCtrLbl::after {
+  opacity: 1;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 28px;
+  right: 10px;
+  border-top: 8px solid var(--color-primary);
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+}
+
+.sonic-rangeslider-wrapper .slideCtrLbl:hover::after {
+  opacity: 1;
+}
+
+.sonic-rangeslider-wrapper .sonic-rangeslider-numbers {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 0;
+  width: 100%;
+  font-size: 1.7rem;
+  color: var(--color-white);
+  margin: auto;
+  top: 15px;
+}
+
+.sonic-rangeslider-wrapper.sonic-rangeslider-wrapper-disabled .slideCtrLbl {
+  background-color: gray !important;
+}
+
+.sonic-rangeslider-wrapper.sonic-rangeslider-wrapper-disabled
+  .slideCtrLbl::after {
+  border-top: 8px solid gray;
+}
+
+.sonic-rangeslider-wrapper.sonic-rangeslider-wrapper-disabled
+  .rheostat-progress {
+  background: gray;
+}
+
+.sonic-rangeslider-wrapper.sonic-rangeslider-wrapper-disabled .rheostat-handle {
+  background: gray;
+  border: solid 2px gray;
+  cursor: not-allowed !important;
+}
+
+.sonic-rangeslider-wrapper.sonic-rangeslider-wrapper-disabled
+  .rheostat-background {
+  background: gray;
+  cursor: not-allowed !important;
+}

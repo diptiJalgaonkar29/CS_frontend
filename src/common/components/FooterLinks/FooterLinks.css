@@ -1,0 +1,65 @@
+.footer_link {
+  text-decoration: none !important;
+  color: var(--color-footer) !important;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.footer_link:hover {
+  color: var(--color-primary) !important;
+}
+
+.footer-dialog {
+  background-color: rgba(74, 74, 74, 0.3);
+}
+
+.footer-dialog-close {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  font-size: 14px;
+  color: var(--color-white);
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.footer-dialog-close svg {
+  stroke: var(--color-white);
+}
+
+.footer-dialog .MuiPaper-root.MuiDialog-paper {
+  background-color: var(--color-bg) !important;
+  width: 75% !important;
+  border-radius: 10px;
+  padding: 25px 50px;
+}
+
+.footer-dialog .MuiDialog-paperWidthSm {
+  max-width: 1000px !important;
+}
+
+.footer-dialog .footer-dialog-title {
+  font-size: 16px !important;
+  color: var(--color-white);
+  width: 100%;
+  text-align: center;
+  margin: 15px auto 20px auto;
+}
+
+.footer-dialog .footer_modal_container {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.footer-dialog .footer_modal_iframe {
+  width: 100%;
+  height: calc(70vh - 140px) !important;
+  border-radius: 10px;
+  border: 1px solid var(--color-white);
+}

@@ -1,0 +1,58 @@
+.tickmarks {
+  display: flex;
+  justify-content: space-between;
+  color: var(--color-white);
+  font-size: 16px;
+  width: 215px;
+  margin-left: -5px;
+  margin-top: 10px;
+}
+
+#range_slider {
+  width: 200px;
+  height: 3px;
+  -webkit-appearance: none;
+  border-radius: 5px;
+  background: var(--color-white);
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
+
+#range_slider:hover {
+  opacity: 1;
+}
+
+#range_slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--color-white);
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+#range_slider::-moz-range-thumb {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--color-white);
+  cursor: pointer;
+}
+
+.reset_container {
+  display: flex;
+  margin-top: 10px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.reset_text {
+  margin: 0;
+  color: var(--color-white);
+  font-size: 16px;
+  margin-left: 5px;
+}

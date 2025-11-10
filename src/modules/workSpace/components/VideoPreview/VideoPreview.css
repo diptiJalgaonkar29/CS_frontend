@@ -1,0 +1,53 @@
+.previewContainer .videoWrapper {
+  display: flex;
+  gap: 18px;
+  margin-bottom: 10px;
+  border: 1px solid var(--color-white);
+  border-radius: 10px;
+  padding: 16px;
+}
+
+.previewContainer .thumbnail {
+  width: 160px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 10px;
+  outline: 1px solid var(--color-primary);
+  outline-offset: 5px;
+}
+
+.previewContainer .videoInfo {
+  flex: 1;
+  color: var(--color-white);
+}
+
+.previewContainer .videoTitle {
+  font-size: 14px;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.previewContainer .videoDuration {
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-bottom: 8px;
+}
+
+.previewContainer
+  .videoInfo
+  .SonicCheckbox_container:has(input.retainCheckbox):before {
+  border: 1px solid #939393;
+}
+
+.previewContainer .videoInfo .SonicCheckbox_container {
+  color: #939393;
+  font-size: 14px;
+}
+
+.previewContainer .note {
+  color: #939393;
+  font-size: 14px;
+  margin-top: 10px;
+}

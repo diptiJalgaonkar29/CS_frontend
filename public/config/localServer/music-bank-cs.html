@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="robots" content="noindex,follow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description"
+    content="Welcome to our AI-powered platform that revolutionizes the way you create music, generate speech, and produce video content. With our cutting-edge technology, you can easily transform your creative vision into reality. Our text-to-speech engine takes your written content and converts it into natural-sounding speech with multiple voice options to choose from. Using advanced algorithms and machine learning, our platform analyzes your input and generates music that perfectly fits your needs. Whether you need background music for your videos or catchy tunes. " />
+  <meta name="keywords" content="AI Music,background music, AI Voice, text-to-speech, Video, AI-powered platform " />
+  <title>Creation Station</title>
+</head>
+
+<body style="
+      text-align: center;
+      background-color: var(--color-bg);
+      color: var(--color-white);
+    ">
+  <h1>Creation Station</h1>
+  <script>
+    var REACT_APP_PERMITTED_CS_DOMAINS = "localhost:3099,localhost:3006";
+    window.addEventListener("message", function (event) {
+      // console.log("CS message event", event);
+      let isPermitted =
+        REACT_APP_PERMITTED_CS_DOMAINS.split(",").findIndex((domain) =>
+          event.origin.endsWith(domain)
+        ) !== -1;
+
+      if (isPermitted) {
+        // console.log("CS data recevied", event?.data);
+        if (event?.data?.action === "LOGIN") {
+          const {
+            token,
+            action,
+            isPersonalizedTrackingAllowed,
+            csThemeData,
+            ss_access,
+            ...brandMeta
+          } = event?.data;
+          localStorage.setItem(`token`, event?.data?.token);
+          localStorage.setItem(`brandMeta`, JSON.stringify(brandMeta));
+          localStorage.setItem(`ssAccess`, ss_access);
+          localStorage.setItem(
+            `isPersonalizedTrackingAllowed`,
+            event?.data?.isPersonalizedTrackingAllowed ?? true
+          );
+          if (!!csThemeData) {
+            localStorage.setItem("csThemeData", csThemeData);
+          }
+        } else if (event?.data?.action === "LOGOUT") {
+          let brandId = event?.data?.brandId;
+          localStorage.clear();
+        }
+      }
+    });
+  </script>
+</body>
+
+</html>

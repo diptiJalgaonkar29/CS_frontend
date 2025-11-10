@@ -1,0 +1,25 @@
+.instrument_reset_changes_btn_container {
+  width: 100%;
+
+  margin: 10px 0 20px;
+  text-align: end;
+}
+
+.instrument_reset_changes_btn {
+  color: var(--color-white);
+  font-size: 16px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.instrument_reset_changes_btn:hover {
+  color: var(--color-primary);
+  cursor: pointer;
+}
+
+.instrument_reset_changes_btn:disabled {
+  opacity: 0.5;
+  color: var(--color-white);
+  cursor: not-allowed;
+}

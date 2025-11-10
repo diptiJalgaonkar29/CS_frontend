@@ -1,0 +1,27 @@
+:root {  
+  --wpp-slider-handle-bg-color-active: var(--color-primary);
+  --wpp-slider-handle-bg-color-disabled: var(--color-primary);
+  --wpp-slider-handle-border-color: var(--color-primary);
+  --wpp-slider-handle-border-color-active: var(--color-primary);
+  --wpp-slider-handle-border-color-disabled: var(--color-primary);
+  --wpp-slider-handle-border-color-hover: var(--color-primary);
+  --wpp-slider-track-bg-color: var(--color-primary);
+  --wpp-slider-track-bg-color-active: var(--color-primary);
+  --wpp-slider-track-bg-color-disabled: var(--color-primary);
+}
+
+.wpp-rangeslider {
+  width: 100%;
+}
+
+.wpp-rangeslider-numbers {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 0;
+  width: 100%;
+  font-size: 1.7rem;
+  color: var(--color-white);
+  margin: auto;
+  top: 10px;
+}

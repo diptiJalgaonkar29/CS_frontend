@@ -1,0 +1,16 @@
+.home_projectsList_container {
+  width: calc(100% - 125px);
+}
+
+.home_projectsList_container .existing-project__header {
+  margin: 50px 0px 25px 0px;
+  color: var(--color-white);
+  font-size: 16px;
+}
+
+.home_projectsList_container .existing-projects {
+  display: flex;
+  gap: 20px;
+  padding-bottom: 15px;
+  overflow-x: hidden;
+}

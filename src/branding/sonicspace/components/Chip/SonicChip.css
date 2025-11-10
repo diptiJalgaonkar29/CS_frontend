@@ -1,0 +1,92 @@
+.sonic_chip {
+  padding: 0.6rem 1.2rem;
+  border: 1px solid #ccc;
+  border-radius: 18px;
+  font-size: 1.4rem;
+  color: var(--color-white);
+  width: fit-content;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+.sonic_chip svg {
+  stroke: var(--color-white);
+  width: 15px;
+  height: 15px;
+  cursor: pointer !important;
+}
+
+.sonic_action_chip {
+  display: flex;
+  gap: 4px;
+  font-size: 1.4rem;
+  padding: 0.7rem 1rem;
+}
+
+.sonic_chip.tag_amp_allmood_ids,
+.sonic_chip.tag_amp_mainmood_ids {
+  background-color: var(--color-bubbletag-amp_allmood_ids-bg) !important;
+  color: var(--color-bubbletag-amp_mainmood_ids-text) !important;
+  border-color: transparent;
+}
+.sonic_chip.sonic_mood_tags {
+  background-color: var(--color-bubbletag-amp_allmood_ids-bg) !important;
+  color: var(--color-bubbletag-amp_mainmood_ids-text) !important;
+  border-color: transparent;
+}
+
+.sonic_chip.tag_feelings {
+  background-color: var(--color-bubbletag-feelings-bg) !important;
+  color: var(--color-white) !important;
+  border-color: transparent;
+}
+
+.sonic_chip.tag_tonality {
+  background-color: var(--color-bubbletag-tonality-bg) !important;
+  color: var(--color-white) !important;
+  border-color: transparent;
+}
+
+.sonic_chip.tag_motion {
+  background-color: var(--color-bubbletag-motion-bg) !important;
+  color: var(--color-white) !important;
+  border-color: transparent;
+}
+
+.sonic_chip.tag_impact {
+  background-color: var(--color-bubbletag-impact-bg) !important;
+  color: var(--color-white) !important;
+  border-color: transparent;
+}
+
+.sonic_chip.tag_genre {
+  background-color: var(--color-bubbletag-genre-bg) !important;
+  color: var(--color-bubbletag-genre-text) !important;
+  border-color: transparent;
+}
+
+.sonic_chip.tempo,
+.sonic_chip.tag_tempo {
+  background-color: var(--color-bubbletag-tempo-bg) !important;
+  color: var(--color-bubbletag-tempo-text) !important;
+  border-color: transparent;
+}
+
+.sonic_chip.tag_key {
+  background-color: var(--color-bubbletag-key-bg) !important;
+  text-transform: lowercase;
+  border-color: transparent;
+}
+
+.sonic_chip.assetTypeId {
+  background-color: var(--color-bubbleasset-type-id-bg) !important;
+  color: var(--color-white) !important;
+  border-color: transparent;
+}
+
+.sonic_chip.instrument_ids {
+  background-color: var(--color-bubbletag-instrument-bg) !important;
+  color: var(--color-white) !important;
+  border-color: transparent;
+}

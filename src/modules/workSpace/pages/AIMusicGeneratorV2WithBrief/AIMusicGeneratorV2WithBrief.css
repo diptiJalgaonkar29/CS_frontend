@@ -1,0 +1,63 @@
+.brief_form_container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.brief_form_btn_container .sonicButton.filled {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.brief_form_container .brief_form_divider {
+  margin: 10px 0px;
+}
+
+.brief_form_container .brief_form_btn_container {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.pollingModal-dialog {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pollingModal-dialog .pollingModal_header {
+  margin-bottom: 20px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.pollingModal-dialog .pollingModal_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.pollingModal_loader .lds-default {
+  scale: 0.5;
+  width: 80px;
+  height: 40px;
+}
+
+.pollingModal_loader {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* .brief_form_container .brief_upload_btn {
+    margin-bottom: 5px;
+}
+
+.brief_form_container .brief_upload_btn .sonic_file_input_container.filled label[for="sonic_file_input"] {
+    margin-bottom: 5px;
+    width: 100%;
+} */

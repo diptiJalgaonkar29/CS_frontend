@@ -1,0 +1,47 @@
+.LikeDislikeCueIdReportPage_header {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  background-color: var(--color-bg);
+  /* position: sticky;
+  top: 80px;
+  z-index: 10; */
+  width: 100%;
+}
+
+.LikeDislikeCueIdReportPage_header .title {
+  font-size: 2.8rem;
+  font-weight: 400;
+  margin: 1.5rem 0;
+}
+
+.LikeDislikeCueIdReportPage_header
+  .DownloadLikeDislikeCueIdReportExcelBtn_container {
+  flex: 1;
+  text-align: right;
+}
+
+.like_dislike_report_filter {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+
+.custom_table_container .table .Liked.status {
+  background-color: #24a148 !important;
+}
+
+.custom_table_container .table th.cue_id,
+.custom_table_container .table td.cue_id {
+  border: 1px solid var(--color-secondary);
+  word-break: break-word;
+  min-width: 200px;
+}
+
+.custom_table_container .table .Disliked.status {
+  background-color: #da1e28 !important;
+}
+
+.LikeDislikeCueIdReportPage_container {
+  margin-bottom: 80px;
+}

@@ -1,0 +1,48 @@
+.custom_date_range_container {
+  border: 1px solid #858585;
+  border-radius: 5px;
+  position: relative;
+}
+
+.custom_date_range_container .calender_icon {
+  position: absolute;
+  z-index: 10;
+  left: 5px;
+  top: 10px;
+  pointer-events: none;
+}
+
+.custom_date_range_container .react-datepicker-wrapper,
+.custom_date_range_container .react-datepicker-wrapper input {
+  width: 150px !important;
+  border: none !important;
+  border-radius: 5px !important;
+}
+
+.custom_date_range_container .react-datepicker-wrapper input {
+  font-weight: bold !important;
+  cursor: pointer !important;
+  padding: 10px 10px 10px 25px !important;
+  background-color: var(--color-bg);
+}
+.custom_date_range_container .select-option {
+  color: black;
+}
+
+.custom_date_range_container .custome-date-button {
+  color: black;
+  padding: 5px;
+}
+.custom_date_range_container .select-option option {
+  color: black;
+}
+
+.custom_date_range_container .react-datepicker {
+  font-size: 1.3rem !important;
+}
+/* .react-datepicker__input-container .react-datepicker__calendar-icon {
+  padding: 1px !important;
+  position: relative;
+  top: 5px;
+  left: 5px;
+} */

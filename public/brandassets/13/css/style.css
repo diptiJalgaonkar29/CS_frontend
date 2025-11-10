@@ -1,0 +1,127 @@
+.vodafone .navbar_img {
+  /* height: 50px !important; */
+  max-width: 55px !important;
+}
+
+.vodafone .project_grid_item .project_grid_asset {
+  background-color: #e7eaee !important;
+  border-top: solid 1px #393e44 !important;
+}
+
+.vodafone .custom_tooltip .MuiTooltip-tooltip {
+  background-color: #e7eaee !important;
+}
+
+.vodafone .BackButton_container svg {
+  fill: #fff !important;
+}
+
+.vodafone .cs_image_icon img,
+.vodafone .instrument_volume_slider_container .instrument_volume_speaker_icon {
+  filter: invert(1) !important;
+}
+.vodafone .SonicModal_dialog .MuiPaper-root.MuiDialog-paper,
+.vodafone
+  .SonicModal_dialog
+  .MuiDialog-container
+  .MuiPaper-root.MuiDialog-paper {
+  background-color: #fff !important;
+}
+
+.vodafone .sonicButton.filled,
+.vodafone .uploaderBlock .uploadBtn,
+.vodafone .ERROR p,
+.vodafone .CustomNotificationTopBar_text,
+.vodafone
+  .instrument_volume_slider_container
+  .SonicSliderInput
+  + datalist
+  option,
+.vodafone .instrument_volume_slider_container .slider_value_tooltip {
+  color: #fff !important;
+}
+.vodafone .sonicButton.outlined,
+.vodafone .loader_spinner_percentage,
+.vodafone .tick_inner,
+.vodafone #voice_add_menu .MuiMenu-paper .MuiMenuItem-root {
+  color: #000 !important;
+}
+
+.vodafone .ending_option_container .selected.sonicButton.outlined {
+  color: var(--color-primary) !important;
+}
+
+.vodafone .ending_option_container .selected.sonicButton.outlined:disabled {
+  color: var(--color-secondary-shade11) !important;
+}
+
+.vodafone .lds-default div {
+  background-color: #000 !important;
+}
+.vodafone #scroll_to_top_btn {
+  stroke: var(--color-black) !important;
+}
+
+.vodafone .dict_input_wrapper .disabled_dict_input,
+.vodafone .disabled_name {
+  color: #999 !important;
+}
+.vodafone .dict_action_btn_container .dict_delete_icon {
+  fill: #000 !important;
+}
+
+.vodafone .export_container .CardContent1 .format_style.format_style_active svg.video_icon {
+  fill: var(--color-primary) !important;
+}
+
+.vodafone .export_container .CardContent1 .format_style svg.video_icon,
+.vodafone .dict_report_delete_icon {
+  fill: var(--color-white) !important;
+}
+
+.vodafone .sonicButton,
+.vodafone .boldFamily,
+.vodafone .format_style,
+.vodafone .nav_link {
+  font-family: var(--font-primary-bold) !important;
+  font-weight: normal !important;
+}
+
+.vodafone .sonicButton.frashlyMadeButton,
+.vodafone .activeWSBtn.sonicButton.outlined {
+  color: var(--color-primary) !important;
+}
+
+.vodafone .custom_progress_bar_container .parent_div {
+  background-color: var(--color-secondary-shade6) !important;
+}
+
+.vodafone
+  .timeline_voice_volume_slider_wrapper:hover
+  .timeline_voice_volume_speaker_icon,
+.vodafone
+  .timeline_voice_music_volume_slider_wrapper:hover
+  .timeline_voice_volume_speaker_icon,
+.vodafone
+  .timeline_music_volume_slider_wrapper:hover
+  .timeline_voice_volume_speaker_icon,
+.vodafone .voice_card_tags_header_summary svg {
+  filter: invert(1) !important;
+}
+
+.vodafone .MuiSlider-valueLabel * {
+  color: #fff !important;
+}
+
+.vodafone .track_like_dislike svg path,
+.vodafone .track_like_dislike svg path {
+  fill: #494b4c;
+}
+
+.vodafone .cue_track_player_close_btn {
+  filter: brightness(0) !important;
+}
+
+.vodafone .brief-textarea {
+  background-color: var(--color-bg) !important;
+}

@@ -1,0 +1,392 @@
+<!-- To use swap with index.html and invalidate web cache -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="robots" content="noindex,follow" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, shrink-to-fit=no"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Amp Music</title>
+    <style>
+      body {
+        background-color: #fff;
+        color: #000;
+        font-family: Helvetica, sans-serif;
+        font-size: 14px;
+        padding: 25px 20px;
+      }
+      .impr-page {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        min-height: 100vh;
+      }
+
+      .impr-container {
+        background-color: var(--color-bg);
+        width: 100%;
+        flex: 1;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 300px 1fr;
+        grid-template-areas: "headline headline headline" "text text text";
+        position: relative;
+      }
+
+      .impr-headline {
+        height: 30vh;
+        background-color: var(--color-bg);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .impr-pp-header {
+        width: 100%;
+        text-align: center;
+      }
+
+      .impr-quicklink {
+        text-decoration: underline;
+        font-style: italic;
+      }
+
+      .impr-quicklink:hover {
+        cursor: pointer;
+      }
+
+      .impr-headline__title {
+        grid-area: headline;
+        font-size: 4.8rem;
+        line-height: 57px;
+        font-weight: bold;
+        font-style: normal;
+        text-transform: uppercase;
+        color: transparent;
+        transform: translateY(-40%);
+      }
+
+      .bold {
+        font-weight: bold;
+      }
+
+      .italic {
+        font-style: italic;
+      }
+
+      .underline {
+        text-decoration: underline;
+      }
+
+      .impr-text {
+        grid-area: text;
+        margin: 0 auto 15rem;
+        transform: translateY(-10rem);
+        width: 70%;
+        padding: 4rem 2rem 4rem 2rem;
+        background-color: var(--color-bg);
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+      }
+
+      .impr-goBack-Section {
+        font-size: 1.2rem;
+        color: var(--color-primary);
+        display: flex;
+        align-items: center;
+      }
+
+      .impr-goBack-Section svg {
+        font-size: 2.1rem !important;
+        margin-right: 1rem;
+      }
+
+      .impr-goBack {
+        color: var(--color-primary);
+      }
+
+      .impr-goBack-Section:hover {
+        cursor: pointer;
+      }
+
+      .impr-goBack-Section:hover .impr-goBack {
+        text-decoration: underline;
+      }
+
+      .impr-goBack-Section:hover svg {
+        animation-iteration-count: 1;
+        animation: goBackArrowAnimation 0.25s forwards ease-in-out;
+      }
+
+      @keyframes goBackArrowAnimation {
+        from {
+          transform: translateX(0%);
+        }
+        to {
+          transform: translateX(-30%);
+        }
+      }
+
+      .impr-underline {
+        text-decoration: underline;
+      }
+
+      .impr-extra {
+        border: 1px solid green;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+      }
+
+      .impr p {
+        color: var(--color-white);
+        font-size: 1.6rem;
+        font-weight: 300;
+        line-height: 2.8rem;
+        margin: 0 0 1.6rem;
+      }
+
+      .impr li::marker,
+      ol::marker {
+        color: var(--color-white);
+        font-size: 1.8rem !important;
+      }
+
+      #impr-pp p {
+        line-height: 2.1rem !important;
+      }
+
+      .impr-mrgn-top {
+        margin-top: 4rem;
+      }
+
+      .impr-list-none {
+        list-style: none;
+      }
+      .impr-list-pp {
+        padding-inline-start: 30px;
+      }
+
+      .impr-subheader {
+        color: var(--color-white);
+        font-family: Helvetica, sans-serif;
+        font-weight: 600;
+        font-size: 1.7rem;
+        line-height: 2.8rem;
+        margin-bottom: 0.8rem;
+      }
+
+      table {
+        border-spacing: 0;
+      }
+      th,
+      td {
+        border: 0.5px solid var(--color-bg);
+      }
+    </style>
+  </head>
+  <body>
+    <div className="impr">
+      <h3 className="impr-subheader impr-mrgn-top">TERMS OF USE</h3>
+      <p className="impr-underline impr-mrgn-top">The Music Bank</p>
+      <br />
+      <p>
+        The Music Bank works according to an intelligent search algorithm driven
+        by machine learning and music-related parameters and tags. For access to
+        the Music Bank, amp creates individual User Accounts based on
+        information provided by
+        <span>Amp Music</span> and its subsidiaries (first and last name of
+        User, E-Mail-Address, name of workplace and country). Upon access to the
+        Music Bank, the Users are able to:
+      </p>
+      <br />
+      <ul>
+        <li>
+          <p>Online stream (music can be played in the Music Bank);</p>
+        </li>
+        <li>
+          <p>
+            Track Download (music can be downloaded to an external device): in
+            each Music Element page, also called “Music Track Folder”, the User
+            may download, when available, the Audio Master (the original
+            mastered piece of music) and the Stems (the single instrument tracks
+            of a piece).
+          </p>
+        </li>
+      </ul>
+
+      <br />
+      <p>
+        The Music Bank is a web-based application for searching, listening and
+        downloading music explicitly developed for
+        <span> Amp Music</span>. Key features of the Music Bank include the
+        intelligent search algorithm, the browse function, the document section
+        and my music. Additionally, in the section my music, each User has the
+        possibility to create playlists with favorite tracks and to follow other
+        Users’ playlists. This function provides Users fast access to the tracks
+        they are currently using i.e. for specific campaigns. It further serves
+        as inspiration for all Music Bank Users. The search system is based on
+        tags describing the emotional attributes of each piece. Each piece can
+        have a different number of tags. These tags are carefully assigned to
+        each music track by the administrator. The User can search new tracks by
+        combining tags.
+      </p>
+      <br />
+      <p>Users are also able to:</p>
+      <ul>
+        <li>
+          <p>
+            select and search for artists, genres, instruments and desired
+            tempos, using a search bar or filter function;
+          </p>
+        </li>
+        <li>
+          <p>
+            observe the music trends of the moment, based on listening data and
+            the number of recorded downloads-observe the most downloaded tracks
+            of a selected period;
+          </p>
+        </li>
+        <li>
+          <p>observe the most recently uploaded tracks;</p>
+        </li>
+        <li>
+          <p>
+            observe suggested tracks, based on the User’s taste (recorded
+            streaming and download data);
+          </p>
+        </li>
+        <li>
+          <p>
+            filter search results by artist, tags, instruments, genre or tempo.
+          </p>
+        </li>
+      </ul>
+
+      <br />
+      <p className="impr-underline">Terms of Use and limited License</p>
+      <br />
+      <p>
+        The access to the Music Bank is strictly reserved (in addition to all
+        authorized personnel of <span>Amp Music</span> and its subsidiaries) to
+        those agencies and production studios which are party to contractual
+        arrangements (service/engagement/commission agreements) with a company
+        of the <span>Amp Music</span>. Username and Password are therefore
+        strictly personal and cannot be assigned and/or communicated by the
+        Users to any third parties for any reason whatsoever.
+      </p>
+      <br />
+      <p>
+        Each User is hereby permitted to download and use the Music Elements,
+        without any exclusivity, SOLELY FOR THE PURPOSE TO CREATE AUDIO VISUAL
+        WORKS FOR THE EXCLUSIVE BENEFIT OF THE
+        <span>AMP MUSIC</span> OR ITS SUBSIDIARIES, TO THE EXTENT AUTHORIZED
+        UNDER AN EXISTING (SERVICE, ENGAGEMENT/ OR COMMISSION) WRITTEN
+        AGREEMEMT, AND SUBJECT TO THE LIMITATIONS PROVIDED THEREIN, as follows:
+        -Use the Music Elements as such and/or to create derivative,
+        compilation, sequel series works, and specifically to edit, or otherwise
+        change the Music Elements (remove portions or add other portions, change
+        redesign key features and elements, create arrangements, choral
+        settings, combine with other works, subject to authors’ moral rights to
+        the extent recognized by relevant legislations) to create spots, movies
+        and/or insert and/or synchronize in moving pictures. Any other usage is
+        excluded.
+      </p>
+      <br />
+      <p>
+        The downloaded and adjusted Music Elements shall be uploaded to the
+        Music Bank by amp, only upon instruction from
+        <span>Amp Music</span> and its subsidiaries which will be responsible to
+        obtain all the necessary copyright (licensing or ownership) on all the
+        uploaded Music Elements.
+      </p>
+      <br />
+      <p>
+        It is specifically understood and agreed upon that the User does NOT
+        acquire any ownership right or any underlying copyright in the Music
+        Elements, and that the respective rights holder retains all rights,
+        title, interest including all copyrights in the Music Elements, even
+        after installation on your personal computers, mobile handsets, tablets,
+        wearable devices, speakers, and/or other devices, as well as in all
+        derivatives and edits of the Music Elements realized by the respective
+        Users (unless otherwise expressly agreed, in writing, in the agreement
+        with the specific User).
+      </p>
+      <br />
+      <p>
+        In the event that the respective user has created his own copyright to a
+        work through the use, conversion or processing of the Music Elements
+        within the scope of these Terms of Use, unless to the extent otherwise
+        agreed in writing in the corresponding service, engagement or commission
+        agreement, the User grants <span>Amp Music </span>
+        and its subsidiaries an exclusive, transferable, sub-licensable,
+        royalty-free, perpetual, irrevocable, fully paid, worldwide license to
+        use, reproduce, make available to the public (e.g. perform or display),
+        publish, translate, modify, create derivative works from, and distribute
+        any of your User Content in connection with the Service through any
+        medium, whether alone or in combination with other Content or materials,
+        in any manner and by any means, method or technology, whether now known
+        or hereafter created.
+      </p>
+      <br />
+      <p>
+        This Agreement does not include any license of Performing Rights. In any
+        case of a publication of Music Elements and/or derivatives and/or edits
+        thereof, the User shall report said music to the local Performing Rights
+        society, and amp, identifying the original copyright owner, composer,
+        publisher, song title, and length of use. Any time an individual User
+        shall use one Music Element and/or a derivative or edit thereof to be
+        published, the User shall compile, before the first publication, the
+        relevant window of the Music Bank called “Download information” with all
+        the requested information as to Topic, Campaign name, Models, Format,
+        Durations, First Airing, Advertising Agency, Producer name, Producer
+        Email and Production Company.
+      </p>
+      <br />
+      <p className="imp-underline">
+        <u>Administration of the Music Bank - Disputes</u>
+      </p>
+      <br />
+      <p>
+        It is specifically understood and agreed upon that
+        <span>Amp Music </span>
+        with its subsidiaries and amp do not grant any assurance or guarantee,
+        whether explicit or implicit. In particular, these Terms of Use do not
+        constitute an implied commitment or guarantee regarding the condition,
+        merchantability, suitability for certain purposes or the non-violation
+        of laws or intellectual property rights.
+      </p>
+      <br />
+      <p>
+        Upon agreement with the <span>Amp Music</span> or one of its
+        subsidiaries, amp shall have the right to immediately terminate these
+        Terms of Use with a specific User who fail to comply with these terms
+        and conditions, preventing with immediate effect their access to the
+        Music Bank. amp shall hold no responsibility for the actual use of the
+        Music Element by Users, and/ or any violations of these Terms of Use by
+        Users.
+      </p>
+      <br />
+      <br />
+      <p>
+        amp is not responsible for the technical functioning of the Music Bank
+        and accepts no liability for any technical problems that should cause
+        the Music Bank not to be available for access, and provide no guarantee
+        that the service will be uninterrupted or error free. Nonetheless, if
+        any technical problems or malfunctioning should occur, amp will endeavor
+        to achieve a fast remedy of the problem and access to the Music Bank. In
+        this context, amp shall be under an obligation to comply with a support
+        service.
+      </p>
+      <br />
+      <p>
+        If a clause of this agreement should be ineffective, the remaining
+        regulations in their legal effectiveness are not affected. This
+        Agreement is governed in accordance with the laws of Germany. All
+        disputes concerning this Agreement shall be devolved to the exclusive
+        jurisdiction of the German courts, and the venue of the Court of Munich.
+      </p>
+    </div>
+  </body>
+</html>

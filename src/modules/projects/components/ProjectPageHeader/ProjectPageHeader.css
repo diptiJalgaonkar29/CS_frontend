@@ -1,0 +1,86 @@
+.page_header {
+  display: flex;
+  align-items: baseline;
+  align-items: center;
+}
+.page_search_bar {
+  height: 140px;
+  display: flex;
+  align-items: center;
+}
+
+.archive_note {
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+  color: var(--color-white);
+  height: 64px;
+}
+.archive_note span {
+  color: var(--color-primary);
+}
+
+#project_menu_dropdown .MuiMenu-paper {
+  background-color: var(--color-secondary) !important;
+  font-size: 16px !important;
+  border-radius: 10px !important;
+  overflow: hidden !important;
+}
+
+#project_menu_dropdown .MuiMenu-paper .MuiMenuItem-root {
+  font-size: 16px !important;
+  color: var(--color-white);
+  width: 250px;
+}
+
+#project_menu_dropdown .MuiMenu-paper .MuiDivider-root {
+  margin-top: 120px;
+  background-color: #4d4d4d !important;
+  width: 90% !important;
+  margin: 0 auto;
+}
+#project_menu_dropdown .MuiPaper-root {
+  margin-left: 40px;
+  margin-top: 20px;
+}
+
+.page_header .page_header_viewType_Add {
+  display: flex;
+  margin-left: auto;
+  gap: 15px;
+  align-items: center;
+}
+
+.page_header_viewType_Add div {
+  cursor: pointer;
+}
+
+.page_header_viewType_Add .active_project_view {
+  fill: var(--color-icon-active);
+  color: var(--color-icon-active);
+}
+
+.page_header_viewType_Add .inactive_project_view {
+  fill: var(--color-icon-inactive);
+  color: var(--color-icon-inactive);
+}
+
+.project_menu_item {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.page_header .page_header_option {
+  font-size: 40px;
+  font-weight: 600;
+  color: var(--color-white);
+  display: flex;
+  gap: 20px;
+  cursor: pointer;
+}
+
+.page_header .page_header_option svg {
+  stroke: var(--color-white);
+  width: 24px;
+  height: 48px;
+}

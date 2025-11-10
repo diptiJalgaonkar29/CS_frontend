@@ -1,0 +1,23 @@
+.recent_music_container {
+  padding-bottom: 10px;
+}
+
+.recent_music_no_data_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  top: 30px;
+  gap: 15px;
+}
+
+.recent_music_no_data_header {
+  color: var(--color-white);
+  text-align: center;
+}
+
+.recent_music_header {
+  color: var(--color-white);
+  margin: 0px 0 10px;
+}

@@ -1,0 +1,20 @@
+.slider_thumb_container.bounce {
+  animation-name: bounce;
+  animation-duration: 0.8s;
+  animation-delay: 0.8s;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translate(0px, -8px);
+  }
+  33% {
+    transform: translate(-16px, -8px);
+  }
+  66% {
+    transform: translate(8px, -8px);
+  }
+  100% {
+    transform: translate(0, -8px);
+  }
+}

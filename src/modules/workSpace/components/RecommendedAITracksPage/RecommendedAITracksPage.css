@@ -1,0 +1,28 @@
+.tags_selection_container {
+  align-items: center;
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  width: fit-content;
+}
+
+.tags_selection_container > .brand_tag_modal_container {
+  background-color: var(--color-secondary);
+}
+
+.tags_selection_container.video {
+  align-items: flex-start;
+}
+
+.no_data_found_ai_tracks {
+  text-align: center;
+  font-size: 18px;
+  margin-top: 15px;
+}
+
+@media only screen and (max-height: 800px) {
+  .tags_selection_container.no_video {
+    height: auto !important;
+  }
+}

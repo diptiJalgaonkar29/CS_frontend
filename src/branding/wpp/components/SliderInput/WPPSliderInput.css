@@ -1,0 +1,11 @@
+:root {  
+  --wpp-slider-handle-bg-color-active: var(--color-primary);
+  --wpp-slider-handle-bg-color-disabled: var(--color-primary);
+  --wpp-slider-handle-border-color: var(--color-primary);
+  --wpp-slider-handle-border-color-active: var(--color-primary);
+  --wpp-slider-handle-border-color-disabled: var(--color-primary);
+  --wpp-slider-handle-border-color-hover: var(--color-primary);
+  --wpp-slider-track-bg-color-active: var(--color-primary);
+  --wpp-slider-track-bg-color-disabled: var(--color-primary);
+}
+

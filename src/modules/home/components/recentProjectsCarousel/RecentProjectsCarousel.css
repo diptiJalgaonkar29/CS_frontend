@@ -1,0 +1,9 @@
+.recent_project_container {
+  width: 100%;
+}
+
+.recent_project_container .header {
+  font-weight: 400;
+  font-size: 20px;
+  margin-bottom: 30px;
+}

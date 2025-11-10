@@ -1,0 +1,15 @@
+.dashboard_variant_container .variant_container {
+  width: calc(86vw - 7px);
+  padding-right: 0px;
+}
+
+.center_align_title {
+  color: var(--color-white);
+  margin: 25px 0px 15px 0px;
+  text-align: center;
+}
+
+.left_align_title {
+  color: var(--color-white);
+  margin: 25px 0px 15px 0px;
+}

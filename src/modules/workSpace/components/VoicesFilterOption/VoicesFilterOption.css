@@ -1,0 +1,447 @@
+.voice_sidebar_accordion {
+  background-color: transparent !important;
+  width: min-content !important;
+  border: 1px solid var(--color-white) !important;
+  border-radius: 30px !important;
+  color: var(--color-white) !important;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.voice_sidebar_accordion .MuiAccordionDetails-root {
+  padding: 0px;
+}
+
+.voice_sidebar_accordion .MuiAccordionSummary-root.Mui-expanded {
+  min-height: 45px;
+}
+
+.voice_sidebar_accordion.MuiAccordion-root.Mui-expanded {
+  margin: 0px 0px 10px 0px;
+}
+
+.voice_sidebar_accordion .MuiSvgIcon-root {
+  fill: var(--color-white) !important;
+  font-size: 22px;
+}
+
+#voice-form-container {
+  display: flex !important;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.left_VoicesFilterOption_container {
+  display: flex !important;
+  justify-content: flex-start !important;
+  align-items: flex-start !important;
+  padding: 0rem !important;
+  gap: 10px !important;
+  flex-wrap: wrap;
+}
+
+.right_VoicesFilterOption_container {
+  display: flex !important;
+  /* align-items: center !important; */
+  position: relative;
+}
+
+.right_VoicesFilterOption_container .search_icon {
+  position: absolute;
+  right: 15px;
+  top: 8px;
+  color: var(--color-white);
+}
+
+.voice-form-Heading {
+  color: var(--color-white);
+  font-size: 16px;
+  margin: 15px 0px 15px;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+}
+
+.voice-form-label {
+  color: var(--color-white);
+  font-size: 16px;
+  margin: 5px 15px 10px;
+  font-weight: bold;
+}
+
+.voice-form-container .input {
+  display: flex;
+  flex-direction: column;
+  /* padding: 9px 0px; */
+  font-size: 16px;
+  width: 100%;
+  padding: 0rem 0rem 1rem 0rem;
+}
+
+.voice-form-container .MuiButtonGroup-root {
+  display: flex;
+  height: 46px !important;
+}
+
+.voice-form-container
+  .gender-button-group
+  .MuiButtonGroup-root
+  .MuiButtonBase-root {
+  flex: 1;
+  border: 1px solid var(--color-white);
+  color: var(--color-white);
+  font-size: 16px;
+  text-transform: none;
+}
+
+.voice-form-container
+  .age-button-group
+  .MuiButtonGroup-root
+  .MuiButtonBase-root {
+  flex: 1;
+  border: 1px solid var(--color-white);
+  color: var(--color-white);
+  font-size: 16px;
+  text-transform: none;
+}
+
+.voice-form-container .MuiButtonGroup-root .MuiButtonBase-root:first-child {
+  border-top-left-radius: 30px 30px;
+  border-bottom-left-radius: 30px 30px;
+}
+
+.voice-form-container .MuiButtonGroup-root .MuiButtonBase-root:last-child {
+  border-top-right-radius: 30px 30px;
+  border-bottom-right-radius: 30px 30px;
+}
+
+.active {
+  background-color: var(--color-primary) !important;
+}
+
+.clearFix {
+  clear: both;
+}
+
+.search_voice_input {
+  background-color: transparent;
+  border: 1px solid var(--color-white);
+  border-radius: 30px;
+  height: 40px;
+  padding-left: 15px;
+  padding-right: 45px;
+  font-size: 16px;
+  color: var(--color-white);
+  width: 180px;
+  /* margin-left: 45px; */
+}
+
+.search_voice_input:focus-visible {
+  border: 1px solid var(--color-primary);
+  outline: none;
+}
+
+.search_voice_input::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: var(--color-white);
+  opacity: 1; /* Firefox */
+}
+
+.search_voice_input:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: var(--color-white);
+}
+
+.search_voice_input::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: var(--color-white);
+}
+
+.bottom_voice_filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+
+.bottom_voice_filter .bottom_left_voice_filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 45px;
+}
+
+.bottom_voice_filter .reset_btn {
+  font-size: 16px;
+  color: var(--color-primary);
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.Studio_Quality_InfoToolTip {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.VoicesFilter_tooltip_container {
+  padding: 10px 15px;
+  font-size: 16px;
+}
+
+.VoicesFilter_tooltip_container > svg {
+  margin-bottom: 5px;
+}
+
+.rmsc.multi_select_voice_filter .dropdown-container,
+.rmsc.multi_select_voice_filter .dropdown-content {
+  background-color: transparent;
+  border: none;
+}
+
+.rmsc.multi_select_voice_filter .dropdown-container:focus-within {
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+.rmsc.multi_select_voice_filter .dropdown-heading {
+  width: 125px;
+  height: 40px;
+  padding: 10px;
+  gap: 2px;
+  border-radius: 40px;
+  border: 1px solid var(--color-white);
+  font-size: 16px;
+}
+
+.rmsc.multi_select_voice_filter .dropdown-content .panel-content {
+  width: 175px;
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid var(--color-white);
+  font-size: 16px;
+  background: var(--color-bg);
+}
+
+.rmsc.multi_select_voice_filter .search input {
+  border: 1px solid var(--color-white);
+  background-color: var(--color-bg);
+  color: var(--color-white);
+  border-radius: 10px;
+  padding: 4px 45px 4px 8px;
+  height: 25px;
+  position: relative;
+}
+
+.rmsc.multi_select_voice_filter .search input:focus {
+  background-color: var(--color-bg);
+  color: var(--color-white);
+}
+
+.rmsc.multi_select_voice_filter .search::after {
+  content: "";
+  background-image: url(../../../../static/common/search.svg);
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 6px;
+  top: 1px;
+  scale: 0.8;
+  filter: invert(1);
+}
+
+.rmsc.multi_select_voice_filter .search {
+  border: none;
+  margin-bottom: 10px;
+}
+
+.rmsc.multi_select_voice_filter .search .search-clear-button {
+  right: 35px;
+  scale: 0.9;
+  width: 15px;
+}
+
+.rmsc.multi_select_voice_filter .item-renderer {
+  align-items: center;
+  gap: 5px;
+  font-size: 16px;
+  flex: 1;
+}
+
+.rmsc.multi_select_voice_filter.selectAll
+  ul
+  > label.select-item
+  input[type="checkbox"] {
+  position: relative;
+}
+
+.rmsc.multi_select_voice_filter.selectAll
+  ul
+  > label.select-item
+  input[type="checkbox"]:checked:before {
+  content: "";
+  display: block;
+  width: 11px;
+  height: 11px;
+  background-color: var(--color-primary);
+  border-radius: 4px;
+  position: absolute;
+  border: 1px solid var(--color-white);
+}
+
+.rmsc.multi_select_voice_filter.selectAll
+  ul
+  > label.select-item
+  input[type="checkbox"]:checked:after {
+  content: "";
+  font-weight: 900;
+  display: block;
+  width: 7px;
+  height: 3px;
+  background-color: var(--color-bg);
+  position: absolute;
+  top: 5px;
+  left: 3px;
+}
+
+.rmsc.multi_select_voice_filter.voiceOptions:not(.selectAll)
+  .select-item
+  input[type="checkbox"] {
+  display: none;
+}
+
+.rmsc.multi_select_voice_filter.voiceOptions:not(.selectAll)
+  .select-item
+  .item-renderer
+  span {
+  padding-left: 4px;
+}
+
+.rmsc.multi_select_voice_filter .select-item.selected .item-renderer span {
+  font-weight: bold;
+}
+
+.rmsc.multi_select_voice_filter .select-item:hover,
+.rmsc.multi_select_voice_filter .select-item.selected {
+  background-color: transparent;
+}
+
+.rmsc.multi_select_voice_filter .select-item:hover span,
+.rmsc.multi_select_voice_filter .select-item.selected span {
+  color: var(--color-primary);
+}
+
+.rmsc.multi_select_voice_filter .select-item span {
+  line-height: 1;
+}
+
+.rmsc.multi_select_voice_filter .clear-selected-button {
+  display: none;
+}
+
+.rmsc.multi_select_voice_filter .dropdown-search-clear-icon {
+  scale: 1.1;
+}
+
+.rmsc.multi_select_voice_filter .dropdown-heading-dropdown-arrow {
+  scale: 1.5;
+}
+
+.rmsc.multi_select_voice_filter svg {
+  color: var(--color-white);
+}
+
+.rmsc.multi_select_voice_filter .item-renderer input {
+  display: none;
+  position: relative;
+}
+
+.rmsc.multi_select_voice_filter.selectAll
+  .options
+  > label.select-item:first-child
+  input[type="checkbox"] {
+  display: none;
+}
+
+.rmsc.multi_select_voice_filter .select-item {
+  display: flex;
+  gap: 8px;
+  padding: 8px 0;
+  position: relative;
+}
+
+.rmsc.multi_select_voice_filter .dropdown-heading-value span {
+  color: var(--color-white);
+}
+
+/* css for all unchecked checkboxes */
+.rmsc.multi_select_voice_filter label.select-item::before {
+  content: "";
+  display: block;
+  width: 14px;
+  height: 14px;
+  background-color: var(--color-bg);
+  border-radius: 4px;
+  border: 1px solid var(--color-white);
+}
+
+/* css for all checked checkboxes */
+.rmsc.multi_select_voice_filter label.select-item.selected::before {
+  content: "";
+  display: block;
+  width: 14px;
+  height: 14px;
+  border-radius: 4px;
+  /* background-color: var(--color-secondary); */
+  background-color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+}
+
+.rmsc.multi_select_voice_filter label.select-item.selected::after {
+  content: "";
+  font-weight: 900;
+  display: block;
+  position: absolute;
+  left: 5px;
+  top: 9px;
+  width: 4px;
+  height: 10px;
+  border: solid var(--color-bg);
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* css for "Select All" checked checkbox */
+.rmsc.multi_select_voice_filter.selectAll
+  .options
+  > label.select-item.selected:first-child::before {
+  content: "";
+  display: block;
+  width: 14px;
+  height: 14px;
+  background-color: var(--color-primary);
+  border-radius: 4px;
+  border: 1px solid var(--color-primary);
+}
+
+.rmsc.multi_select_voice_filter.selectAll
+  .options
+  > label.select-item.selected:first-child::after {
+  content: "";
+  font-weight: 900;
+  display: block;
+  width: 10px;
+  height: 3px;
+  background-color: var(--color-bg);
+  border-radius: 4px;
+  position: absolute;
+  top: 14px;
+  left: 3px;
+  border: none !important;
+  transform: none !important;
+}

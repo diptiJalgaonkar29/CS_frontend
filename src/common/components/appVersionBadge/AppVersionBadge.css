@@ -1,0 +1,8 @@
+.app_version {
+  text-align: center;
+  font-size: 12px;
+  /* margin: 0px auto; */
+  font-weight: 500;
+  color: var(--color-white);
+  pointer-events: none;
+}

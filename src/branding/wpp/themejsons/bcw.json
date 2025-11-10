@@ -1,0 +1,364 @@
+{
+  "version": 1,
+  "settings": {
+    "fontUrl": ["https://use.typekit.net/dav7aoj.css", "https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900"]
+  },
+  "content": {
+    "light": {
+      "color": {
+        "primary": {
+          "100": "#e3f8e3",
+          "200": "#c8f0c6",
+          "300": "#95e292",
+          "400": "#4ecf49",
+          "500": "#298725",
+          "600": "#164d14",
+          "700": "#0E310D",
+          "800": "#081C07"
+        },
+        "success": {
+          "200": "#E0FAEA",
+          "400": "#15803D",
+          "500": "#11652F"
+        },
+        "warning": {
+          "200": "#FFF7ED",
+          "400": "#EA580C",
+          "500": "#9a3412"
+        },
+        "danger": {
+          "200": "#fee2e2",
+          "300": "#fecaca",
+          "400": "#dc2626",
+          "500": "#b91c1c",
+          "600": "#7f1d1d"
+        },
+        "grey": {
+          "100": "#F8F9FB",
+          "200": "#F4F5F7",
+          "300": "#E7EAEE",
+          "400": "#C1C7CD",
+          "500": "#A2A9B0",
+          "600": "#8B919A",
+          "700": "#697077",
+          "800": "#4D5358",
+          "900": "#343A3F",
+          "1000": "#121619",
+          "000": "#FFFFFF"
+        },
+        "highlight": {
+          "200": "rgba(250, 204, 201, 0.4)",
+          "400": "#facc15"
+        },
+        "brand": {
+          "default": "color.primary.500",
+          "disabled": "color.primary.300",
+          "hover": "color.primary.400",
+          "active": "color.primary.600"
+        },
+        "dataviz": {
+          "cat": {
+            "dark": {
+              "1": "#22a11e",
+              "2": "#1ea16a",
+              "3": "#0891B2",
+              "4": "#325ea1",
+              "5": "#514ec0",
+              "6": "#a53a93",
+              "7": "#dc2626",
+              "8": "#EA580C",
+              "9": "#CA8A04",
+              "10": "#53574f"
+            },
+            "light": {
+              "1": "#c8fdc7",
+              "2": "#c7fde6",
+              "3": "#a5f3fc",
+              "4": "#bae1f5",
+              "5": "#ccdbf8",
+              "6": "#efd1f0",
+              "7": "#fecaca",
+              "8": "#fed7aa",
+              "9": "#fef08a",
+              "10": "#dddfe1"
+            },
+            "neutral": {
+              "1": "#4cce48",
+              "2": "#4bd79d",
+              "3": "#22d3ee",
+              "4": "#529cd0",
+              "5": "#7d8fe0",
+              "6": "#d47ac6",
+              "7": "#f87171",
+              "8": "#fb923c",
+              "9": "#facc15",
+              "10": "#879493"
+            }
+          },
+          "seq": {
+            "brand": {
+              "100": "#efffee",
+              "200": "#dcfeda",
+              "300": "#c8fdc7",
+              "400": "#9ef69b",
+              "500": "#75ea71",
+              "600": "#4cce48",
+              "700": "#35bd30",
+              "800": "#22a11e",
+              "900": "#188314",
+              "1000": "#11660E"
+            },
+            "grey": {
+              "100": "#f9faf9",
+              "200": "#f0f2f2",
+              "300": "#dddfe1",
+              "400": "#b7bdbe",
+              "500": "#879493",
+              "600": "#69726c",
+              "700": "#53574f",
+              "800": "#3f413c",
+              "900": "#2b2b2a",
+              "1000": "#1a1a1b"
+            },
+            "negative": {
+              "100": "#fef2f2",
+              "200": "#fee2e2",
+              "300": "#fecaca",
+              "400": "#fca5a5",
+              "500": "#f87171",
+              "600": "#ef4444",
+              "700": "#dc2626",
+              "800": "#b91c1c",
+              "900": "#991b1b",
+              "1000": "#7f1d1d"
+            },
+            "warning": {
+              "100": "#fff7ed",
+              "200": "#ffedd5",
+              "300": "#fed7aa",
+              "400": "#fdba74",
+              "500": "#fb923c",
+              "600": "#f97316",
+              "700": "#35BD30",
+              "800": "#C2410C",
+              "900": "#9a3412",
+              "1000": "#7c2d12"
+            },
+            "positive": {
+              "100": "#eefff8",
+              "200": "#dafeef",
+              "300": "#c7fde6",
+              "400": "#9bf6d0",
+              "500": "#71eab7",
+              "600": "#4bd79d",
+              "700": "#30bd82",
+              "800": "#1ea16a",
+              "900": "#148355",
+              "1000": "#0E6642"
+            }
+          }
+        },
+        "white": "color.grey.000"
+      },
+      "border": {
+        "radius": {
+          "xs": "4px",
+          "s": "6px",
+          "m": "8px",
+          "l": "12px",
+          "xl": "20px",
+          "round": "64px"
+        },
+        "width": {
+          "s": "1px",
+          "m": "2px",
+          "l": "3px"
+        }
+      },
+      "boxShadow": {
+        "xs": "0px 1px 4px 0px rgba(52, 58, 63, 0.12)",
+        "s": "0px 0px 1px 0px rgba(52, 58, 63, 0.1), 0px 1px 5px 0px rgba(52, 58, 63, 0.1)",
+        "m": "0px 1px 4px 0px rgba(52, 58, 63, 0.05), 0px 4px 12px 0px rgba(52, 58, 63, 0.12)",
+        "brand": "0px 4px 12px 0px rgba(34, 117, 31, 0.3)",
+        "l": "0px 8px 32px 0px rgba(52, 58, 63, 0.05)"
+      },
+      "font": {
+        "family": ["graphie", "Inter"]
+      },
+      "icon": {
+        "color": {
+          "default": "color.grey.600",
+          "disabled": "color.grey.400",
+          "hover": "color.grey.800",
+          "active": "color.grey.900"
+        }
+      },
+      "text": {
+        "color": {
+          "default": "color.grey.1000",
+          "whiteInfo": "color.grey.200",
+          "disabled": "color.grey.500",
+          "danger": "color.danger.500",
+          "warning": "color.warning.500",
+          "success": "color.success.500",
+          "info": "color.grey.800"
+        }
+      },
+      "surface": {
+        "bgColor": "color.grey.100"
+      },
+      "overlay": {
+        "bgColor": "rgba(77, 83, 88, 0.6)"
+      },
+      "typography": {
+        "5xl": {
+          "display": {
+            "fontFamily": ["graphie", "Inter"],
+            "fontSize": "48px",
+            "fontWeight": "600",
+            "letterSpacing": "0px",
+            "lineHeight": "62px"
+          }
+        },
+        "4xl": {
+          "display": {
+            "fontFamily": ["graphie", "Inter"],
+            "fontSize": "36px",
+            "fontWeight": "600",
+            "letterSpacing": "0px",
+            "lineHeight": "48px"
+          }
+        },
+        "3xl": {
+          "heading": {
+            "fontFamily": ["graphie", "Inter"],
+            "fontSize": "28px",
+            "fontWeight": "600",
+            "letterSpacing": "0px",
+            "lineHeight": "40px"
+          }
+        },
+        "2xl": {
+          "heading": {
+            "fontFamily": ["graphie", "Inter"],
+            "fontSize": "24px",
+            "fontWeight": "600",
+            "letterSpacing": "0px",
+            "lineHeight": "32px"
+          }
+        },
+        "xl": {
+          "heading": {
+            "fontFamily": ["graphie", "Inter"],
+            "fontSize": "20px",
+            "fontWeight": "600",
+            "letterSpacing": "0px",
+            "lineHeight": "32px"
+          }
+        },
+        "l": {
+          "strong": {
+            "fontFamily": ["graphie", "Inter"],
+            "fontSize": "18px",
+            "fontWeight": "600",
+            "letterSpacing": "0px",
+            "lineHeight": "28px"
+          },
+          "midi": {
+            "fontFamily": ["graphie", "Inter"],
+            "fontSize": "18px",
+            "fontWeight": "500",
+            "letterSpacing": "0px",
+            "lineHeight": "28px"
+          },
+          "body": {
+            "fontFamily": ["graphie", "Inter"],
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "letterSpacing": "0px",
+            "lineHeight": "28px"
+          }
+        },
+        "m": {
+          "strong": {
+            "fontFamily": ["graphie", "Inter"],
+            "fontSize": "16px",
+            "fontWeight": "600",
+            "letterSpacing": "0px",
+            "lineHeight": "24px"
+          },
+          "midi": {
+            "fontFamily": ["graphie", "Inter"],
+            "fontSize": "16px",
+            "fontWeight": "500",
+            "letterSpacing": "0px",
+            "lineHeight": "24px"
+          },
+          "body": {
+            "fontFamily": ["graphie", "Inter"],
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "letterSpacing": "0px",
+            "lineHeight": "24px"
+          }
+        },
+        "s": {
+          "strong": {
+            "fontFamily": ["graphie", "Inter"],
+            "fontSize": "14px",
+            "fontWeight": "600",
+            "letterSpacing": "0px",
+            "lineHeight": "22px"
+          },
+          "midi": {
+            "fontFamily": ["graphie", "Inter"],
+            "fontSize": "14px",
+            "fontWeight": "500",
+            "letterSpacing": "0px",
+            "lineHeight": "22px"
+          },
+          "body": {
+            "fontFamily": ["graphie", "Inter"],
+            "fontSize": "14px",
+            "fontWeight": "400",
+            "letterSpacing": "0px",
+            "lineHeight": "22px"
+          }
+        },
+        "xs": {
+          "strong": {
+            "fontFamily": ["graphie", "Inter"],
+            "fontSize": "12px",
+            "fontWeight": "600",
+            "letterSpacing": "0px",
+            "lineHeight": "20px"
+          },
+          "midi": {
+            "fontFamily": ["graphie", "Inter"],
+            "fontSize": "12px",
+            "fontWeight": "500",
+            "letterSpacing": "0px",
+            "lineHeight": "20px"
+          },
+          "body": {
+            "fontFamily": ["graphie", "Inter"],
+            "fontSize": "12px",
+            "fontWeight": "400",
+            "letterSpacing": "0px",
+            "lineHeight": "20px"
+          }
+        },
+        "2xs": {
+          "strong": {
+            "fontFamily": ["graphie", "Inter"],
+            "fontSize": "10px",
+            "fontWeight": "700",
+            "letterSpacing": "5%",
+            "lineHeight": "20px",
+            "textTransform": "uppercase"
+          }
+        }
+      }
+    }
+  }
+}

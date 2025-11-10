@@ -1,0 +1,12 @@
+.recent_projects_container .existing-project__header {
+  margin: 50px 0px 25px 0px;
+  color: var(--color-white);
+  font-size: 16px;
+}
+
+.recent_projects_container .existing-projects {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding-bottom: 15px;
+}

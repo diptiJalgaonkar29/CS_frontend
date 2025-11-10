@@ -1,0 +1,749 @@
+.voice_artist_audio_container {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 111111111;
+  display: none;
+}
+
+.voicePage__container .voicePage_header {
+  font-weight: 700;
+  font-size: 20px;
+  padding: 20px 0px;
+  margin: 0;
+  color: var(--color-primary);
+}
+
+.voicePage__container .voice_outer_container {
+  border-radius: 20px;
+  /* height: calc(100vh - 445px); */
+  height: 45vh;
+  position: relative;
+  top: 25px;
+}
+
+.voicePage__container .voice_inner_container {
+  overflow-y: auto;
+  padding-right: 10px;
+  height: 45vh;
+  position: relative;
+}
+
+.voicePage__container .voice_artists_container {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+}
+
+.voicePage__container .voice_inner_container .MuiGrid-root {
+  height: 115px !important;
+}
+
+.voicePage__container .project_name_container {
+  display: flex;
+  align-items: center;
+  padding: 5px 0px 20px 0px;
+}
+
+.voicePage__container .project_name_header {
+  font-weight: 700;
+  font-size: 26px;
+  padding: 0;
+  margin: 0;
+  color: var(--color-primary);
+}
+
+.voicePage__container .project_name_input {
+  background-color: transparent;
+  width: 40vw;
+  border: none;
+  font-weight: 400;
+  font-size: 16px;
+  margin-left: 15px;
+  height: 20px;
+  padding: 10px 15px;
+  color: var(--color-white);
+  border-radius: 25px;
+}
+
+.voicePage__container .project_name_input::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: var(--color-white);
+  opacity: 1;
+  /* Firefox */
+}
+
+.voicePage__container .project_name_input:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: var(--color-white);
+}
+
+.voicePage__container .project_name_input::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: var(--color-white);
+}
+
+.voicePage__container .voice_list_header {
+  font-weight: 700;
+  font-size: 20px;
+  padding: 0px 0px 10px;
+  margin: 0;
+  color: var(--color-primary);
+}
+
+.voicePage__container .voice_list_sub_header {
+  font-size: 16px;
+  color: var(--color-white);
+  padding: 0px 0px 25px;
+  margin: 0;
+}
+
+.voiceCard__header {
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+  width: fit-content;
+}
+
+.voiceCard__header h3 {
+  margin: 0px 10px;
+  color: var(--color-primary);
+}
+
+.VoiceCard {
+  display: flex;
+  background-color: #292929;
+  border-radius: 15px;
+  margin-bottom: 10px;
+}
+
+.VoiceCard__img {
+  width: 40px;
+  height: 40px;
+  padding: 10px 0px 10px 10px;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+.VoiceCard--left {
+  width: 70px;
+}
+
+.VoiceCard--right {
+  padding: 10px;
+  flex-basis: 100%;
+}
+
+.VoiceCard--artistname {
+  margin-top: 0rem !important;
+  width: fit-content;
+  font-size: 16px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: var(--color-white);
+  font-weight: bold;
+}
+
+.VoiceCard--artistname:hover {
+  color: var(--color-primary);
+  cursor: pointer;
+}
+
+.voicePage_header_container {
+  /* background-color: var(--color-white); */
+  display: flex;
+  justify-content: space-between;
+}
+
+.filtered_item {
+  margin: -1px 6px 0px auto;
+  height: 28px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0px 10px;
+  cursor: pointer;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: right;
+  right: 0;
+  font-size: 16px;
+  top: 1px;
+  color: var(--color-white);
+  border: 1px solid #e0e0e0;
+}
+
+.filtered_items_container {
+  display: flex;
+}
+
+.filtered_items_container .MuiChip-root {
+  height: 30px;
+  background-color: black;
+  color: var(--color-white);
+  border: 1px solid var(--color-white);
+  font-size: 16px;
+  margin-right: 6px;
+}
+
+.filtered_items_container .MuiChip-deleteIcon {
+  color: #aaa;
+}
+
+/* table */
+.voicePage__container table {
+  border-collapse: collapse;
+  font-size: 16px;
+}
+
+.voicePage__container .table-dark.table-bordered {
+  border: 0;
+}
+
+.voicePage__container .table-dark {
+  color: var(--color-white);
+  background-color: #212529;
+}
+
+.voicePage__container .table-dark th {
+  font-family: var(--font-primary);
+  background-color: #2c2f37;
+}
+
+.voicePage__container .table-dark td,
+.voicePage__container .table-dark th,
+.voicePage__container .table-dark thead th {
+  border-color: #32383e;
+}
+
+.voicePage__container .table-bordered thead td,
+.voicePage__container .table-bordered thead th {
+  border-bottom-width: 2px;
+}
+
+.voicePage__container .table-bordered th {
+  border: 1px solid #000000 !important;
+}
+
+.voicePage__container .table-bordered td {
+  border-top: 1px solid #2f3033;
+  border-bottom: 1px solid #444445;
+}
+
+.voicePage__container .table td,
+.voicePage__container .table th {
+  padding: 0.75rem;
+  vertical-align: top;
+  /* border-top: 1px solid #dee2e6; */
+  text-align: center;
+  vertical-align: middle;
+}
+
+.voicePage__container .table th:first-child,
+.voicePage__container .table td:first-child {
+  text-align: left;
+  width: fit-content;
+}
+
+.voicePage__container .table-dark td,
+.voicePage__container .table-dark th,
+.voicePage__container .table-dark thead th {
+  border-color: #32383e;
+}
+
+.voicePage__container .autoTr {
+  width: 96%;
+  display: block;
+  border-style: solid;
+  border-width: 0 0 1px 0;
+  padding: 5px;
+  border-color: var(--color-secondary-shade6);
+  cursor: pointer;
+  min-height: 50px;
+  position: relative;
+}
+
+.voicePage__container .autoTr:hover {
+  background-color: var(--color-secondary-shade6);
+}
+
+.voicePage__container .table-dark td {
+  border: 0px;
+}
+
+.voicePage__container .tableHeader {
+  position: sticky;
+  top: -1px;
+  z-index: 10;
+}
+
+.voicePage__container .tableHeader th {
+  border: none;
+}
+
+.voicePage__container .genderIcon {
+  border-radius: 5px;
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  position: relative;
+  top: 2px;
+}
+
+.voicePage__container .playIcon {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  top: 4px;
+  right: 5px;
+}
+
+.voicePage__container .jobHistoryListPlayIcon .playIcon {
+  right: -5px;
+}
+
+.voicePage__container .profileColumn {
+  display: flex;
+  align-items: center;
+  /* cursor: pointer; */
+}
+
+.voicePage__container .profileColumn p {
+  white-space: nowrap;
+  width: 70px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: bold;
+}
+
+/* .voicePage__container .profileColumn p:hover {
+  color: var(--color-primary);
+  text-decoration: underline;
+} */
+
+.voicePage__container .jobHistotyButton,
+.voicePage__container .jobHistotyDeleteButton {
+  margin: -1px -2px 0px 0px;
+  height: 30px;
+  width: fit-content;
+  padding: 0px 10px;
+  cursor: pointer;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: right;
+  right: 0;
+  font-size: 16px;
+  top: 1px;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  margin-left: auto;
+  border: none;
+}
+
+.voicePage__container .AudioDownloadButton {
+  margin: -1px -2px 0px 0px;
+  height: 30px;
+  width: fit-content;
+  padding: 0px 10px;
+  cursor: pointer;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: right;
+  right: 0;
+  font-size: 16px;
+  top: 1px;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  /* margin: 0px auto; */
+  border: none;
+}
+
+.voicePage__container .selectVoiceButton {
+  margin: -1px -2px 0px 20px;
+  height: 30px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 0px 10px;
+  cursor: pointer;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: right;
+  right: 18px;
+  font-size: 16px;
+  top: 1px;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border: none;
+  position: relative;
+}
+
+.voicePage__container .profileColumn .playIcon {
+  top: 0px;
+}
+
+.voicePage__container .AudioDownloadButton a {
+  text-decoration: none;
+}
+
+.voicePage__container .closeIconContainer {
+  margin: -1px -2px 0px 0px;
+  height: 30px;
+  width: 56px;
+  cursor: pointer;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: right;
+  right: 0;
+  top: 1px;
+  /* border: 1px solid var(--color-primary); */
+  background-color: var(--color-primary);
+}
+
+.voicePage__container .closeIconContainer:hover {
+  background-color: "#232323";
+}
+
+.voicePage__container img.imgClose {
+  height: 15px;
+  width: 56px;
+  cursor: pointer;
+  transition: all 0.15s ease-in 0s;
+}
+
+.voicePage__container img.imgClose:hover {
+  opacity: 0.8;
+}
+
+.textBox-overlay {
+  background-color: black;
+  position: absolute;
+  top: 0;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+.textBox-overlay .MuiInputBase-input {
+  /* background: #292929; */
+  border: 1px solid var(--color-white);
+  font-size: 16px;
+  color: var(--color-white);
+  border-radius: 15px;
+  padding: 10px;
+}
+
+.textBox-overlay .MuiInputBase-root:hover {
+  border: 1px solid white;
+  color: var(--color-white);
+  border-radius: 15px;
+}
+
+.messageContent {
+  font-size: 16px;
+  text-align: center;
+  color: var(--color-white);
+  padding-top: 10px;
+}
+
+.customDialogSeeJobHistory {
+  position: absolute;
+  width: 100vw;
+  height: calc(100vh - 102px);
+  left: 0;
+  top: 102px;
+  color: var(--color-white);
+  display: block;
+  background-color: var(--browse-background-color);
+  display: none;
+}
+
+.customDialogSeeJobHistoryWrapper {
+  display: block;
+  width: 90%;
+  margin: auto;
+  padding-top: 20px;
+}
+
+.voicePage__container .closeJobHistoryDialog {
+  height: 30px;
+  width: 56px;
+  cursor: pointer;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: right;
+  right: 0;
+  top: 1px;
+  display: flex;
+  background-color: var(--color-primary);
+  /* margin-left: auto; */
+}
+
+.jobId {
+  font-weight: bold;
+}
+
+.jobId:hover {
+  color: var(--color-primary);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.jobCardContainer {
+  display: flex;
+  /* align-items: center; */
+  /* align-content: center; */
+  /* justify-content: center; */
+}
+
+.jobHeading {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 10px;
+  width: 20%;
+}
+
+.jobInfo {
+  font-size: 16px;
+  margin: 5px 10px;
+  width: 80%;
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  /*add*/
+}
+
+.jobInfo a {
+  color: var(--color-white);
+}
+
+.jobDetailsWrapper {
+  padding: 10px 18px;
+  background-color: #212529;
+}
+
+th.controlWidth {
+  text-align: center !important;
+}
+
+.controlWidth .jobInfo {
+  font-size: 16px;
+  justify-content: center;
+  width: 100%;
+}
+
+.jobHistoryTable th {
+  text-align: center;
+}
+
+.voicePage__container .jobHistoryTable th:first-child,
+.voicePage__container .jobHistoryTable td:first-child {
+  text-align: center;
+}
+
+.voicePage__container .jobHistotyDeleteButton {
+  margin: 0 auto;
+}
+
+.contentWrapper {
+  background-color: #32383e;
+  padding: 15px;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+.spinnerContainer {
+  background-color: black;
+}
+
+.spinnerWrapper {
+  width: 100%;
+  text-align: center;
+}
+
+.playIcon:hover {
+  cursor: pointer;
+}
+
+.playIconContainer {
+  margin-left: -20px;
+}
+
+.TTS_dialog .MuiDialog-paper {
+  background-color: black !important;
+  border-radius: 25px !important;
+  border: 1px solid var(--color-white) !important;
+  max-width: 800px !important;
+}
+
+.TTS_dialog .alert-dialog {
+  font-size: 16px !important;
+  color: var(--color-white) !important;
+  text-align: center !important;
+  padding: 15px !important;
+}
+
+.TTS_dialog .MuiDialogContentText-root {
+  margin-bottom: 0px !important;
+}
+
+.TTS_dialog .MuiDialogActions-root {
+  justify-content: center !important;
+}
+
+.TTS_dialog .alert-dialog-close-btn {
+  background-color: var(--color-primary) !important;
+  border-radius: 25px !important;
+  font-size: 16px !important;
+  padding: 1px 15px !important;
+  color: var(--color-white) !important;
+  text-transform: capitalize !important;
+  margin-bottom: 20px !important;
+  line-height: 30px !important;
+}
+
+.BackgroundVoiceBtn_Wrapper {
+  display: flex;
+  width: 90%;
+  flex-wrap: wrap;
+}
+
+.voicePage__container .searchResuts__footer--text,
+.voicePage__container .searchResuts__footer--text a {
+  color: var(--color-footer) !important;
+}
+
+.voicePage__container .searchResuts__footer {
+  position: initial;
+}
+
+.voicePage__container .searchResuts__footer--text {
+  margin: auto;
+  max-width: 100vw;
+  width: 88vw !important;
+  display: block;
+  bottom: 0px;
+  padding-bottom: 10px;
+  position: absolute;
+  background-color: var(--browse-background-color);
+  border-radius: 10px !important;
+}
+
+.voicePage__container {
+  /* height: calc(85vh - 45px); */
+  /* padding: 15px 45px 20px 45px; */
+  position: relative;
+  /* background-color: var(--color-secondary); */
+  color: var(--color-white);
+  border: none;
+}
+
+.button_container .voice_artist_icons {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.button_container .voice_artist_btn {
+  display: flex;
+  gap: 20px;
+}
+
+.button_container .voice_artist_powerd_by {
+  gap: 10px;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+}
+
+.voicePage__container .button_container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 50px;
+}
+
+.select_later_btn {
+  background-color: transparent;
+  border: 1px solid var(--color-white);
+}
+
+.create_btn {
+  background-color: #797979;
+  border: none;
+  color: var(--color-white);
+}
+
+.select_later_btn,
+.create_btn {
+  width: 175px;
+  padding: 8px 15px;
+  border-radius: 20px;
+  color: var(--color-white);
+  font-size: 16px;
+}
+
+/* @media only screen and (max-width: 1350px) {
+  .voicePage__container .voice_outer_container,
+  .voicePage__container .voice_inner_container {
+    height: calc(100vh - 495px);
+  }
+} */
+
+@media only screen and (max-width: 1250px) {
+
+  .voicePage__container .voice_outer_container,
+  .voicePage__container .voice_inner_container {
+    height: 40vh;
+  }
+}
+
+@media only screen and (max-width: 1150px) {
+  .voicePage__container .voice_inner_container .MuiGrid-root {
+    max-width: 100%;
+    flex-basis: 33.33%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .voicePage__container {
+    /* padding: 15px 30px 20px 30px; */
+  }
+
+  .search_voice_input {
+    width: 80px;
+  }
+}
+
+@media only screen and (max-width: 980px) {
+  .voicePage__container .voice_inner_container .MuiGrid-root {
+    max-width: 100% !important;
+    flex-basis: 50% !important;
+  }
+
+  .button_container .voice_artist_powerd_by {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* @media only screen and (max-width: 775px) {
+  .voicePage__container .voice_outer_container,
+  .voicePage__container .voice_inner_container {
+    height: calc(100vh - 575px);
+  }
+} */

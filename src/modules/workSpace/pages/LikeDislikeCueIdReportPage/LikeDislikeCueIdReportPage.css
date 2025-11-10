@@ -1,0 +1,84 @@
+.LikeDislikeCueIdReportPage_header {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  background-color: var(--color-bg);
+  /* position: sticky;
+  top: 80px;
+  z-index: 10; */
+  width: 100%;
+}
+
+.LikeDislikeCueIdReportPage_header .title {
+  font-size: 2.8rem;
+  font-weight: 400;
+  margin: 1.5rem 0;
+}
+
+.LikeDislikeCueIdReportPage_header
+  .DownloadLikeDislikeCueIdReportExcelBtn_container {
+  flex: 1;
+  text-align: right;
+}
+
+.like_dislike_report_filter {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+
+.custom_table_container .table .Liked.status {
+  background-color: #24a148 !important;
+}
+
+.custom_table_container .table th.cue_id,
+.custom_table_container .table td.cue_id {
+  border: 1px solid var(--color-secondary);
+  word-break: break-word;
+  min-width: 200px;
+}
+
+.custom_table_container .table .Disliked.status {
+  background-color: #da1e28 !important;
+}
+
+.LikeDislikeCueIdReportPage_container {
+  margin-bottom: 80px;
+}
+
+.LikeDislikeCueIdReportPage .no_data_text {
+  font-size: 16px;
+  width: 100%;
+  margin: 15px 0;
+}
+
+.LikeDislikeCueIdReportPage .BrandFilter {
+  margin-left: 20px;
+}
+
+.LikeDislikeCueIdReportPage .BrandFilter select {
+  padding: 8px;
+  border: 1px solid white;
+  border-radius: 3px;
+  font-size: 14px;
+  background-color: #333;
+  /* color: #333; */
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.LikeDislikeCueIdReportPage .BrandFilter select:hover {
+  border-color: #333;
+}
+
+.LikeDislikeCueIdReportPage .BrandFilter select option {
+  padding: 10px;
+  font-size: 14px;
+}
+.LikeDislikeCueIdReportPage
+  .LikeDislikeCueIdReportPage_container
+  .no_data_container {
+  text-align: center;
+  margin-top: 10px;
+}

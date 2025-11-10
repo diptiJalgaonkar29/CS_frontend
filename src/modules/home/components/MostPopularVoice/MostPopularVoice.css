@@ -1,0 +1,74 @@
+.voicePage__container {
+  margin-top: 20px;
+}
+
+.most_popular_sub_header {
+  font-size: 20px;
+  color: var(--color-white);
+  padding: 0px 0px 25px;
+  margin: 0;
+}
+
+.voice_artist_audio_container {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 111111111;
+  display: none;
+}
+
+.messageContent {
+  font-size: 16px;
+  text-align: center;
+  color: var(--color-white);
+  padding-top: 10px;
+}
+.most_popular_artist_list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(297px, 1fr));
+  gap: 15px;
+}
+.spinnerWrapper {
+  text-align: center;
+}
+
+.most_popular_artist_list .voice_card_container .artistName {
+  cursor: auto;
+  pointer-events: none;
+}
+
+/* @media only screen and (max-width: 1250px) {
+  .voicePage__container .voice_outer_container,
+  .voicePage__container .voice_inner_container {
+    height: 40vh;
+  }
+}
+
+@media only screen and (max-width: 1150px) {
+  .voicePage__container .voice_inner_container .MuiGrid-root {
+    max-width: 100%;
+    flex-basis: 33.33%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .voicePage__container {
+  }
+  .search_voice_input {
+    width: 80px;
+  }
+} */
+
+/* @media only screen and (max-width: 980px) {
+  .voicePage__container .voice_inner_container .MuiGrid-root {
+    max-width: 100% !important;
+    flex-basis: 50% !important;
+  }
+} */
+
+/* @media only screen and (max-width: 775px) {
+    .voicePage__container .voice_outer_container,
+    .voicePage__container .voice_inner_container {
+      height: calc(100vh - 575px);
+    }
+  } */
