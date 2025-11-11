@@ -6,9 +6,7 @@ import { useSelector } from "react-redux";
 export default function CheckboxGroup({ name, label, options }) {
   const { values, setFieldValue, setFieldTouched } = useFormikContext();
   const { videoFile, briefFile, yourPrompt } = values;
-  const {
-    aiMusicGeneratorProgress,
-  } = useSelector((state) => state.AIMusic);
+  const { aiMusicGeneratorProgress } = useSelector((state) => state.AIMusic);
 
   const isDisabled = (id) => {
     if (id === "video") return !videoFile;
@@ -71,9 +69,14 @@ export default function CheckboxGroup({ name, label, options }) {
             option.id === "all"
               ? enabledOptions.length === 0
               : isDisabled(option.id) ||
-              (isAnySelected && !values[name]?.includes(option.id));
+                (isAnySelected && !values[name]?.includes(option.id));
           return (
-            <label key={option.id} className="checkbox-label">
+            <label
+              key={option.id}
+              className={`checkbox-label ${
+                disabled ? "checkbox-disabled" : ""
+              }`}
+            >
               <Field
                 type="checkbox"
                 name={name}

@@ -11,3 +11,7 @@
   flex-wrap: wrap;
   gap: 25px;
 }
+.MusicGenerationformContainer .checkbox-disabled {
+  opacity: 0.4;     
+  color: #b5b5b5;
+}

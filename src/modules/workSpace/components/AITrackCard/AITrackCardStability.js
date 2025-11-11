@@ -61,7 +61,7 @@ const AITrackCardStability = ({
   const [isCueModalOpen, setIsCueModalOpen] = useState(false);
   const wavesurferRef = useRef();
 
-   // extra code------------------------------
+  // extra code------------------------------
 
   // Track which audio to play if multiple
   const [audioIndex, setAudioIndex] = useState(0);
@@ -71,7 +71,7 @@ const AITrackCardStability = ({
     stabilityArr && stabilityArr.length > 0
       ? stabilityArr[audioIndex] || stabilityArr[0]
       : data?.cue_audio_file_url;
-//------------------------------------------
+  //------------------------------------------
   const generateCueID = (taskID) => {
     generateCue({
       taskID,
@@ -152,9 +152,9 @@ const AITrackCardStability = ({
   const handleWSMount = useCallback(
     (waveSurfer) => {
       wavesurferRef.current = waveSurfer;
-      if (!audioSrc) return;  // extra code
+      if (!audioSrc) return; // extra code
       if (wavesurferRef.current) {
-        wavesurferRef.current?.load(audioSrc);  // extra code
+        wavesurferRef.current?.load(audioSrc); // extra code
 
         wavesurferRef.current?.on("ready", (e) => {
           setduration(
@@ -198,17 +198,17 @@ const AITrackCardStability = ({
         }
       }
     },
-    [audioSrc]  // extra code
+    [audioSrc] // extra code
   );
 
-   // extra code----------------------------
+  // extra code----------------------------
   // If audioSrc changes, reload the audio
   useEffect(() => {
     if (wavesurferRef.current && audioSrc) {
       wavesurferRef.current.load(audioSrc);
     }
   }, [audioSrc]);
-//-------------------------------------------
+  //-------------------------------------------
   useEffect(() => {
     if (!wavesurferRef.current?.isReady) return;
 

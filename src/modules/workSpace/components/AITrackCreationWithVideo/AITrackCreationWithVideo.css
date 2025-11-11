@@ -86,3 +86,7 @@
 .AITrackCreationWithVideo_container .SonicCheckbox_container:has(input):before {
   border-radius: 50%;
 }
+.disabled-checkbox {
+  opacity: 0.4;     
+  color: #b5b5b5;
+}

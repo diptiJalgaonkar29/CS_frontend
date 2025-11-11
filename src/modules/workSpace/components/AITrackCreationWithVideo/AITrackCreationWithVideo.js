@@ -51,9 +51,11 @@ const AITrackCreationWithVideo = () => {
   let location = useLocation();
   const navigate = useNavigate();
   let dispatch = useDispatch();
-  let param = useParams()
+  let param = useParams();
   const { VideoURL = "", fileSource = {}, meta = {} } = location?.state || {};
-  const { projectID, projectDurationInsec } = useSelector((state) => state.projectMeta);
+  const { projectID, projectDurationInsec } = useSelector(
+    (state) => state.projectMeta
+  );
   const { appAccess } = useSelector((state) => state.auth);
   const { cueID, aiMusicGeneratorOption, aiMusicGeneratorProgress } =
     useSelector((state) => state.AIMusic);
@@ -70,13 +72,14 @@ const AITrackCreationWithVideo = () => {
   const [loaderForProcedding, setLoaderForProcedding] = useState(false);
   const [processPercent, setProcessPercent] = useState(0);
   const { config, jsonConfig } = useConfig();
-  const [confirmation, setConfirmation] = useState(false)
+  const [confirmation, setConfirmation] = useState(false);
   const { brandMeta } = getCSUserMeta();
-  const { stabilityMP3TracksArr, latestFiledataStability } = useSelector((state) => state.AIMusicStability);
+  const { stabilityMP3TracksArr, latestFiledataStability } = useSelector(
+    (state) => state.AIMusicStability
+  );
   const { stabilityArr } = useSelector((state) => state.AITrackStability);
 
-
-  console.log('location?.state', location?.state)
+  console.log("location?.state", location?.state);
   const onCancelClick = () => {
     navigate(NavStrings?.UPLOAD_VIDEO, { state: { videoUpload: "video" } });
   };
@@ -164,7 +167,7 @@ const AITrackCreationWithVideo = () => {
             duration: projectDurationInsec > 180 ? 180 : projectDurationInsec,
             prompt: null,
           };
-          console.log("7895234")
+          console.log("7895234");
           stabilityAIAnalysisRequest(requestData);
         } else {
           requestData = {
@@ -280,21 +283,26 @@ const AITrackCreationWithVideo = () => {
 
       // Dispatch to redux
       dispatch(
-        SET_AI_Track_Stability_META({ stabilityArr: [...stabilityArr, ...objectURLArr] })
+        SET_AI_Track_Stability_META({
+          stabilityArr: [...stabilityArr, ...objectURLArr],
+        })
       );
       dispatch(
-        SET_AI_MUSIC_Stability_META({ stabilityMP3TracksArr: [...stabilityMP3TracksArr, fileNames], stabilityLoading: false })
+        SET_AI_MUSIC_Stability_META({
+          stabilityMP3TracksArr: [...stabilityMP3TracksArr, fileNames],
+          stabilityLoading: false,
+        })
       );
       setLoading(false);
     } catch (e) {
-      console.log("Error while fetching stability mp3 files", e)
+      console.log("Error while fetching stability mp3 files", e);
       setLoading(false);
     }
   };
 
   const stabilityAIAnalysisRequest = (data) => {
     setLoading(true);
-    console.log("789456231-12346")
+    console.log("789456231-12346");
     initVideoBreifAIAnalysisStability({
       data,
       projectID,
@@ -302,7 +310,11 @@ const AITrackCreationWithVideo = () => {
       latestFiledataStability,
       pollingDataFiles: (details) => {
         dispatch(
-          SET_AI_MUSIC_Stability_META({ latestFiledataStability: details, stabilityMP3TracksArr: [...stabilityMP3TracksArr], stabilityLoading: true })
+          SET_AI_MUSIC_Stability_META({
+            latestFiledataStability: details,
+            stabilityMP3TracksArr: [...stabilityMP3TracksArr],
+            stabilityLoading: true,
+          })
         );
         setLoaderForProcedding(false);
         dispatch(RESET_LOADING_STATUS());
@@ -320,7 +332,7 @@ const AITrackCreationWithVideo = () => {
         setLoading(false);
         setLoaderForProcedding(false);
         dispatch(RESET_LOADING_STATUS());
-      }
+      },
     });
   };
 
@@ -460,7 +472,9 @@ const AITrackCreationWithVideo = () => {
       <div className={"retainCheckbox_container"}>
         <CheckboxWrapper
           label="Retain Voice"
-          className={"retainCheckbox"}
+          className={`retainCheckbox ${
+            !isAudioAvailable ? "disabled-checkbox" : "enabled-checkbox"
+          }`}
           checked={retain}
           disabled={!isAudioAvailable}
           onChange={(e) => {
@@ -527,7 +541,6 @@ const AITrackCreationWithVideo = () => {
           </>
         </ModalWrapper>
       )}
-
     </div>
   );
 };

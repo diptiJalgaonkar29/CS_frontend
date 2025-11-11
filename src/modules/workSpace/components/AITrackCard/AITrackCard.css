@@ -217,9 +217,9 @@
   top: 0px;
 }
 
-.track_like_dislike svg.liked path,
-.track_like_dislike svg.disliked path {
-  fill: var(--color-primary);
+.track_like_dislike  .liked svg path,
+.track_like_dislike .disliked svg path {
+  stroke: var(--color-primary);
 }
 
 .track_like_dislike svg {
