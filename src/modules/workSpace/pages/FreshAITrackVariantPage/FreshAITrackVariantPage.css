@@ -8,6 +8,10 @@
   align-items: center;
   margin-bottom: 15px;
 }
+.fresh_AI_variants_container{
+  height: calc(100vh - 280px);
+overflow: auto;
+}
 
 /* .fresh_AI_variants_container .variant_container .variant_sub_header_container {
   color: var(--color-primary);

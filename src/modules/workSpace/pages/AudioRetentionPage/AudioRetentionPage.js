@@ -345,7 +345,8 @@ const AudioRetentionPage = () => {
 
   return (
     <Layout fullWidth={true}>
-      <div className="audioRetentionPage_container">
+      <div className="audioRetentionPage_parent_container" >
+         <div className="audioRetentionPage_container">
         {loading && (
           <CustomLoader
             processPercent={processPercent}
@@ -592,6 +593,8 @@ const AudioRetentionPage = () => {
           }}
         </Formik>
       </div>
+      </div>
+     
     </Layout>
   );
 };

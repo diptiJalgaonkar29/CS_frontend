@@ -23,8 +23,10 @@ const AIMusicGeneratorSelectedOption = () => {
   };
   return (
     <Layout>
-      <div className="AIMusicGeneratorSelectedOption_container">
+      <div className="AIMusic_parent_container">
+        <div className="AIMusicGeneratorSelectedOption_container">
         {renderSelectedOptionUI(option)}
+      </div>
       </div>
     </Layout>
   );

@@ -105,7 +105,7 @@
     "singleQuote": false
   },
   "proxy00": "http://localhost:8080/",
-  "proxy": "https://dev.create.sonic-hub.com/",
+  "proxy": "https://wpp.create.sonic-hub.com/",
   "browserslist": {
     "production": [
       ">0.2%",

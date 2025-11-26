@@ -14,33 +14,46 @@ const RecentAITracksPage = () => {
   const { recentAIGeneratedData, selectedAIMusicDetails } = useSelector(
     (state) => state.AIMusic
   );
-  const { stabilityMP3TracksArr } = useSelector((state) => state.AIMusicStability);
+  const { stabilityMP3TracksArr } = useSelector(
+    (state) => state.AIMusicStability
+  );
   let navigate = useNavigate();
   let { brandMeta } = getCSUserMeta();
   let sortedRecentAIGeneratedData = useMemo(() => {
-    if (!Array.isArray(recentAIGeneratedData)) return;
+    if (!Array.isArray(recentAIGeneratedData)) return [];
     try {
       let [filtered, others] = partition(
         recentAIGeneratedData,
         (data) => data.value === selectedAIMusicDetails?.cue_id
       );
-      return [...filtered, ...others];
+
+      let sorted = [...filtered, ...others];
+
+      // ✅ Add showSelected: true to top one only if cue_id exists
+      if (selectedAIMusicDetails?.cue_id && sorted.length > 0) {
+        sorted = [{ ...sorted[0], showSelected: true }, ...sorted.slice(1)];
+      }
+
+      return sorted;
     } catch (error) {
       console.log("error sorting recent tracks :: ", error);
       return [];
     }
   }, [selectedAIMusicDetails?.cue_id, recentAIGeneratedData]);
 
+  console.log("sortedRecentAIGeneratedData", sortedRecentAIGeneratedData);
   if (!Array.isArray(recentAIGeneratedData)) return;
 
-  console.log("stabilityMP3TracksArr?.flat()?.length", stabilityMP3TracksArr)
-  console.log("recentAIGeneratedData?.length", recentAIGeneratedData?.length)
+  console.log("stabilityMP3TracksArr?.flat()?.length", stabilityMP3TracksArr);
+  console.log("recentAIGeneratedData?.length", recentAIGeneratedData?.length);
 
   return (
     <Layout>
       <VideoLayoutV2 hideHeader>
         <div className="recent_music_container">
-          {recentAIGeneratedData?.length === 0 && (stabilityMP3TracksArr && stabilityMP3TracksArr.flat().length === 0) ? (
+          {recentAIGeneratedData?.length === 0 &&
+          stabilityMP3TracksArr &&
+          stabilityMP3TracksArr.flat().length === 0 ? (
             <div className="recent_music_no_data_container">
               <h1 className="recent_music_no_data_header">
                 No Variants Generated...
@@ -50,34 +63,35 @@ const RecentAITracksPage = () => {
           ) : (
             <>
               <h1 className="recent_music_header">Recently Generated Tracks</h1>
-              {
-                brandMeta?.aiMusicProvider == "stability" ? (
+              {brandMeta?.aiMusicProvider == "stability" ? (
+                <LazyLoadComponent
+                  className={`recent_music_item_${stabilityMP3TracksArr?.length} recent_music_item`}
+                  ref={React.createRef()}
+                  defaultHeight={150}
+                  key={`${stabilityMP3TracksArr?.length}_${
+                    stabilityMP3TracksArr?.length - 1
+                  }`}
+                >
+                  <RecentAITrackCard mp3Urls={stabilityMP3TracksArr} />
+                </LazyLoadComponent>
+              ) : (
+                sortedRecentAIGeneratedData?.map((cue, index) => (
                   <LazyLoadComponent
-                    className={`recent_music_item_${stabilityMP3TracksArr?.length}`}
+                    className={`recent_music_item_${index} recent_music_item`}
                     ref={React.createRef()}
                     defaultHeight={150}
-                    key={`${stabilityMP3TracksArr?.length}_${stabilityMP3TracksArr?.length - 1}`}
+                    key={`${cue?.value}_${index}`}
                   >
                     <RecentAITrackCard
-                      mp3Urls={stabilityMP3TracksArr}
+                      cue={cue?.value}
+                      label={`${cue?.label}`}
+                      index={sortedRecentAIGeneratedData?.length - index}
+                      description={cue?.desc}
+                      showSelected={cue?.showSelected}
                     />
                   </LazyLoadComponent>
-                ) : (
-                  sortedRecentAIGeneratedData?.map((cue, index) => (
-                    <LazyLoadComponent
-                      className={`recent_music_item_${index}`}
-                      ref={React.createRef()}
-                      defaultHeight={150}
-                      key={`${cue?.value}_${index}`}
-                    >
-                      <RecentAITrackCard
-                        cue={cue?.value}
-                        label={`${cue?.label}`}
-                        index={sortedRecentAIGeneratedData?.length - index}
-                        description={cue?.desc}
-                      />
-                    </LazyLoadComponent>
-                  )))}
+                ))
+              )}
             </>
           )}
         </div>

@@ -4,7 +4,9 @@ import "./CustomLoader.css";
 import { useConfig } from "../../../customHooks/useConfig";
 import ProgressBarWrapper from "../../../branding/componentWrapper/ProgressBarWrapper";
 import CustomLoaderSpinner from "../customLoaderSpinner/CustomLoaderSpinner";
-
+import { RESET_LOADING_STATUS } from "../../../common/redux/loaderSlice";
+import { SET_AI_MUSIC_Stability_META } from "../../../modules/workSpace/redux/AIMusicStabilitySlice";
+import { useDispatch } from "react-redux";
 const CustomLoader = ({
   processPercent = -1,
   hideCancelBtn = false,
@@ -14,6 +16,7 @@ const CustomLoader = ({
 }) => {
   let { jsonConfig } = useConfig();
   const [loadingText, setLoadingText] = useState("");
+  const dispatch = useDispatch();
 
   const setRandomLoadingSentence = async (
     AI_MUSIC_LOADING_SENTENCES,
@@ -76,7 +79,10 @@ const CustomLoader = ({
               className="cancel_btn"
               onClick={() => {
                 onCancelClick();
+                dispatch(RESET_LOADING_STATUS());
+                dispatch(SET_AI_MUSIC_Stability_META({ stabilityLoading: false }));
                 window.location.reload();
+                
               }}
             >
               Cancel

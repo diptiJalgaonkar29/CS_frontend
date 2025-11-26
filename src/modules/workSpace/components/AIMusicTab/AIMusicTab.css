@@ -133,9 +133,13 @@ label {
   gap: 20px;
   color: var(--color-white);
 }
-
+.dashboard_layout_container{
+  height: 80%;
+}
 .dashboard_layout_container .left_dashboard_layout_container {
   flex: 1;
+  /* height: 100%; */
+  /* overflow-y: auto; */
 }
 
 .dashboard_layout_container .right_dashboard_layout_container {

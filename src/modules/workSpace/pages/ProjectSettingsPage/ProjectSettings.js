@@ -32,6 +32,7 @@ import SonicInputError from "../../../../branding/sonicspace/components/InputErr
 import DurationCounter from "../../components/DurationCounter/DurationCounter";
 import getWorkSpacePath from "../../../../utils/getWorkSpacePath";
 import getCSUserMeta from "../../../../utils/getCSUserMeta";
+import ModalWrapper from "../../../../branding/componentWrapper/ModalWrapper";
 
 const ProjectSettings = ({ flaxId, isCSTrack }) => {
   const MAX_DURATION = 60;
@@ -57,8 +58,10 @@ const ProjectSettings = ({ flaxId, isCSTrack }) => {
       projectName: values.projectName,
       description: values.projectDescription,
       duration: +projectDurationInsec,
-      aiAnalysis: brandMeta?.aiMusicProvider === "stability" ?
-        "Stability" : ["tags", "brief", "video"].includes(AIMusicGeneratorOption)
+      aiAnalysis:
+        brandMeta?.aiMusicProvider === "stability"
+          ? "Stability"
+          : ["tags", "brief", "video"].includes(AIMusicGeneratorOption)
           ? AIMusicGeneratorOption
           : "Voice",
     };
@@ -191,145 +194,149 @@ const ProjectSettings = ({ flaxId, isCSTrack }) => {
 
   return (
     <Layout fullWidth={true}>
-      <div className="project_setting_wrapper">
-        <div className="project_setting_container">
-          <Formik
-            initialValues={{
-              projectName: "",
-              projectDescription: "",
-              isSameAsVideoLength: "",
-              duration: {
-                minutes: MIN_DURATION,
-                seconds: MIN_DURATION,
-              },
-            }}
-            onSubmit={(values, { setSubmitting }) => {
-              setTimeout(() => {
-                CreateProject(values, setSubmitting);
-              }, 500);
-            }}
-            validationSchema={Yup.object().shape({
-              projectName: Yup.string().required("Required"),
-              isSameAsVideoLength: Yup.string().required("Required"),
-            })}
-          >
-            {(props) => {
-              const {
-                values,
-                dirty,
-                isValid,
-                isSubmitting,
-                touched,
-                errors,
-                handleChange,
-                handleSubmit,
-                setFieldValue,
-              } = props;
-              return (
-                <form onSubmit={handleSubmit}>
-                  <div>
-                    <Field
-                      label="Project Name *"
-                      id="projectSettings_projectName"
-                      placeholder="Enter your project name"
-                      autoFocus
-                      name="projectName"
-                      type="text"
-                      component={InputWrapper}
-                      value={values.projectName}
-                    />
-                  </div>
-
-                  <div className="project_length_container">
-                    <SonicInputLabel>Length of the project *</SonicInputLabel>
-                    <div className="Form_radio_container">
-                      {AIMusicGeneratorOption !== "video" && (
-                        <div className="main_duration_radio_container">
-                          <Field
-                            name="isSameAsVideoLength"
-                            type="radio"
-                            id="projectSettings_radio_false"
-                            value="false"
-                            component={RadioWrapper}
-                            allowHtmlLabel={true}
-                            label={
-                              <DurationCounter
-                                setFieldValue={setFieldValue}
-                                values={values}
-                              />
-                            }
-                          />
-                        </div>
-                      )}
+      <ModalWrapper isOpen={true} onClose={() => navigate(-1)}>
+        <div className="project_setting_wrapper">
+          <div className="project_setting_container">
+            <Formik
+              initialValues={{
+                projectName: "",
+                projectDescription: "",
+                isSameAsVideoLength: "",
+                duration: {
+                  minutes: MIN_DURATION,
+                  seconds: MIN_DURATION,
+                },
+              }}
+              onSubmit={(values, { setSubmitting }) => {
+                setTimeout(() => {
+                  CreateProject(values, setSubmitting);
+                }, 500);
+              }}
+              validationSchema={Yup.object().shape({
+                projectName: Yup.string().required("Required"),
+                isSameAsVideoLength: Yup.string().required("Required"),
+              })}
+            >
+              {(props) => {
+                const {
+                  values,
+                  dirty,
+                  isValid,
+                  isSubmitting,
+                  touched,
+                  errors,
+                  handleChange,
+                  handleSubmit,
+                  setFieldValue,
+                } = props;
+                return (
+                  <form onSubmit={handleSubmit}>
+                    <div>
                       <Field
-                        name="isSameAsVideoLength"
-                        type="radio"
-                        value="true"
-                        component={RadioWrapper}
-                        label="Use video length"
-                        id="projectSettings_radio_true"
-                        onChange={(e) => {
-                          setFieldValue("duration", {
-                            minutes: MIN_DURATION,
-                            seconds: MIN_DURATION,
-                          });
-                          AIMusicGeneratorOption !== "video" &&
-                            (() => {
-                              document.getElementById("minutes").value = "00";
-                              document.getElementById("seconds").value = "00";
-                            })();
-                          handleChange(e);
-                        }}
+                        label="Project Name *"
+                        id="projectSettings_projectName"
+                        placeholder="Enter your project name"
+                        autoFocus
+                        name="projectName"
+                        type="text"
+                        component={InputWrapper}
+                        value={values.projectName}
                       />
                     </div>
-                    {errors.isSameAsVideoLength &&
-                      touched.isSameAsVideoLength && (
-                        <SonicInputError style={{ marginTop: "5px" }}>
-                          {errors.isSameAsVideoLength}
-                        </SonicInputError>
-                      )}
-                  </div>
-                  <div>
-                    <Field
-                      label="Description"
-                      id="projectSettings_Description"
-                      name="projectDescription"
-                      type="text"
-                      placeholder="Describe your project..."
-                      component={TextAreaWrapper}
-                      value={values.projectDescription}
-                    />
-                  </div>
-                  <div className="btn_container">
-                    <ButtonWrapper
-                      variant="outlined"
-                      onClick={() => {
-                        navigate(-1);
-                      }}
-                    >
-                      Cancel
-                    </ButtonWrapper>
-                    <ButtonWrapper
-                      variant="filled"
-                      type="submit"
-                      disabled={
-                        isSubmitting ||
-                        // !isValid ||
-                        !(values.projectName && values.isSameAsVideoLength) ||
-                        !dirty ||
-                        (values.isSameAsVideoLength === "false" &&
-                          !(values.duration.minutes || values.duration.seconds))
-                      }
-                    >
-                      Next
-                    </ButtonWrapper>
-                  </div>
-                </form>
-              );
-            }}
-          </Formik>
+
+                    <div className="project_length_container">
+                      <SonicInputLabel>Length of the project *</SonicInputLabel>
+                      <div className="Form_radio_container">
+                        {AIMusicGeneratorOption !== "video" && (
+                          <div className="main_duration_radio_container">
+                            <Field
+                              name="isSameAsVideoLength"
+                              type="radio"
+                              id="projectSettings_radio_false"
+                              value="false"
+                              component={RadioWrapper}
+                              allowHtmlLabel={true}
+                              label={
+                                <DurationCounter
+                                  setFieldValue={setFieldValue}
+                                  values={values}
+                                />
+                              }
+                            />
+                          </div>
+                        )}
+                        <Field
+                          name="isSameAsVideoLength"
+                          type="radio"
+                          value="true"
+                          component={RadioWrapper}
+                          label="Use video length"
+                          id="projectSettings_radio_true"
+                          onChange={(e) => {
+                            setFieldValue("duration", {
+                              minutes: MIN_DURATION,
+                              seconds: MIN_DURATION,
+                            });
+                            AIMusicGeneratorOption !== "video" &&
+                              (() => {
+                                document.getElementById("minutes").value = "00";
+                                document.getElementById("seconds").value = "00";
+                              })();
+                            handleChange(e);
+                          }}
+                        />
+                      </div>
+                      {errors.isSameAsVideoLength &&
+                        touched.isSameAsVideoLength && (
+                          <SonicInputError style={{ marginTop: "5px" }}>
+                            {errors.isSameAsVideoLength}
+                          </SonicInputError>
+                        )}
+                    </div>
+                    <div>
+                      <Field
+                        label="Description"
+                        id="projectSettings_Description"
+                        name="projectDescription"
+                        type="text"
+                        placeholder="Describe your project..."
+                        component={TextAreaWrapper}
+                        value={values.projectDescription}
+                      />
+                    </div>
+                    <div className="btn_container">
+                      <ButtonWrapper
+                        variant="outlined"
+                        onClick={() => {
+                          navigate(-1);
+                        }}
+                      >
+                        Cancel
+                      </ButtonWrapper>
+                      <ButtonWrapper
+                        variant="filled"
+                        type="submit"
+                        disabled={
+                          isSubmitting ||
+                          // !isValid ||
+                          !(values.projectName && values.isSameAsVideoLength) ||
+                          !dirty ||
+                          (values.isSameAsVideoLength === "false" &&
+                            !(
+                              values.duration.minutes || values.duration.seconds
+                            ))
+                        }
+                      >
+                        Next
+                      </ButtonWrapper>
+                    </div>
+                  </form>
+                );
+              }}
+            </Formik>
+          </div>
         </div>
-      </div>
+      </ModalWrapper>
     </Layout>
   );
 };

@@ -472,6 +472,7 @@ const AITrackCreationWithVideo = () => {
       <div className={"retainCheckbox_container"}>
         <CheckboxWrapper
           label="Retain Voice"
+          // className={"retainCheckbox"}
           className={`retainCheckbox ${
             !isAudioAvailable ? "disabled-checkbox" : "enabled-checkbox"
           }`}

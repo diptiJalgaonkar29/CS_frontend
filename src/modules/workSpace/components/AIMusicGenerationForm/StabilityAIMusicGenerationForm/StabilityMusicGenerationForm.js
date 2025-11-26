@@ -149,6 +149,7 @@ export default function StabilityMusicGenerationForm() {
           setIsLoading(false);
           setFileUploadPopup(false);
           dispatch(RESET_LOADING_STATUS());
+          dispatch(SET_AI_MUSIC_Stability_META({ stabilityLoading: false }));
         },
       });
     },
@@ -162,7 +163,7 @@ export default function StabilityMusicGenerationForm() {
     (fileObject) => {
       if (!fileObject) return console.error("Error: No file selected!");
 
-      setFileUploadPopup(true);
+      // setFileUploadPopup(true);
 
       const formdata = new FormData();
       formdata.append("file", fileObject);
@@ -172,6 +173,8 @@ export default function StabilityMusicGenerationForm() {
         onUploadProgress: ({ loaded, total }) =>
           setProcessPercent(Math.round((loaded * 100) / total)),
       };
+    //  console.log(fileObject,'fileObject');
+      
 
       fileUpload({
         formdata,
@@ -194,12 +197,12 @@ export default function StabilityMusicGenerationForm() {
         },
         onError: (error) => {
           console.error("Error Uploading File:", error);
-          setFileUploadPopup(false);
+          // setFileUploadPopup(false);
           dispatch(RESET_LOADING_STATUS());
+          dispatch(SET_AI_MUSIC_Stability_META({ stabilityLoading: false }));
         },
       });
-    },
-    [dispatch, projectID, projectDurationInsec, handleVideoBriefAIAnalysis]
+    }
   );
 
   /** -------------------
@@ -222,7 +225,7 @@ export default function StabilityMusicGenerationForm() {
         duration: projectDurationInsec,
         type: 4,
       };
-
+     // console.log("briefFile",briefFile, "videoFile",videoFile);
       if (briefFile) uploadFileFunction(briefFile);
       else if (videoFile) uploadFileFunction(videoFile);
       else handleAIAnalysisStability(data);
@@ -240,12 +243,17 @@ export default function StabilityMusicGenerationForm() {
   /** -------------------
    * JSX RETURN
    * ------------------*/
+  console.log(isLoading , stabilityLoading , fileUploadPopup,'isLoading || stabilityLoading || fileUploadPopup');
+  
   return (
     <div className="MusicGenerationformContainer">
       <Formik
         initialValues={initialValues}
         validationSchema={validationSchema}
-        onSubmit={handleSubmit}
+         onSubmit={(values, { resetForm }) => {
+          handleSubmit(values);
+          resetForm(); // 👈 resets Formik state (dirty/isValid/touched)
+        }}
       >
         {({ isSubmitting, isValid, values, errors, touched, dirty }) => (
           <Form className="musicForm">
@@ -301,6 +309,17 @@ export default function StabilityMusicGenerationForm() {
             </div>
 
             <div className="new_UI_genrateButton">
+              <>
+              {(
+                  console.log({
+                  prompt: values?.yourPrompt,
+                  analyzeOptions: values?.analyzeOptions,
+                  isValid,
+                  dirty,
+                },'Generate Tracks Button Rendered')
+                
+
+              )}
               <ButtonWrapper
                 type="submit"
                 variant="filled"
@@ -318,6 +337,7 @@ export default function StabilityMusicGenerationForm() {
               >
                 {isLoading ? "Generating..." : "Generate Tracks"}
               </ButtonWrapper>
+              </>
             </div>
           </Form>
         )}
@@ -328,6 +348,15 @@ export default function StabilityMusicGenerationForm() {
           <CustomLoader
             processPercent={processPercent}
             appendLoaderText="Uploading asset now!"
+            // setIsLoading={setIsLoading}
+            // onCancelClick={() => {
+            //   // setIsCancelled(true);
+            //   // setFileUploadPopup(false);
+            //   setIsLoading(false);
+            //   dispatch(RESET_LOADING_STATUS());
+            //   dispatch(SET_AI_MUSIC_Stability_META({ stabilityLoading: false ,isCancelled:true,latestFiledataStability:[]}));
+            //   dispatch(RESET_VIDEO_META());
+            // }}
           />
         </div>
       )}

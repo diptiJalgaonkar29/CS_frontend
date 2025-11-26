@@ -37,31 +37,46 @@ import RadioWrapper from "../../../../branding/componentWrapper/RadioWrapper";
 import * as Yup from "yup";
 import updateProjectMeta from "../../services/projectDB/updateProjectMeta";
 import { SET_PROJECT_META } from "../../redux/projectMetaSlice";
-import { RESET_LOADING_STATUS, SET_LOADING_STATUS } from "../../../../common/redux/loaderSlice";
+import {
+  RESET_LOADING_STATUS,
+  SET_LOADING_STATUS,
+} from "../../../../common/redux/loaderSlice";
 import IconButtonWrapper from "../../../../branding/componentWrapper/IconButtonWrapper";
 
-function EditTrackModal({ open, close, trackDuration, stabilityDataEditTrackModal }) {
+function EditTrackModal({
+  open,
+  close,
+  trackDuration,
+  stabilityDataEditTrackModal,
+}) {
   const MAX_DURATION = 60;
   const MIN_DURATION = 0;
-  const param = useParams()
-  const dispatch = useDispatch()
-  const navigate = useNavigate()
-  const { uploadedVideoURL, uploadedVideoBlobURL } = useSelector((state) => state.video);
-  const { projectID, projectDurationInsec, projectName, projectDescription } = useSelector((state) => state.projectMeta);
-  const { stabilityMP3TracksArr } = useSelector((state) => state.AIMusicStability);
+  const param = useParams();
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const { uploadedVideoURL, uploadedVideoBlobURL } = useSelector(
+    (state) => state.video
+  );
+  const { projectID, projectDurationInsec, projectName, projectDescription } =
+    useSelector((state) => state.projectMeta);
+  const { stabilityMP3TracksArr } = useSelector(
+    (state) => state.AIMusicStability
+  );
 
   function toSecondsFromObj(time) {
-    return (time.minutes * 60) + time.seconds;
+    return time.minutes * 60 + time.seconds;
   }
 
   const generateBlob = async (allFileData) => {
     try {
-      const fileRequests = stabilityMP3TracksArr.flat().map((file) =>
-        axiosCSPrivateInstance.get(
-          `/stability/GetMediaFile/${projectID}/${allFileData?.fileName}`,
-          { responseType: "blob" }
-        )
-      );
+      const fileRequests = stabilityMP3TracksArr
+        .flat()
+        .map((file) =>
+          axiosCSPrivateInstance.get(
+            `/stability/GetMediaFile/${projectID}/${allFileData?.fileName}`,
+            { responseType: "blob" }
+          )
+        );
 
       const results = await Promise.all(fileRequests);
 
@@ -75,14 +90,23 @@ function EditTrackModal({ open, close, trackDuration, stabilityDataEditTrackModa
       dispatch(RESET_LOADING_STATUS());
       // Dispatch here, where objectURLArr exists
       dispatch(
-        SET_AI_MUSIC_Stability_META({ stabilityMP3TracksArr: [...stabilityMP3TracksArr, allFileData?.fileName], stabilityLoading: false })
+        SET_AI_MUSIC_Stability_META({
+          stabilityMP3TracksArr: [
+            ...stabilityMP3TracksArr,
+            allFileData?.fileName,
+          ],
+          stabilityLoading: false,
+        })
       );
       dispatch(
-        SET_AI_Track_Stability_META({ stabilityArr: objectURLArr, currentUseThisTrack: allFileData?.usedMp3 })
+        SET_AI_Track_Stability_META({
+          stabilityArr: objectURLArr,
+          currentUseThisTrack: allFileData?.usedMp3,
+        })
       );
-      navigate(getWorkSpacePath(allFileData?.projectId, allFileData?.usedMp3))
+      navigate(getWorkSpacePath(allFileData?.projectId, allFileData?.usedMp3));
       dispatch(RESET_LOADING_STATUS());
-      close()
+      close();
     } catch (err) {
       console.error("Failed to generate blob URLs:", err);
       dispatch(RESET_LOADING_STATUS());
@@ -91,7 +115,7 @@ function EditTrackModal({ open, close, trackDuration, stabilityDataEditTrackModa
 
   const callImpaint = (values) => {
     var formData = new FormData();
-    console.log("value", +toSecondsFromObj(values?.duration))
+    console.log("value", +toSecondsFromObj(values?.duration));
 
     const matchedFiles = stabilityMP3TracksArr?.flat().filter(
       (item) =>
@@ -105,21 +129,23 @@ function EditTrackModal({ open, close, trackDuration, stabilityDataEditTrackModa
     formData.append("audioFile", matchedFiles[0]);
     formData.append("duration", +toSecondsFromObj(values?.duration));
 
-    axiosCSPrivateInstance.post("stability/inpaint", formData, {
-      headers: {
-        "Content-Type": "multipart/form-data", // Axios automatically sets the correct boundary
-      }
-    }).then((response) => {
-      let data = response.data
-      generateBlob(data)
-    }).catch((error) => {
-      console.log("error", error)
-      showNotification("Something went wrong!")
-      dispatch(RESET_LOADING_STATUS());
-      close()
-    })
-
-  }
+    axiosCSPrivateInstance
+      .post("stability/inpaint", formData, {
+        headers: {
+          "Content-Type": "multipart/form-data", // Axios automatically sets the correct boundary
+        },
+      })
+      .then((response) => {
+        let data = response.data;
+        generateBlob(data);
+      })
+      .catch((error) => {
+        console.log("error", error);
+        showNotification("Something went wrong!");
+        dispatch(RESET_LOADING_STATUS());
+        close();
+      });
+  };
 
   function generateProjectLength(values) {
     if (toSecondsFromObj(values?.duration) >= projectDurationInsec) {
@@ -132,7 +158,7 @@ function EditTrackModal({ open, close, trackDuration, stabilityDataEditTrackModa
         duration: +toSecondsFromObj(values?.duration),
       };
 
-      console.log("projectMeta", projectMeta)
+      console.log("projectMeta", projectMeta);
 
       updateProjectMeta({
         projectID,
@@ -141,25 +167,24 @@ function EditTrackModal({ open, close, trackDuration, stabilityDataEditTrackModa
           showNotification("SUCCESS", "Project length updated succesfully!");
           dispatch(
             SET_PROJECT_META({
-              projectDurationInsec:
-                +toSecondsFromObj(values?.duration),
+              projectDurationInsec: +toSecondsFromObj(values?.duration),
               projectName: projectName,
               projectDescription: projectDescription,
             })
           );
-          callImpaint(values)
+          callImpaint(values);
         },
         onError: () => {
           dispatch(RESET_LOADING_STATUS());
         },
       });
-      console.log("called from update project length and track length")
+      console.log("called from update project length and track length");
     } else {
       dispatch(
         SET_LOADING_STATUS({ loaderStatus: true, loaderProgressPercent: -1 })
       );
-      console.log("called from update track length")
-      callImpaint(values)
+      console.log("called from update track length");
+      callImpaint(values);
     }
   }
 
@@ -207,12 +232,15 @@ function EditTrackModal({ open, close, trackDuration, stabilityDataEditTrackModa
           } = props;
           return (
             <form onSubmit={handleSubmit}>
-              <div className="project_modal__duration_container" style={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "flex-start",
-                marginBottom: "15px"
-              }}>
+              <div
+                className="project_modal__duration_container"
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "flex-start",
+                  marginBottom: "15px",
+                }}
+              >
                 <div className="project_length_container">
                   {/* <SonicInputLabel>Length of the project *</SonicInputLabel> */}
                   <div className="Form_radio_container">
@@ -224,9 +252,7 @@ function EditTrackModal({ open, close, trackDuration, stabilityDataEditTrackModa
                         value="false"
                         component={RadioWrapper}
                         allowHtmlLabel={true}
-                        disabled={
-                          !!uploadedVideoURL || !!uploadedVideoBlobURL
-                        }
+                        disabled={!!uploadedVideoURL || !!uploadedVideoBlobURL}
                         label={
                           <DurationCounter
                             disabled={
@@ -241,15 +267,18 @@ function EditTrackModal({ open, close, trackDuration, stabilityDataEditTrackModa
                   </div>
                 </div>
               </div>
-              {toSecondsFromObj(values?.duration) > 180
-                && (
-                  <span style={{ color: "red", fontSize: "14px" }}>Track length should be less than 3 minutes.</span>
-                )}
-              <div style={{
-                display: "flex",
-                alignItems: "center",
-                gap: "10px"
-              }}>
+              {toSecondsFromObj(values?.duration) > 180 && (
+                <span style={{ color: "red", fontSize: "14px" }}>
+                  Track length should be less than 3 minutes.
+                </span>
+              )}
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "10px",
+                }}
+              >
                 <ButtonWrapper onClick={close}>Cancel</ButtonWrapper>
                 <ButtonWrapper
                   variant="filled"
@@ -263,8 +292,8 @@ function EditTrackModal({ open, close, trackDuration, stabilityDataEditTrackModa
           );
         }}
       </Formik>
-    </ModalWrapper >
-  )
+    </ModalWrapper>
+  );
 }
 
 const AITrackCard = ({
@@ -275,18 +304,20 @@ const AITrackCard = ({
   onTrackSelect,
   showSelectedHighlighted = false,
   stabilityArr = [],
-  oldData = [],// <-- Add this prop // extra code
-  mp3Url = []// <-- Add this prop // extra code
+  oldData = [], // <-- Add this prop // extra code
+  mp3Url = [], // <-- Add this prop // extra code
+  showSelected,
 }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const param = useParams()
+  const param = useParams();
   let { theme } = useConfig();
   const [playing, setplaying] = useState(false);
   const [curtime, setcurtime] = useState("00:00");
   const [duration, setduration] = useState("00:00");
-  const [stabilityEditTrackModal, setStabilityEditTrackModal] = useState(false)
-  const [stabilityDataEditTrackModal, setStabilityDataEditTrackModal] = useState(false)
+  const [stabilityEditTrackModal, setStabilityEditTrackModal] = useState(false);
+  const [stabilityDataEditTrackModal, setStabilityDataEditTrackModal] =
+    useState(false);
   const {
     playedCueID,
     recentAIGeneratedData,
@@ -298,7 +329,9 @@ const AITrackCard = ({
   const { projectID, projectDurationInsec } = useSelector(
     (state) => state.projectMeta
   );
-  const { uploadedVideoURL, uploadedVideoBlobURL } = useSelector((state) => state.video);
+  const { uploadedVideoURL, uploadedVideoBlobURL } = useSelector(
+    (state) => state.video
+  );
   const [isTrackLoading, setIsTrackLoading] = useState(true);
   const [loadingPercent, setLoadingPercent] = useState(0);
   const [processStatus, setProcessStatus] = useState(false);
@@ -308,11 +341,29 @@ const AITrackCard = ({
   const [isCueModalOpen, setIsCueModalOpen] = useState(false);
   const wavesurferRef = useRef();
   const { brandMeta } = getCSUserMeta();
-  const { currentUseThisTrack } = useSelector((state) => state.AITrackStability);
-  const sendAndCompareId = mp3Url.flat()[index]?.replace(/\.mp3$/i, '').split('_').pop().replace(/stability$/i, '')
-  const { stabilityLoading } = useSelector((state) => state.AIMusicStability);
+  const { currentUseThisTrack } = useSelector(
+    (state) => state.AITrackStability
+  );
+  const { stabilityMP3TracksArr, stabilityLoading } = useSelector(
+    (state) => state.AIMusicStability
+  );
+  const sendAndCompareId = mp3Url
+    ? mp3Url
+        .flat()
+        [index]?.replace(/\.mp3$/i, "")
+        .split("_")
+        .pop()
+        .replace(/stability$/i, "")
+    : stabilityMP3TracksArr;
 
-  // console.log("mp3Url", mp3Url);
+  console.log(
+    mp3Url,
+    sendAndCompareId,
+    currentUseThisTrack,
+    "sendAndCompareIdsendAndCompareIds"
+  );
+
+  console.log("mp3Url", mp3Url);
 
   // extra code
 
@@ -406,12 +457,20 @@ const AITrackCard = ({
     // console.log("blobURL", blobURL?.replace(/\.mp3$/i, '').split('_').pop().replace(/stability$/i, ''))
     // console.log("mp3URL", mp3URL)
     if (mp3URL?.length === 0 || mp3URL?.length <= 1) return;
-    let blobURLSplit = blobURL?.replace(/\.mp3$/i, '').split('_').pop().replace(/stability$/i, '') || "";
+    let blobURLSplit =
+      blobURL
+        ?.replace(/\.mp3$/i, "")
+        .split("_")
+        .pop()
+        .replace(/stability$/i, "") || "";
     axiosCSPrivateInstance
       .put(`/stability/updateStabilityById/${mp3URL}/${blobURLSplit}`)
       .then(async (response) => {
         dispatch(
-          SET_AI_Track_Stability_META({ stabilityArr: [], currentUseThisTrack: blobURLSplit })
+          SET_AI_Track_Stability_META({
+            stabilityArr: [],
+            currentUseThisTrack: blobURLSplit,
+          })
         );
         // dispatch(
         //   SET_AI_MUSIC_Stability_META({ latestStability: latestStability })
@@ -421,8 +480,8 @@ const AITrackCard = ({
       .catch((error) => {
         console.error("Error in Stability AI Music Response:", error);
         showNotification("ERROR", "Something went wrong!");
-      })
-  }
+      });
+  };
 
   const handleWSMount = useCallback(
     (waveSurfer) => {
@@ -632,7 +691,7 @@ const AITrackCard = ({
 
   useEffect(() => {
     if (brandMeta?.aiMusicProvider == "stability") {
-      if (playedCueID !== audioSrc?.split('/').pop()) {
+      if (playedCueID !== audioSrc?.split("/").pop()) {
         wavesurferRef.current?.pause();
         setplaying(false);
       }
@@ -646,10 +705,10 @@ const AITrackCard = ({
 
   const play = useCallback(() => {
     if (brandMeta?.aiMusicProvider === "stability") {
-      if (playedCueID !== audioSrc?.split('/').pop()) {
+      if (playedCueID !== audioSrc?.split("/").pop()) {
         dispatch(
           SET_AI_MUSIC_META({
-            playedCueID: audioSrc?.split('/').pop(),
+            playedCueID: audioSrc?.split("/").pop(),
             playedInstrument: null,
             playedSonicLogo: null,
           })
@@ -896,15 +955,16 @@ const AITrackCard = ({
   const isDislikedTrack = dislikedAIMusicArr?.includes(data?.cue_id);
 
   const editTrackDataPassToBackend = async (fileName, duration) => {
-    setStabilityEditTrackModal(true)
+    setStabilityEditTrackModal(true);
     setStabilityDataEditTrackModal({
       fileName: fileName,
-      duration: duration
-    })
-  }
+      duration: duration,
+    });
+  };
 
   return (
-    <div className="cue_variant_block" data-type={data?.type}>
+    <div className="cue_variant_block" data-type={data?.type} data-index={index} {...(sendAndCompareId === currentUseThisTrack ? { "data-prop": currentUseThisTrack } : {})}
+>
       {(processStatus || processStatusRegen) && (
         <CustomLoader processPercent={processPercent || processPercentRegen} />
       )}
@@ -955,9 +1015,10 @@ const AITrackCard = ({
         className="wavesurfer"
         style={{
           border:
-            showSelectedHighlighted &&
-              selectedAIMusicDetails?.cue_id &&
-              data?.cue_id == selectedAIMusicDetails?.cue_id
+            //showSelectedHighlighted &&
+            showSelected &&
+            selectedAIMusicDetails?.cue_id &&
+            data?.cue_id == selectedAIMusicDetails?.cue_id
               ? "1px solid var(--color-primary)"
               : "none",
         }}
@@ -1013,8 +1074,9 @@ const AITrackCard = ({
             )}
             {!!data && (
               <div
-                className={`track_like_dislike ${type === "DASHBOARD_BLOCK" ? "dashbord_AICard" : ""
-                  }`}
+                className={`track_like_dislike ${
+                  type === "DASHBOARD_BLOCK" ? "dashbord_AICard" : ""
+                }`}
               >
                 <IconButtonWrapper
                   icon="ThumbsUp"
@@ -1073,65 +1135,68 @@ const AITrackCard = ({
               />
             </div>
             <div style={{ height: "60px", overflow: "hidden" }}>
-              {
-                brandMeta?.aiMusicProvider === "stability" ? (
-                  <WaveSurfer
-                    id={`waveSurfer_${audioSrc?.split('/').pop()}_${index}`}
-                    onMount={handleWSMountStability}
-                  >
-                    <WaveForm
-                      container={`#waveSurfer${audioSrc?.split('/').pop()}_${index}`}
-                      barWidth={1}
-                      barRadius={1}
-                      barGap={5}
-                      barMinHeight={2}
-                      cursorWidth={1}
-                      progressColor={theme?.["--color-wave-progress"]}
-                      waveColor={theme?.["--color-wave-bg"]}
-                      width={"100%"}
-                      height={60}
-                      hideScrollbar
-                      responsive
-                      id={`waveform_${audioSrc?.split('/').pop()}_${index}`}
-                    />
-                  </WaveSurfer>
-                ) : (
-                  <WaveSurfer
-                    id={`waveSurfer_${data?.cue_id}_${index}`}
-                    onMount={handleWSMount}
-                  >
-                    <WaveForm
-                      container={`#waveSurfer${data?.cue_id}_${index}`}
-                      barWidth={1}
-                      barRadius={1}
-                      barGap={5}
-                      barMinHeight={2}
-                      cursorWidth={1}
-                      progressColor={theme?.["--color-wave-progress"]}
-                      waveColor={theme?.["--color-wave-bg"]}
-                      width={"100%"}
-                      height={60}
-                      hideScrollbar
-                      responsive
-                      id={`waveform_${data?.cue_id}_${index}`}
-                    />
-                  </WaveSurfer>
-                )
-              }
+              {brandMeta?.aiMusicProvider === "stability" ? (
+                <WaveSurfer
+                  id={`waveSurfer_${audioSrc?.split("/").pop()}_${index}`}
+                  onMount={handleWSMountStability}
+                >
+                  <WaveForm
+                    container={`#waveSurfer${audioSrc
+                      ?.split("/")
+                      .pop()}_${index}`}
+                    barWidth={1}
+                    barRadius={1}
+                    barGap={5}
+                    barMinHeight={2}
+                    cursorWidth={1}
+                    progressColor={theme?.["--color-wave-progress"]}
+                    waveColor={theme?.["--color-wave-bg"]}
+                    width={"100%"}
+                    height={60}
+                    hideScrollbar
+                    responsive
+                    id={`waveform_${audioSrc?.split("/").pop()}_${index}`}
+                  />
+                </WaveSurfer>
+              ) : (
+                <WaveSurfer
+                  id={`waveSurfer_${data?.cue_id}_${index}`}
+                  onMount={handleWSMount}
+                >
+                  <WaveForm
+                    container={`#waveSurfer${data?.cue_id}_${index}`}
+                    barWidth={1}
+                    barRadius={1}
+                    barGap={5}
+                    barMinHeight={2}
+                    cursorWidth={1}
+                    progressColor={theme?.["--color-wave-progress"]}
+                    waveColor={theme?.["--color-wave-bg"]}
+                    width={"100%"}
+                    height={60}
+                    hideScrollbar
+                    responsive
+                    id={`waveform_${data?.cue_id}_${index}`}
+                  />
+                </WaveSurfer>
+              )}
             </div>
             <div className="timestamp">
               <p className="curr-time">{curtime}</p>
               <p className="duration">{duration}</p>
             </div>
           </div>
-          {(brandMeta?.aiMusicProvider == "stability" && !!param?.cue_id) && (
+          {brandMeta?.aiMusicProvider == "stability" && !!param?.cue_id && (
             <div className="selection">
               <ButtonWrapper
-                onClick={() => editTrackDataPassToBackend(mp3Url.flat()?.[index], projectDurationInsec)}
-                className="primary_border frashlyMadeButton"
-                disabled={
-                  !!uploadedVideoURL || !!uploadedVideoBlobURL
+                onClick={() =>
+                  editTrackDataPassToBackend(
+                    mp3Url.flat()?.[index],
+                    projectDurationInsec
+                  )
                 }
+                className="primary_border frashlyMadeButton"
+                disabled={!!uploadedVideoURL || !!uploadedVideoBlobURL}
               >
                 Edit track
               </ButtonWrapper>
@@ -1139,8 +1204,8 @@ const AITrackCard = ({
           )}
           {type !== "DASHBOARD_BLOCK" && (
             <div className="selection">
-              {brandMeta?.aiMusicProvider == "stability" ?
-                (sendAndCompareId === currentUseThisTrack ? (
+              {brandMeta?.aiMusicProvider == "stability" ? (
+                sendAndCompareId === currentUseThisTrack ? (
                   <ButtonWrapper
                     onClick={() =>
                       navigate(getWorkSpacePath(projectID, sendAndCompareId))
@@ -1150,45 +1215,50 @@ const AITrackCard = ({
                   </ButtonWrapper>
                 ) : (
                   <ButtonWrapper
-                    onClick={() => sendDataAboutTrackToBk(mp3Url.flat()?.[index], mp3Url.flat()[index])}
+                    onClick={() =>
+                      sendDataAboutTrackToBk(
+                        mp3Url.flat()?.[index],
+                        mp3Url.flat()[index]
+                      )
+                    }
                     className="primary_border frashlyMadeButton"
                     disabled={!!stabilityLoading}
                   >
                     Use this track
                   </ButtonWrapper>
-                )) : (
-                  showSelectedHighlighted &&
+                )
+              ) : showSelectedHighlighted &&
+                selectedAIMusicDetails?.cue_id &&
+                data?.cue_id == selectedAIMusicDetails?.cue_id &&
+                showSelected ? (
+                <ButtonWrapper
+                  onClick={() =>
+                    navigate(
+                      getWorkSpacePath(
+                        projectID,
+                        selectedAIMusicDetails?.cue_id
+                      )
+                    )
+                  }
+                  // style={{ width: "150px" }}
+                >
+                  Keep Selection
+                </ButtonWrapper>
+              ) : (
+                <ButtonWrapper
+                  onClick={() =>
                     selectedAIMusicDetails?.cue_id &&
-                    data?.cue_id == selectedAIMusicDetails?.cue_id ? (
-                    <ButtonWrapper
-                      onClick={() =>
-                        navigate(
-                          getWorkSpacePath(
-                            projectID,
-                            selectedAIMusicDetails?.cue_id
-                          )
-                        )
-                      }
-                    // style={{ width: "150px" }}
-                    >
-                      Keep Selection
-                    </ButtonWrapper>
-                  ) : (
-                    <ButtonWrapper
-                      onClick={() =>
-                        selectedAIMusicDetails?.cue_id &&
-                          CheckStatus() &&
-                          type === "VARIANT_BLOCK"
-                          ? setIsCueModalOpen(true)
-                          : UpdateOnly()
-                      }
-                      // style={{ width: "150px" }}
-                      className="primary_border frashlyMadeButton"
-                    >
-                      Use this track
-                    </ButtonWrapper>
-                  ))
-              }
+                    CheckStatus() &&
+                    type === "VARIANT_BLOCK"
+                      ? setIsCueModalOpen(true)
+                      : UpdateOnly()
+                  }
+                  // style={{ width: "150px" }}
+                  className="primary_border frashlyMadeButton"
+                >
+                  Use this track
+                </ButtonWrapper>
+              )}
             </div>
           )}
         </div>
@@ -1199,9 +1269,8 @@ const AITrackCard = ({
         trackDuration={duration}
         stabilityDataEditTrackModal={stabilityDataEditTrackModal}
       />
-    </div >
+    </div>
   );
 };
-
 
 export default AITrackCard;

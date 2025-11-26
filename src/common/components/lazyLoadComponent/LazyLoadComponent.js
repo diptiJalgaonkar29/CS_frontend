@@ -37,7 +37,7 @@ export const LazyLoadComponent = React.forwardRef((props, ref) => {
     <div
       ref={ref}
       style={{
-        height: "auto",
+        // height: "auto",
         minHeight: `${childHeight ? childHeight : props.defaultHeight}px`,
       }}
       className={props.className || ""}

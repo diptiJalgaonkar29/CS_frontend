@@ -1,5 +1,11 @@
 .recent_music_container {
   padding-bottom: 10px;
+  overflow: auto;
+  max-height: calc(100vh - 150px);
+}
+.recent_music_container .recent_music_item{
+  height: 99.9%;
+  overflow-y: auto;
 }
 
 .recent_music_no_data_container {

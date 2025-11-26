@@ -8,3 +8,8 @@
   flex-direction: column;
   gap: 35px;
 }
+
+.AIMusic_parent_container {
+  height: calc(100vh - 150px);
+  overflow-y: auto;
+}

@@ -34,6 +34,9 @@ const WSSubHeader = ({ type = "" }) => {
   let navigate = useNavigate();
   const dispatch = useDispatch();
   const { TTSTimelineVoicesMP3 } = useSelector((state) => state.voices);
+  const { stabilityMP3TracksArr } = useSelector(
+    (state) => state.AIMusicStability
+  );
   const [isVariantModalOpen, setIsVariantModalOpen] = useState(false);
   const [isAddVideoModalOpen, setIsAddVideoModalOpen] = useState(false);
   const [flagToCallExportApi, setFlagToCallExportApi] = useState(false);
@@ -146,7 +149,8 @@ const WSSubHeader = ({ type = "" }) => {
                   Icon: Left_arrow,
                   label: "Back to music selection",
                   onClick: () => navigate(NavStrings.RECENT_AI_MUSIC),
-                  enable: !!cue_id,
+                  // enable: !!cue_id,
+                  enable: stabilityMP3TracksArr?.length > 1 && !!cue_id
                 }
               : recentAIGeneratedData?.length > 1 && !isFreshAITracksListPage
               ? {
@@ -245,113 +249,111 @@ const WSSubHeader = ({ type = "" }) => {
         {console.log("config?.modules?.SHOW_EXPORT_BTN", config?.modules)}
         <div className="AI_tab_header_menu_wrapper_right">
           {console.log("##config:", config)}
-          {/* {config?.SHOW_EXPORT_BTN && ( */}
-          {getSuperBrandName() === brandConstants.WPP
+          {(getSuperBrandName() === brandConstants.WPP
             ? config?.SHOW_EXPORT_BTN
-            : config?.modules?.SHOW_EXPORT_BTN && (
+            : config?.modules?.SHOW_EXPORT_BTN) && (
+            <>
+              <ExportModal
+                isOpenExportModalBtnDisabled={isOpenExportModalDisabled}
+                isOpen={isExportModalOpen}
+                onClose={() => setIsExportModalOpen(false)}
+                onOpen={() => setIsExportModalOpen(true)}
+                openCSTOSSTransferModal={() => {
+                  setIsRequestTrasferModalOpen(true);
+                  setIsExportModalOpen(false);
+                }}
+                flagHandlerToCallExportApi={() => setFlagToCallExportApi(true)}
+                flagToCallExportApi={flagToCallExportApi}
+              />
+
+              {config?.modules?.CS_TO_SS_AI_TRACK_TRANSFER && (
                 <>
-                  <ExportModal
-                    isOpenExportModalBtnDisabled={isOpenExportModalDisabled}
-                    isOpen={isExportModalOpen}
-                    onClose={() => setIsExportModalOpen(false)}
-                    onOpen={() => setIsExportModalOpen(true)}
-                    openCSTOSSTransferModal={() => {
-                      setIsRequestTrasferModalOpen(true);
-                      setIsExportModalOpen(false);
-                    }}
-                    flagHandlerToCallExportApi={() =>
-                      setFlagToCallExportApi(true)
+                  <CSTOSSTransferModal
+                    trackName={
+                      selectedAIMusicDetails?.label?.split("##")?.[0] ||
+                      selectedAIMusicDetails?.name ||
+                      projectName
                     }
-                    flagToCallExportApi={flagToCallExportApi}
-                  />{" "}
-                  {config?.modules?.CS_TO_SS_AI_TRACK_TRANSFER && (
-                    <>
-                      <CSTOSSTransferModal
-                        trackName={
+                    isOpen={isRequestTrasferModalOpen}
+                    onClose={() => {
+                      setIsRequestTrasferModalOpen(false);
+                      setIsRequestTrasferSuccessModalOpen(false);
+                    }}
+                    onTransfer={() => {
+                      setCStoSSTransferLoading(true);
+
+                      dispatch(
+                        SET_AI_MUSIC_META({
+                          playedCueID: null,
+                          playedInstrument: null,
+                          playedSonicLogo: null,
+                        })
+                      );
+
+                      dispatch(SET_PROJECT_META({ isTimelinePlaying: false }));
+
+                      const filteredStemData = Object.keys(
+                        selectedAIMusicDetails
+                      )
+                        .filter(
+                          (key) =>
+                            key.startsWith("stem_") &&
+                            key.endsWith("_audio_file_url") &&
+                            !key.includes("percussion")
+                        )
+                        .map((key) => ({
+                          label: key.slice(5).replace("_audio_file_url", ""),
+                          value: selectedAIMusicDetails[key],
+                        }));
+
+                      const AITrackMeta = {
+                        projectId: projectID,
+                        cueId: selectedAIMusicDetails?.cue_id,
+                        trackName:
                           selectedAIMusicDetails?.label?.split("##")?.[0] ||
                           selectedAIMusicDetails?.name ||
-                          projectName
-                        }
-                        isOpen={isRequestTrasferModalOpen}
-                        onClose={() => {
+                          projectName,
+                        mp3: selectedAIMusicDetails?.cue_audio_file_url,
+                        videoMp3:
+                          tXStatus === "completed" &&
+                          tXsplit === "1" &&
+                          !!tXfilePath
+                            ? tXfilePath
+                            : null,
+                        stem: filteredStemData,
+                      };
+
+                      CStoSSTransfer({
+                        AITrackMeta,
+                        onSuccess: () => {
+                          setCStoSSTransferLoading(false);
                           setIsRequestTrasferModalOpen(false);
-                          setIsRequestTrasferSuccessModalOpen(false);
-                        }}
-                        onTransfer={() => {
-                          setCStoSSTransferLoading(true);
-                          dispatch(
-                            SET_AI_MUSIC_META({
-                              playedCueID: null,
-                              playedInstrument: null,
-                              playedSonicLogo: null,
-                            })
-                          );
-                          dispatch(
-                            SET_PROJECT_META({ isTimelinePlaying: false })
-                          );
-                          const filteredStemData = Object.keys(
-                            selectedAIMusicDetails
-                          )
-                            .filter((key) => {
-                              return (
-                                key.startsWith("stem_") &&
-                                key.endsWith("_audio_file_url") &&
-                                !key.includes("percussion")
-                              );
-                            })
-                            ?.map((key) => {
-                              let keyName = key
-                                .slice(5)
-                                .replace("_audio_file_url", "");
-                              return {
-                                label: keyName,
-                                value: selectedAIMusicDetails[key],
-                              };
-                            });
-                          let AITrackMeta = {
-                            projectId: projectID,
-                            cueId: selectedAIMusicDetails?.cue_id,
-                            trackName:
-                              selectedAIMusicDetails?.label?.split("##")?.[0] ||
-                              selectedAIMusicDetails?.name ||
-                              projectName,
-                            mp3: selectedAIMusicDetails?.cue_audio_file_url,
-                            videoMp3:
-                              tXStatus === "completed" &&
-                              tXsplit === "1" &&
-                              !!tXfilePath
-                                ? tXfilePath
-                                : null,
-                            stem: filteredStemData,
-                          };
-                          CStoSSTransfer({
-                            AITrackMeta,
-                            onSuccess: (res) => {
-                              setCStoSSTransferLoading(false);
-                              setIsRequestTrasferModalOpen(false);
-                              setIsRequestTrasferSuccessModalOpen(true);
-                            },
-                            onError: () => {
-                              setFlagToCallExportApi(false);
-                              setCStoSSTransferLoading(false);
-                            },
-                          });
-                          setFlagToCallExportApi(true);
-                        }}
-                      />
-                      {CStoSSTransferLoading && <CustomLoader />}
-                      <CSTOSSTransferSuccessModal
-                        isOpen={isRequestTrasferSuccessModalOpen}
-                        onClose={() => {
-                          setIsRequestTrasferModalOpen(false);
-                          setIsRequestTrasferSuccessModalOpen(false);
-                          setIsExportModalOpen(false);
-                        }}
-                      />
-                    </>
-                  )}
+                          setIsRequestTrasferSuccessModalOpen(true);
+                        },
+                        onError: () => {
+                          setFlagToCallExportApi(false);
+                          setCStoSSTransferLoading(false);
+                        },
+                      });
+
+                      setFlagToCallExportApi(true);
+                    }}
+                  />
+
+                  {CStoSSTransferLoading && <CustomLoader />}
+
+                  <CSTOSSTransferSuccessModal
+                    isOpen={isRequestTrasferSuccessModalOpen}
+                    onClose={() => {
+                      setIsRequestTrasferModalOpen(false);
+                      setIsRequestTrasferSuccessModalOpen(false);
+                      setIsExportModalOpen(false);
+                    }}
+                  />
                 </>
               )}
+            </>
+          )}
         </div>
       </div>
 

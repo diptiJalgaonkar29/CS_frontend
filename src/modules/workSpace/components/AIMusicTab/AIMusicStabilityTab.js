@@ -39,7 +39,7 @@ import divideDurationBySections from "../../../../utils/divideDurationBySections
 import { AIMusicActions } from "../../constants/AIMusicActions";
 import Timeline from "../Timeline/Timeline";
 import axiosCSPrivateInstance from "../../../../axios/axiosCSPrivateInstance";
-
+import { SET_AI_Track_Stability_META } from "../../redux/AITrackStabilitySlice";
 const getSuccessMessage = (action) => {
     let successMessage;
     switch (action) {
@@ -125,6 +125,9 @@ export default function AIMusicStabilityTab({ cueID }) {
                     `/stability/GetMediaFile/${projectID}/${fileName}`,
                     { responseType: "blob" }
                 );
+                dispatch(
+                        SET_AI_Track_Stability_META({ currentUseThisTrack: data.usedMp3})
+                )
 
                 const objectURL = URL.createObjectURL(res.data);
                 console.log("Fetched Stability MP3 file:", objectURL);

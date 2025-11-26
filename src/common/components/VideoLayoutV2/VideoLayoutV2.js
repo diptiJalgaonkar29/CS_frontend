@@ -554,84 +554,87 @@ export default function VideoLayoutV2({ hideHeader = false, children }) {
           className="video_layout_v2_container"
           id="video_layout_v2_container"
         >
-          {uploadedVideoURL && (
-            <div className={`video_container`} style={{ width: "35%" }}>
-              <button
-                className="delete_icon_btn"
-                disabled={
-                  isVideoLoading ||
-                  isVideoProcessing ||
-                  loading ||
-                  (!!aiMusicGeneratorProgress?.id &&
-                    !["failed", "completed"].includes(
-                      aiMusicGeneratorProgress?.status
-                    ))
-                }
-              >
-                <div className="delete_icon_container">
-                  <IconButtonWrapper
-                    icon="Trash"
-                    onClick={() => {
-                      removeVideo(projectID);
-                      const videoAnalysisId =
-                        aiMusicGeneratorAnalysisDetails?.find(
-                          (item) =>
-                            getAIAnalysisType(+item?.mediatype) === "video"
-                        )?.id;
-                      removeAIAnalysisData(videoAnalysisId);
-                    }}
-                  />
-                </div>
-              </button>
-              {isVideoLoading && (
-                <div className="video_container_loader">
-                  <CustomLoaderSpinner processPercent={processPercent} />
-                </div>
-              )}
-              {isVideoProcessing && (
-                <div className="video_container_processing">
-                  <CustomLoaderSpinner />
-                  <p> Your video is processing </p>
-                </div>
-              )}
-              <ReactPlayer
-                style={{
-                  backgroundColor: "var(--color-secondary)",
-                  borderRadius: "10px",
-                  overflow: "hidden",
-                }}
-                ref={videoRef}
-                width="100%"
-                height="100%"
-                controls
-                muted={true}
-                url={uploadedVideoBlobURL}
-                playing={isVideoPlaying}
-                onError={onVideoError}
-                onReady={onVideoReady}
-                className="project_video"
-                id="project_video"
-                config={{
-                  file: {
-                    attributes: {
-                      controlsList:
-                        "nodownload noplaybackrate noremoteplayback",
-                      disablePictureInPicture: true,
+          <div className="video_layout_v2_voice_container">
+            {uploadedVideoURL && (
+              <div className={`video_container`} style={{ width: "35%" }}>
+                <button
+                  className="delete_icon_btn"
+                  disabled={
+                    isVideoLoading ||
+                    isVideoProcessing ||
+                    loading ||
+                    (!!aiMusicGeneratorProgress?.id &&
+                      !["failed", "completed"].includes(
+                        aiMusicGeneratorProgress?.status
+                      ))
+                  }
+                >
+                  <div className="delete_icon_container">
+                    <IconButtonWrapper
+                      icon="Trash"
+                      onClick={() => {
+                        removeVideo(projectID);
+                        const videoAnalysisId =
+                          aiMusicGeneratorAnalysisDetails?.find(
+                            (item) =>
+                              getAIAnalysisType(+item?.mediatype) === "video"
+                          )?.id;
+                        removeAIAnalysisData(videoAnalysisId);
+                      }}
+                    />
+                  </div>
+                </button>
+                {isVideoLoading && (
+                  <div className="video_container_loader">
+                    <CustomLoaderSpinner processPercent={processPercent} />
+                  </div>
+                )}
+                {isVideoProcessing && (
+                  <div className="video_container_processing">
+                    <CustomLoaderSpinner />
+                    <p> Your video is processing </p>
+                  </div>
+                )}
+                <ReactPlayer
+                  style={{
+                    backgroundColor: "var(--color-secondary)",
+                    borderRadius: "10px",
+                    overflow: "hidden",
+                  }}
+                  ref={videoRef}
+                  width="100%"
+                  height="100%"
+                  controls
+                  muted={true}
+                  url={uploadedVideoBlobURL}
+                  playing={isVideoPlaying}
+                  onError={onVideoError}
+                  onReady={onVideoReady}
+                  className="project_video"
+                  id="project_video"
+                  config={{
+                    file: {
+                      attributes: {
+                        controlsList:
+                          "nodownload noplaybackrate noremoteplayback",
+                        disablePictureInPicture: true,
+                      },
                     },
-                  },
-                }}
+                  }}
+                />
+              </div>
+            )}
+            <div
+              //className="content_container"
+              className="content_container voice_content_container"
+              style={{ width: uploadedVideoURL ? "65%" : "100%" }}
+            >
+              {children}
+              <div
+                className="video_layout_container_filler"
+                id="video_layout_container_filler"
               />
             </div>
-          )}
-          <div
-            className="content_container"
-            style={{ width: uploadedVideoURL ? "65%" : "100%" }}
-          >
-            {children}
-            <div
-              className="video_layout_container_filler"
-              id="video_layout_container_filler"
-            />
           </div>
         </div>
       ) : activeWSTab === "AI Music" ? (
@@ -645,22 +648,23 @@ export default function VideoLayoutV2({ hideHeader = false, children }) {
                 : "0%",
           }}
         >
-          <div
-            style={{
-              width:
-                uploadedVideoURL || uploadedVideoBlobURL || !param?.cue_id
-                  ? "35%"
-                  : "0%",
-            }}
-          >
-            {!param?.cue_id ? (
-              <div className="video_layout_v2_card_container">
-                <div className="content">
-                  <AIGenSideBarVideoLayoutV2>
-                    {uploadedVideoBlobURL && (
-                      <div className={`video_container`}>
-                        <>
-                          {/* <button
+          <div className="video_layout_v2_ai_music_container">
+            <div
+              style={{
+                width:
+                  uploadedVideoURL || uploadedVideoBlobURL || !param?.cue_id
+                    ? "35%"
+                    : "0%",
+              }}
+            >
+              {!param?.cue_id ? (
+                <div className="video_layout_v2_card_container">
+                  <div className="content">
+                    <AIGenSideBarVideoLayoutV2>
+                      {uploadedVideoBlobURL && (
+                        <div className={`video_container`}>
+                          <>
+                            {/* <button
                             className="delete_icon_btn"
                             disabled={
                               isVideoLoading ||
@@ -688,164 +692,165 @@ export default function VideoLayoutV2({ hideHeader = false, children }) {
                               />
                             </div>
                           </button> */}
-                          {isVideoLoading && (
-                            <div
-                              className="video_container_loader"
-                              style={{ height: "350px", width: "35%" }}
-                            >
-                              <CustomLoaderSpinner
-                                processPercent={processPercent}
-                              />
-                            </div>
-                          )}
-                          {isVideoProcessing && (
-                            <div
-                              className="video_container_processing"
-                              style={{ height: "350px", width: "35%" }}
-                            >
-                              <CustomLoaderSpinner />
-                              <p> Your video is processing </p>
-                            </div>
-                          )}
-                          <ReactPlayer
-                            style={{
-                              backgroundColor: "var(--color-secondary)",
-                              borderRadius: "10px",
-                              overflow: "hidden",
-                            }}
-                            ref={videoRef}
-                            width="100%"
-                            height={param?.cue_id ? "350px" : "250px"}
-                            controls
-                            muted={true}
-                            url={uploadedVideoBlobURL}
-                            playing={isVideoPlaying}
-                            onError={onVideoError}
-                            onReady={onVideoReady}
-                            className="project_video"
-                            id="project_video_v2"
-                            config={{
-                              file: {
-                                attributes: {
-                                  controlsList:
-                                    "nodownload noplaybackrate noremoteplayback",
-                                  disablePictureInPicture: true,
+                            {isVideoLoading && (
+                              <div
+                                className="video_container_loader"
+                                style={{ height: "350px", width: "35%" }}
+                              >
+                                <CustomLoaderSpinner
+                                  processPercent={processPercent}
+                                />
+                              </div>
+                            )}
+                            {isVideoProcessing && (
+                              <div
+                                className="video_container_processing"
+                                style={{ height: "350px", width: "35%" }}
+                              >
+                                <CustomLoaderSpinner />
+                                <p> Your video is processing </p>
+                              </div>
+                            )}
+                            <ReactPlayer
+                              style={{
+                                backgroundColor: "var(--color-secondary)",
+                                borderRadius: "10px",
+                                overflow: "hidden",
+                              }}
+                              ref={videoRef}
+                              width="100%"
+                              height={param?.cue_id ? "350px" : "250px"}
+                              controls
+                              muted={true}
+                              url={uploadedVideoBlobURL}
+                              playing={isVideoPlaying}
+                              onError={onVideoError}
+                              onReady={onVideoReady}
+                              className="project_video"
+                              id="project_video_v2"
+                              config={{
+                                file: {
+                                  attributes: {
+                                    controlsList:
+                                      "nodownload noplaybackrate noremoteplayback",
+                                    disablePictureInPicture: true,
+                                  },
                                 },
-                              },
-                            }}
-                          />
-                        </>
-                      </div>
-                    )}
-                  </AIGenSideBarVideoLayoutV2>
-                </div>
-              </div>
-            ) : (
-              <>
-                {uploadedVideoBlobURL && (
-                  <div className={`video_container`}>
-                    <>
-                      <button
-                        className="delete_icon_btn"
-                        disabled={
-                          isVideoLoading ||
-                          isVideoProcessing ||
-                          loading ||
-                          (!!aiMusicGeneratorProgress?.id &&
-                            !["failed", "completed"].includes(
-                              aiMusicGeneratorProgress?.status
-                            ))
-                        }
-                      >
-                        <div className="delete_icon_container">
-                          <IconButtonWrapper
-                            icon="Trash"
-                            onClick={() => {
-                              removeVideo(projectID);
-
-                              const videoAnalysisId =
-                                aiMusicGeneratorAnalysisDetails?.find(
-                                  (item) =>
-                                    getAIAnalysisType(+item?.mediatype) ===
-                                    "video"
-                                )?.id;
-
-                              if (videoAnalysisId) {
-                                removeAIAnalysisData(videoAnalysisId);
-                              }
-                            }}
-                          />
-                        </div>
-                      </button>
-                      {isVideoLoading && (
-                        <div
-                          className="video_container_loader"
-                          style={{ height: "350px", width: "35%" }}
-                        >
-                          <CustomLoaderSpinner
-                            processPercent={processPercent}
-                          />
+                              }}
+                            />
+                          </>
                         </div>
                       )}
-                      {isVideoProcessing && (
-                        <div
-                          className="video_container_processing"
-                          style={{ height: "350px", width: "35%" }}
-                        >
-                          <CustomLoaderSpinner />
-                          <p> Your video is processing </p>
-                        </div>
-                      )}
-                      <ReactPlayer
-                        style={{
-                          backgroundColor: "var(--color-secondary)",
-                          borderRadius: "10px",
-                          overflow: "hidden",
-                        }}
-                        ref={videoRef}
-                        width="100%"
-                        height={param?.cue_id ? "350px" : "250px"}
-                        controls
-                        muted={true}
-                        url={uploadedVideoBlobURL}
-                        playing={isVideoPlaying}
-                        onError={onVideoError}
-                        onReady={onVideoReady}
-                        className="project_video"
-                        id="project_video_v2"
-                        config={{
-                          file: {
-                            attributes: {
-                              controlsList:
-                                "nodownload noplaybackrate noremoteplayback",
-                              disablePictureInPicture: true,
-                            },
-                          },
-                        }}
-                      />
-                    </>
+                    </AIGenSideBarVideoLayoutV2>
                   </div>
-                )}
-              </>
-            )}
+                </div>
+              ) : (
+                <>
+                  {uploadedVideoBlobURL && (
+                    <div className={`video_container`}>
+                      <>
+                        <button
+                          className="delete_icon_btn"
+                          disabled={
+                            isVideoLoading ||
+                            isVideoProcessing ||
+                            loading ||
+                            (!!aiMusicGeneratorProgress?.id &&
+                              !["failed", "completed"].includes(
+                                aiMusicGeneratorProgress?.status
+                              ))
+                          }
+                        >
+                          <div className="delete_icon_container">
+                            <IconButtonWrapper
+                              icon="Trash"
+                              onClick={() => {
+                                removeVideo(projectID);
 
-            {/* <DeleteModal open={open} close={() => setOpen(false)} /> */}
-          </div>
-          <div
-            className="content_container"
-            style={{
-              width:
-                uploadedVideoURL || uploadedVideoBlobURL || !param?.cue_id
-                  ? "65%"
-                  : "100%",
-              overflow: "auto",
-            }}
-          >
-            {children}
+                                const videoAnalysisId =
+                                  aiMusicGeneratorAnalysisDetails?.find(
+                                    (item) =>
+                                      getAIAnalysisType(+item?.mediatype) ===
+                                      "video"
+                                  )?.id;
+
+                                if (videoAnalysisId) {
+                                  removeAIAnalysisData(videoAnalysisId);
+                                }
+                              }}
+                            />
+                          </div>
+                        </button>
+                        {isVideoLoading && (
+                          <div
+                            className="video_container_loader"
+                            style={{ height: "350px", width: "35%" }}
+                          >
+                            <CustomLoaderSpinner
+                              processPercent={processPercent}
+                            />
+                          </div>
+                        )}
+                        {isVideoProcessing && (
+                          <div
+                            className="video_container_processing"
+                            style={{ height: "350px", width: "35%" }}
+                          >
+                            <CustomLoaderSpinner />
+                            <p> Your video is processing </p>
+                          </div>
+                        )}
+                        <ReactPlayer
+                          style={{
+                            backgroundColor: "var(--color-secondary)",
+                            borderRadius: "10px",
+                            overflow: "hidden",
+                          }}
+                          ref={videoRef}
+                          width="100%"
+                          height={param?.cue_id ? "350px" : "250px"}
+                          controls
+                          muted={true}
+                          url={uploadedVideoBlobURL}
+                          playing={isVideoPlaying}
+                          onError={onVideoError}
+                          onReady={onVideoReady}
+                          className="project_video"
+                          id="project_video_v2"
+                          config={{
+                            file: {
+                              attributes: {
+                                controlsList:
+                                  "nodownload noplaybackrate noremoteplayback",
+                                disablePictureInPicture: true,
+                              },
+                            },
+                          }}
+                        />
+                      </>
+                    </div>
+                  )}
+                </>
+              )}
+
+              {/* <DeleteModal open={open} close={() => setOpen(false)} /> */}
+            </div>
             <div
-              className="video_layout_container_filler"
-              id="video_layout_container_filler"
-            />
+              className="content_container"
+              style={{
+                width:
+                  uploadedVideoURL || uploadedVideoBlobURL || !param?.cue_id
+                    ? "65%"
+                    : "100%",
+                //overflow: "auto",
+              }}
+            >
+              {children}
+              <div
+                className="video_layout_container_filler"
+                id="video_layout_container_filler"
+              />
+            </div>
           </div>
         </div>
       ) : (

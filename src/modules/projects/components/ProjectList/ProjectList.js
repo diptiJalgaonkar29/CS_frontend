@@ -199,7 +199,8 @@ const ProjectList = ({
                     projectItem={project}
                     projectType={selectedProjectType}
                     onProjectClick={() => {
-                      // console.log("cliked project", project?.project_id);
+                      console.log("cliked project", project?.project_id,`${NavStrings.WORKSPACE}/project/${project?.project_id}`);
+
                       navigate(
                         `${NavStrings.WORKSPACE}/project/${project?.project_id}`
                       );

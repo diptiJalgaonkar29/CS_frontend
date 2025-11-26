@@ -1,0 +1,264 @@
+/* .sonicspace .navbar_img,
+.amp .navbar_img {
+  max-width: 50px !important;
+}
+
+
+.emiratesnbd .hompageV3 .header-content h1, .emiratesnbd .hompageV3 .section-title {
+color: var(--color-text-dark) !important;
+}
+
+.emiratesnbd .nav_link {
+color: var(--color-text-nav, var(--color-primary));
+}
+
+.emiratesnbd .active_nav_link, 
+.emiratesnbd .nav_link:hover {
+color: var(--color-texthighlight, var(--color-primary));
+}
+
+.emiratesnbd .WS_header_action_btns_container .nav-btn-left {
+background-color: var(--color-bg-light);
+}
+
+.emiratesnbd .AI_tab_header_menu_wrapper, .emiratesnbd .video_layout_v2_container .card {
+background-color: var(--color-bg-light);
+}
+
+.emiratesnbd .WS_header_action_btns_container .activeWSBtn.sonicButton.outlined {
+color: var(--color-text-light) !important;
+}
+
+.emiratesnbd .video_layout_v2_container .ai_generator_option .tab_header .tab {
+color: var(--color-text-dark);
+}
+
+
+.emiratesnbd .video_layout_v2_container .card .subTitle {
+color: var(--color-text-dark);
+}
+
+.emiratesnbd .style-selector__button--selected {
+  background-color: var(--color-primary) !important;
+  color: var(--color-text-light) !important;
+}
+
+.emiratesnbd .upload_video_container, .emiratesnbd .AIMusicGeneratorSelectedOption_container {
+background-color: var(--color-bg-light);
+}
+.emiratesnbd  .sonic_video_input_container .uploaderBlock{
+  background-color: var(--color-bg)!important;
+  border: 2px dashed var(--color-text-dark) !important;
+}
+
+.emiratesnbd .cue_variant_block .wavesurfer, .emiratesnbd .cue_variant_block_skeleton {
+background-color: var(--color-bg-light);
+}
+
+
+
+
+.emiratesnbd .outlined {
+    color: var(--color-text-dark) !important;
+    border: 1px solid var(--color-text-dark) !important;
+}
+.emiratesnbd .filled,
+.emiratesnbd .AI_tab_header_menu_wrapper_right .filled,
+.emiratesnbd .export_container .btn-left .filled,
+.emiratesnbd  .dashboard-panel-btn-container .btn-left .filled .undo_redo_btn_content span{
+    color: var(--color-text-light) !important;
+    background-color: var(--color-primary) !important;
+}
+.emiratesnbd  .dashboard-panel-btn-container .btn-left .filled .undo_redo_btn_content svg path {
+  fill: var(--color-text-light);
+}
+.emiratesnbd .export-dialog .selected {
+  color: var(--color-text-light) !important;
+}
+.emiratesnbd .btn-left .filled .edit_instruments_btn_content span,
+.emiratesnbd .btn-left .filled .edit_instruments_btn_content svg path{
+    color: var(--color-text-light) !important;
+    background-color: var(--color-primary) !important;
+    fill: var(--color-text-light);
+}
+ .emiratesnbd .project_grid_v1 .card {
+  background-color: transparent !important;
+  color: var(--color-text-dark);
+ }
+.emiratesnbd  .project_grid_v1 .content  {
+    color: var(--color-primary);
+}
+.emiratesnbd  .project_grid_v1 .card .icons-left svg path {
+  stroke: var(--color-primary);
+}
+.emiratesnbd .creationStation_homePage_wrapper .creationStation_homePage_container {
+  background-color: var(--color-text-light);
+}
+
+
+.emiratesnbd .creationStation_homePage_wrapper .creationStation_homePage_option.selected,
+.emiratesnbd .creationStation_homePage_wrapper .creationStation_homePage_option.selected svg path{
+    border: 1px solid var(--color-texthighlight) !important;
+    fill: var(--color-texthighlight);
+}
+
+.emiratesnbd .creationStation_homePage_wrapper .creationStation_homePage_option.selected .creationStation_homePage_option_title {
+    color: var(--color-texthighlight) !important;
+}
+
+.emiratesnbd .project_list_item .projectName_container,
+.emiratesnbd .project_list_item .projectDelete {
+  background-color: var(--color-bg-light);
+}
+
+.emiratesnbd .MusicGenerationformContainer .file-upload-button .file-upload-button-icon {
+  background-color: transparent;
+}
+.emiratesnbd .voice_content_container .voice_placeholder,
+.emiratesnbd .voice_content_container .voice_note{
+  background-color: var(--color-bg-light);
+}
+.emiratesnbd .SonicModal_dialog .MuiPaper-root.MuiDialog-paper {
+    background-color: var(--color-bg)!important;
+}
+.emiratesnbd  .dict_input_wrapper {
+  color: var(--color-bg-dark);
+  background-color: transparent;
+}
+
+.emiratesnbd .video_upload_v2 .uploaderBlock .uploadBtn {
+  color: var(--color-text-light);
+}
+.emiratesnbd .footer_container {
+  color: var(--color-text-light);
+}
+.emiratesnbd .project_setting_wrapper .project_setting_container {
+  background-color: transparent !important;
+
+}
+.emiratesnbd .project_setting_wrapper {
+    height: auto;
+}
+.emiratesnbd .audioRetentionPage_container .audio_on_off_container  {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  background-color: var(--color-bg-light) !important;
+  overflow-y: scroll;
+    height: calc(100vh - 170px);
+}
+.emiratesnbd .edit_project_meta_icon {
+  background-color: transparent;
+}
+.emiratesnbd .loader_container  .overlay {
+  background-color: var(--color-bg-light) !important;
+}
+.emiratesnbd  .video_layout_v2_container .video_layout_v2_ai_music_container {
+  overflow-y: auto;
+  height: calc(100vh - 300px) !important;
+}
+.emiratesnbd .instrument-panel,
+.emiratesnbd .drop_container {
+  background-color: var(--color-bg-light) !important;
+}
+
+.emiratesnbd .timeline_container .toggle_btn_container,
+.emiratesnbd .timeline_container .toggle_btn_container .toggle_btn_text,
+.emiratesnbd .timeline_container .toggle_btn_container svg path {
+  background-color: var(--color-bg-light);
+  color: var(--color-text-dark)!important;
+  fill: var(--color-text-dark);
+}
+
+.emiratesnbd .timeline_box_container,
+.emiratesnbd .timeline_box_container,
+.emiratesnbd .timeline_seek_bar  {
+  background-color: var(--color-bg-light);
+  color: var(--color-text-dark);
+}
+
+.emiratesnbd .timeline_box_container .left,
+.emiratesnbd .timeline_box_container .left .header, 
+.emiratesnbd .timeline_box_container .left .play_pause_btn_container svg path {
+  background-color: var(--color-bg-light);
+  color: var(--color-text-dark);
+  fill: var(--color-text-dark);
+}
+.emiratesnbd .slider-ticks  .tick_outer,
+.emiratesnbd .slider-ticks  .tick_inner{
+  color: var(--color-text-dark);
+}
+.emiratesnbd .timeline_box_container .left .play_pause_btn_container svg circle {
+  stroke: var(--color-text-dark);
+}
+.emiratesnbd .lds-default div,
+.emiratesnbd .lds-default  .loader_spinner_percentage {
+  color: var(--color-text-dark);
+}
+
+.emiratesnbd .instrument-wavesurfer .sonic_icon_button svg ,
+.emiratesnbd .instrument-wavesurfer .sonic_icon_button svg circle {
+    fill: var(--color-text-dark) !important;
+}
+.emiratesnbd.export-dialog .transfer-option .checkbox-label {
+  color: var(--color-text-dark) !important;
+}
+
+.emiratesnbd .voice_card_container .voice_card_icon_large, .voice_card_container .voice_card_icon_small {
+  stroke: var(--color-text-dark);
+}
+
+.emiratesnbd .voice_card_container {
+  background-color: var(--color-bg-light) !important;
+}
+
+.emiratesnbd .project_grid_asset {
+  border-top: 1px solid var(--color-bg-dark);
+  background-color: var(--color-bg-light) !important;
+}
+.emiratesnbd .project_grid_item  {
+  background-color: var(--color-bg-light);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+
+.emiratesnbd .dict_input_wrapper [class*="-placeholder"] {
+    color: var(--color-text-light) !important;
+}
+.emiratesnbd .dict_input_wrapper [role="option"] {
+    color: var(--color-text-light) !important;
+}
+
+.emiratesnbd .inputbox_hoverable_container .inputbox_header {
+  background-color: transparent !important;
+  box-shadow: 0px 2px 4px -2px rgba(0, 0, 0, 0.25);
+}
+
+.emiratesnbd #voice_add_menu .MuiMenu-paper .MuiMenuItem-root {
+  color: var(--color-text-dark);
+}
+.emiratesnbd .set_duration_container input {
+  font-size: 16px;
+}
+
+.emiratesnbd .export-dialog .format-options  .selected,
+.emiratesnbd .export-dialog .format-options:hover {
+  background-color: transparent !important;
+  border-color: var(--color-texthighlight) !important;
+  color:  var(--color-texthighlight) !important;
+}
+.emiratesnbd .format_style_active,
+.emiratesnbd .format_style_active .asset-label,
+.emiratesnbd .format_style_active .asset-icon svg path  {
+  border-color: var(--color-texthighlight) !important;
+  color:  var(--color-texthighlight) !important;
+  fill: var(--color-texthighlight);
+}
+
+.emiratesnbd .pronunciation_audio_container .loader_container.overlayBg {
+  background-color: var(--color-bg-light) !important;
+  color: var(--color-text-dark) !important; 
+}
+.emiratesnbd .style-selector__button {
+  background-color: var(--color-text-light) ;
+  border: 1px solid var(--color-text-dark);
+  color: var(--color-text-dark);
+} */

@@ -648,12 +648,26 @@ export default function AIMusicTab({ cueID }) {
     const removedSonicLogoId =
       recentAIGeneratedData.find((item) => item.action === "SONIC_LOGO_APPEND")
         ?.parentCueId || "";
+    let trackTitle = selectedAIMusicDetails?.label?.split("##")?.[0];
+    let trackDescription = selectedAIMusicDetails.desc || "-";
+    let parentCueId =
+      recentAIGeneratedData.find((item) => item.value === removedSonicLogoId)
+        ?.parentCueId || "";
     updateAIMusicMeta({
       projectID,
       AIMusicMeta: {
         cueId: removedSonicLogoId,
         sonic_logo_id: null,
         flax_id: SSflaxTrackID,
+        variantCueIds: JSON.stringify([
+          {
+            label: `${trackTitle}##${"sonic logo removed"}`,
+            value: removedSonicLogoId,
+            desc: trackDescription,
+            parentCueId: parentCueId,
+            action: "SONIC_LOGO_REMOVE",
+          },
+        ]),
       },
       recentAIGeneratedData,
       onSuccess: () => {

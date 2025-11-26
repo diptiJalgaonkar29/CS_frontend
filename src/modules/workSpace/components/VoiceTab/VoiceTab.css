@@ -6,9 +6,31 @@
   display: none;
 }
 
-.voice_tab_container {
+/* .voice_tab_container {
   min-height: calc(100vh - 560px);
   position: relative;
+} */
+
+/* .content_container { */
+/* .voice_content_container {
+  overflow-y: auto;
+  position: relative;
+  height: 700px;
+  padding: 0 10px;
+} */
+.voice_content_container {
+  overflow-y: auto;
+  position: relative;
+  height: calc(100vh - 300px);
+  padding: 0 10px;
+}
+.content_container .voice_tab_container {
+  min-height: calc(100vh - 560px);
+  position: relative;
+}
+.content_container .voice_note {
+  position: static;
+  margin-top: 20px;
 }
 
 .voice_tab_container .voice_header {

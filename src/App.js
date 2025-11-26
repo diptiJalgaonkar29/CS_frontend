@@ -1,5 +1,6 @@
 import React, { Suspense, useEffect } from "react";
 import "./index.css";
+import "./style.css";
 import { persistor, store } from "./reduxToolkit/store";
 import { Provider } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";

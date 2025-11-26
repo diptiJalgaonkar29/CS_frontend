@@ -1,14 +1,27 @@
+import React, { useEffect } from "react";
 import { Field, useFormikContext } from "formik";
 import CheckboxWrapper from "../../../../../branding/componentWrapper/CheckboxWrapper";
 import "./CheckboxGroup.css";
 import { useSelector } from "react-redux";
-
+import getCSUserMeta from "../../../../../utils/getCSUserMeta";
 export default function CheckboxGroup({ name, label, options }) {
   const { values, setFieldValue, setFieldTouched } = useFormikContext();
   const { videoFile, briefFile, yourPrompt } = values;
   const { aiMusicGeneratorProgress } = useSelector((state) => state.AIMusic);
+  const { stabilityLoading } = useSelector((state) => state.AIMusicStability);
+  const { brandMeta } = getCSUserMeta();
+
+  useEffect(() => {
+  // Whenever "yourPrompt" becomes empty, uncheck "prompt" if selected
+  if (!yourPrompt && values[name]?.includes("prompt")) {
+    const filtered = values[name].filter((val) => val !== "prompt" && val !== "all");
+    setFieldValue(name, filtered);
+    }
+  }, [yourPrompt]); // run only when prompt changes
 
   const isDisabled = (id) => {
+    console.log('idxx',id);
+    
     if (id === "video") return !videoFile;
     if (id === "brief") return !briefFile;
     if (id === "prompt") return !yourPrompt;
@@ -69,14 +82,15 @@ export default function CheckboxGroup({ name, label, options }) {
             option.id === "all"
               ? enabledOptions.length === 0
               : isDisabled(option.id) ||
-                (isAnySelected && !values[name]?.includes(option.id));
+                (isAnySelected && !values[name]?.includes(option.id)) || stabilityLoading;
+                
+                console.log(enabledOptions,isDisabled(option.id),(isAnySelected && !values[name]?.includes(option.id)),'&&&&&&&&&&&&&');
+                
           return (
             <label
               key={option.id}
-              className={`checkbox-label ${
-                disabled ? "checkbox-disabled" : ""
-              }`}
-            >
+              className={`checkbox-label ${disabled ? "checkbox-disabled" : ""}`}
+            > { console.log( aiMusicGeneratorProgress,'aiMusicGeneratorProgress') }
               <Field
                 type="checkbox"
                 name={name}

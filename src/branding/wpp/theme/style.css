@@ -491,3 +491,55 @@ svg {
   stroke: var(--button-secondary-icon-color) !important;
   filter: none !important; /* Resets conflicting filters */
 }
+
+
+
+.wpp .export-dialog .format-option
+{
+  background-color: transparent !important;
+  color: #000;
+  border: 1px solid #000;
+}
+.wpp .export-dialog .format-option.selected{
+  color: var(--color-primary) !important;
+  border-color: var(--color-primary);
+}
+
+.format-option.wpp-button::part(button) {
+  background-color: #fff !important;
+  color: #000 !important;
+  border-radius: 6px;
+}
+
+/* When selected (you already have .selected class on the wpp-button) */
+.format-option.wpp-button.selected::part(button) {
+  color: var(--color-primary) !important;
+  font-weight: 500;
+}
+
+
+
+.wpp .export-dialog .button,
+.export-dialog .export_wrpper-sect .button{
+  padding: 0 !important;
+  min-width: auto !important;
+}
+.wpp .button-cancel::part(button) {
+  background-color: transparent !important;
+  border: 1px solid #000 !important;
+  color: #000 !important;
+}
+
+
+
+/* Select the outer custom element */
+.new_UI_genrateButton wpp-button-v3-1-1 {
+  width: 100% !important;
+  display: block; /* Makes width apply correctly */
+}
+
+/* Style the internal <button> inside the Shadow DOM */
+.new_UI_genrateButton wpp-button-v3-1-1::part(button) {
+  width: 100% !important;
+  border-radius: 5px !important; /* LESS rounded */
+}

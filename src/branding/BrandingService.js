@@ -167,6 +167,7 @@ class BrandingService {
 
   async getWPP() {
     let superBrandName = getSuperBrandName();
+    let superBrandId = getSuperBrandId();
     console.log("superBrandName getWPP :: ", superBrandName);
 
     try {
@@ -188,6 +189,13 @@ class BrandingService {
 
       let apiResponse;
       try {
+        const brandId = localStorage.getItem("brandId");
+        if (!!brandId) {
+          superBrandId = `${superBrandId}_${brandId}`;
+        }
+        let brandassetsFolderName = superBrandId;
+        console.log("brandassetsFolderName", brandassetsFolderName);
+        localStorage.setItem("brandassetsFolderName", brandassetsFolderName);
         apiResponse = await axios.get(
           `${ssDomainPath}/api/metaData/getBrandAssets?type=cs`,
           {

@@ -48,6 +48,47 @@ const AIGenSideBarVideoLayoutV2 = ({ children }) => {
     return () => stopPolling(interval); // Cleanup on unmount
   }, [aiMusicGeneratorProgress?.id]);
 
+useEffect(() => {
+  const updateHeight = () => {
+    const container = document.querySelector(".video_layout_v2_ai_music_container");
+    const hasFreshVariants = container?.querySelector(".fresh_AI_variants_container");
+    const aiOption = document.querySelector(".ai_generator_option");
+
+    const aiHeader = document.querySelector(".AI_tab_header_menu_wrapper");
+    const wsHeader = document.querySelector(".WS_header_action_btns_container");
+
+    // Safe style checks
+    const aiHeaderIsFlex =
+      aiHeader && getComputedStyle(aiHeader).display === "flex";
+
+    const wsHeaderIsFlex =
+      wsHeader && getComputedStyle(wsHeader).display === "flex";
+
+    const bothFlex = aiHeaderIsFlex && wsHeaderIsFlex;
+    const oneOfThemFlex = aiHeaderIsFlex || wsHeaderIsFlex;
+
+    if (aiOption) {
+      if (bothFlex) {
+        aiOption.style.maxHeight = "calc(100vh - 250px)";
+      } else if (oneOfThemFlex) {
+        aiOption.style.maxHeight = "calc(100vh - 200px)";
+      } else if (hasFreshVariants) {
+        aiOption.style.maxHeight = "calc(100vh - 250px)";
+      } else {
+        aiOption.style.maxHeight = "calc(100vh - 150px)";
+      }
+    }
+  };
+
+  updateHeight();
+
+  const observer = new MutationObserver(updateHeight);
+  observer.observe(document.body, { childList: true, subtree: true });
+
+  return () => observer.disconnect();
+}, []);
+
+
   return (
     <div className="card ai_generator_option">
       <div className="tab_header" style={{

@@ -6,38 +6,72 @@ import { useDispatch, useSelector } from "react-redux";
 import { SET_AI_Track_Stability_META } from "../../redux/AITrackStabilitySlice";
 import axiosCSPrivateInstance from "../../../../axios/axiosCSPrivateInstance";
 
-const RecentAITrackCard = ({ cue, label, index, description, mp3Urls }) => {
+const RecentAITrackCard = ({
+  cue,
+  label,
+  index,
+  description,
+  mp3Urls,
+  showSelected,
+}) => {
   const dispatch = useDispatch();
+
   const [cueDetails, setCueDetails] = useState(null);
-  const { stabilityMP3TracksArr, latestFiledataStability } = useSelector((state) => state.AIMusicStability);
-  const { stabilityArr, currentUseThisTrack } = useSelector((state) => state.AITrackStability);
-  const { projectID, } = useSelector((state) => state.projectMeta);
+  const { stabilityMP3TracksArr, latestFiledataStability } = useSelector(
+    (state) => state.AIMusicStability
+  );
+  const { stabilityArr, currentUseThisTrack } = useSelector(
+    (state) => state.AITrackStability
+  );
+  useEffect(() => {
+  // Run after component has rendered
+  const timeout = setTimeout(() => {
+    const parent = document.querySelector(".cue_variant_block")?.parentElement;
+    const elementToMove = document.querySelector('[data-prop]');
+
+    if (parent && elementToMove) {
+      parent.prepend(elementToMove);
+      console.log("Moved currentUseThisTrack div to top");
+    }
+  }, 500); // small delay to ensure DOM is ready
+
+  return () => clearTimeout(timeout);
+}, [stabilityArr, currentUseThisTrack]);
+  const { projectID } = useSelector((state) => state.projectMeta);
   const getCuesDetails = (controller, cueID, label = "") => {
     getTrackDetailsByCueID({
       controller,
       cueID,
       onSuccess: (response) => {
-        setCueDetails({ ...response.data, label, desc: description, type: "recentAIGeneratedData" });
+        setCueDetails({
+          ...response.data,
+          label,
+          desc: description,
+          type: "recentAIGeneratedData",
+        });
         dispatch(
           SET_AI_MUSIC_META({
             selectedAIMusicConfig: {
               mood: response.data?.settings?.mood || "",
               genre: response.data?.settings?.genre || "",
               tempo: response.data?.settings?.tempo || "",
-            }
-          }))
+            },
+          })
+        );
       },
     });
   };
 
   const generateBlob = async () => {
     try {
-      const fileRequests = mp3Urls.flat().map((file) =>
-        axiosCSPrivateInstance.get(
-          `/stability/GetMediaFile/${projectID}/${file}`,
-          { responseType: "blob" }
-        )
-      );
+      const fileRequests = mp3Urls
+        .flat()
+        .map((file) =>
+          axiosCSPrivateInstance.get(
+            `/stability/GetMediaFile/${projectID}/${file}`,
+            { responseType: "blob" }
+          )
+        );
 
       const results = await Promise.all(fileRequests);
 
@@ -47,7 +81,10 @@ const RecentAITrackCard = ({ cue, label, index, description, mp3Urls }) => {
 
       // Dispatch here, where objectURLArr exists
       dispatch(
-        SET_AI_Track_Stability_META({ stabilityArr: objectURLArr, currentUseThisTrack: currentUseThisTrack })
+        SET_AI_Track_Stability_META({
+          stabilityArr: objectURLArr,
+          currentUseThisTrack: currentUseThisTrack,
+        })
       );
     } catch (err) {
       console.error("Failed to generate blob URLs:", err);
@@ -61,17 +98,19 @@ const RecentAITrackCard = ({ cue, label, index, description, mp3Urls }) => {
     } else {
       getCuesDetails(controller, cue, label);
     }
+
     return () => controller.abort();
   }, [cue, mp3Urls?.length]);
 
-
-  console.log("stabilityMP3TracksArr", stabilityMP3TracksArr)
+  console.log("stabilityMP3TracksArr", stabilityMP3TracksArr);
 
   return (
     <div>
-      {
-        mp3Urls?.length > 0 ? (
-          stabilityArr?.slice().reverse().map((url, idx) => {
+      {mp3Urls?.length > 0 ? (
+        stabilityArr
+          ?.slice()
+          .reverse()
+          .map((url, idx) => {
             return (
               <AITrackCard
                 key={idx}
@@ -81,20 +120,20 @@ const RecentAITrackCard = ({ cue, label, index, description, mp3Urls }) => {
                 oldData={stabilityArr}
                 mp3Url={stabilityMP3TracksArr.flat().reverse()}
                 allDataArr={latestFiledataStability}
+                currentUseThisTrack={currentUseThisTrack}
               />
-            )
+            );
           })
-        ) : (
-          <AITrackCard
-            key={`recent_AI_music_${cueDetails?.cue_id}_${index}`}
-            type="RECENT_VARIANT_BLOCK"
-            data={cueDetails}
-            index={index}
-            showSelectedHighlighted={true}
-          />
-        )
-      }
-
+      ) : (
+        <AITrackCard
+          key={`recent_AI_music_${cueDetails?.cue_id}_${index}`}
+          type="RECENT_VARIANT_BLOCK"
+          data={cueDetails}
+          index={index}
+          showSelectedHighlighted={true}
+          showSelected={showSelected}
+        />
+      )}
     </div>
   );
 };

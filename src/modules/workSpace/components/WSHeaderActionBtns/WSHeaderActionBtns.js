@@ -36,7 +36,9 @@ export default function WSHeaderActionBtns() {
   const { TTSTimelineVoicesMP3 } = useSelector((state) => state.voices);
   const [isProjectModalOpen, setIsProjectModalOpen] = useState(false);
   const { freshAITracksVariantsList } = useSelector((state) => state.AIMusic);
-  const { currentUseThisTrack } = useSelector((state) => state.AITrackStability);
+  const { currentUseThisTrack } = useSelector(
+    (state) => state.AITrackStability
+  );
 
   const getActiveWSTab = (appAccess, condition) => {
     if (appAccess?.AI_MUSIC && appAccess?.AI_VOICE) {
@@ -84,13 +86,13 @@ export default function WSHeaderActionBtns() {
       SET_PROJECT_META({
         activeWSTab:
           freshAITracksVariantsList?.length > 0 ||
-            aiMusicGeneratorProgress?.id ||
-            aiMusicGeneratorTrackDetails?.length > 0 ||
-            !!cue_id
+          aiMusicGeneratorProgress?.id ||
+          aiMusicGeneratorTrackDetails?.length > 0 ||
+          !!cue_id
             ? "AI Music"
             : !!uploadedVideoURL && !!tXsplit
-              ? getActiveWSTab(appAccess, Number(tXsplit) === 1)
-              : activeWSTab || "AI Music",
+            ? getActiveWSTab(appAccess, Number(tXsplit) === 1)
+            : activeWSTab || "AI Music",
       })
     );
   }, [
@@ -145,8 +147,9 @@ export default function WSHeaderActionBtns() {
                   dispatch(SET_PROJECT_META({ activeWSTab: "AI Music" }));
                 }}
                 disabled={!!tXStatus && Number(tXsplit) === 1}
-                className={`tab_btns ${activeWSTab === "AI Music" ? "activeWSBtn" : "inactiveWSBtn"
-                  }`}
+                className={`tab_btns ${
+                  activeWSTab === "AI Music" ? "activeWSBtn" : "inactiveWSBtn"
+                }`}
               >
                 AI Music
               </SonicButton>
@@ -156,7 +159,7 @@ export default function WSHeaderActionBtns() {
               onClick={() => {
                 dispatch(SET_PROJECT_META({ activeWSTab: "Voice" }));
               }}
-              disabled={!!tXStatus && tXsplit === "0"}
+              disabled={!!tXStatus && Number(tXsplit) === 0}
               className={`boldFamily tab_btns ${
                 activeWSTab === "Voice" ? "activeWSBtn" : "inactiveWSBtn"
               }`}
